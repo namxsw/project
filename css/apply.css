@@ -1,0 +1,87 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* ปุ่มสมัครงาน */
+.btn {
+  margin-top: 5%;
+  width: 180px;
+  height: 50px;
+  position: absolute;
+  right: 44.5%;
+}
+
+.tit .modal-title {
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* ประเภทผู้สมัคร */
+
+.btn-post button {
+  color: white;
+  width: 150px;
+  border: none;
+  border-radius: 4px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.std {
+  color: #fff;
+  background-color: red;
+  margin-top: 8%;
+  margin-left: 15%;
+  border: none;
+  border-radius: 4px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 110px;
+  align-items: center;
+  padding: 10px;
+  
+}
+
+.general {
+  color: #fff;
+  background-color: rgb(17, 0, 255);
+  margin-left: 20%;
+  border: none;
+  border-radius: 4px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 110px;
+  padding: 10px;
+}
+
+/* details */
+.Des {
+  margin: 5% 0% 0% 15%;
+}
+
+.Des h2 {
+  margin-top: 15px;
+}
+
+.Des h5 {
+  margin-left: 30px;
+  margin-top: 15px;
+}
+
+hr {
+  margin-top: 15px;
+  width: 48%;
+}
+
+.card {
+  position: absolute;
+  top: -450px;
+  left: 70%;
+  background-color: #fff;
+  border-radius: 15px;
+}
+

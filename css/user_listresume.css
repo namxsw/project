@@ -1,0 +1,16 @@
+.pic-company-cc {
+padding: 10px;
+background: #fff;
+height: 352px;
+text-align: center;
+}
+
+.pic-company img {
+    max-width: 100%;
+    height: 150px;
+    width: 150px;
+    object-position: 50% 0;
+    object-fit: cover;
+    border-radius: 50%;
+    background: var(--bg-gray-young);
+    box-shadow: 3px 4px 5px var(--bg-gray);}
