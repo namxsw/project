@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/user_listresume.css"
+    <link rel="stylesheet" href="./css/user_listresume.css">
     <link rel="icon" type="image/png" href="./img/BayasitaD.png">
     <title>Profile</title>
     <!-- bootstrap -->
@@ -20,28 +20,68 @@
     include "./user_navbar.php";
     ?>
 
-<div class="pic-company pic-company-cc">
-    <section class="profileUser">
-       <ul>
-        <li>
-            <div id="img">
-                <img src="https://jobbkk.com/assets/template/jobbkk/theme02/images/default_user.png?v=1665065612" class="profile">
+    <div class="appeal-container">
+        <div class="appeal-content">
+            <div class="appeal-content-info">
+                <div class="pic-company pic-company-cc">
+                    <section class="profileUser">
+                        <ul>
+                            <li>
+                                <div id="img">
+                                    <img src="https://jobbkk.com/assets/template/jobbkk/theme02/images/default_user.png?v=1665065612" class="img-profile">
+                                </div>
+                            </li>
+
+                            <li>
+                                <label class="upimg">
+                                    <i class="fa fa-camera" aria-hidden="true"> อัพโหลดรูปโปรไฟล์</i>
+                                    <form id="upload" method="POST" enctype="multipart/form-data"></form>
+                                </label>
+                            </li>
+
+                            <li>ชื่อผู้ใช้</li>
+                        </ul>
+                    </section>
+             
+        <hr>
+       
+                    <div class="input-group prefix mt-4" style="width: 1370px;">
+                        <span class="input-group-text">คำนำหน้า</span>
+                        <input type="text" aria-label="First name" class="form-control" value="">
+                        <span class="input-group-text">ชื่อ</span>
+                        <input type="text" aria-label="First name" class="form-control" value="">
+                        <span class="input-group-text">นามสกุล</span>
+                        <input type="text" aria-label="First name" class="form-control" value="">
+                    </div>
+
+                    <div class="input-group prefix mt-4" style="width: 1370px;">
+                        <span class="input-group-text">วันเกิด</span>
+                        <input type="date" aria-label="First name" class="form-control" value="">
+                        <span class="input-group-text">สัญชาติ</span>
+                        <input type="text" aria-label="First name" class="form-control" value="">
+                        <span class="input-group-text">หมายเลขบัตรประชาชน</span>
+                        <input type="text" aria-label="First name" class="form-control" value="">
+                    </div>
+
+                    <div class="input-group prefix mt-4" style="width: 1370px;">
+                        <span class="input-group-text">เบอร์โทรศัพท์</span>
+                        <input type="text" aria-label="First name" class="form-control" value="">
+                        <span class="input-group-text">อีเมล</span>
+                        <input type="text" aria-label="First name" class="form-control" value="">
+                        <span class="input-group-text">Line ID</span>
+                        <input type="text" aria-label="First name" class="form-control" value="">
+                    </div>
+
+                    <div class="input-group prefix mt-4" style="width: 1370px;">
+                        <span class="input-group-text">ที่อยู่</span>
+                        <input type="address" aria-label="First name" class="form-control" value="">
+                        <span class="input-group-text">ที่อยู่</span>
+                        <input type="address" aria-label="First name" class="form-control" value="">
+
+                </div>
             </div>
-        </li>
+        </div>
 
-        <li>
-            <label class="upimg">
-                <i class="fa fa-camera" aria-hidden="true">อัพโหลดรูปโปรไฟล์</i>
-                <form id="upload" method="POST" enctype="multipart/form-data"></form>
-            </label>
-        </li>
-
-        <li>ชื่อผู้ใช้</li>
-        <li c></li>
-       </ul> 
-    </section>
-
-</div>
 
 </body>
 
