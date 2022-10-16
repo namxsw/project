@@ -90,8 +90,8 @@
     </div>
   </div>
   <div>
-    <button type="button" class="btn btn-primary sent1">ส่ง</button>
-    <button type="button" class="btn btn-danger cancel">ยกเลิก </button>
+    <!-- <button type="button" class="btn btn-primary sent1">ส่ง</button>
+    <button type="button" class="btn btn-danger cancel">ยกเลิก </button> -->
 
   </div>
 
