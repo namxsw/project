@@ -44,7 +44,7 @@ session_start();
        <span class="tooltip">ตรวจสอบข้อมูล</span>
      </li>
      <li>
-       <a href="#">
+       <a href="./ad_interview.php">
        <i class="fa-regular fa-calendar"></i>
          <span class="links_name">วันสัมภาษณ์</span>
        </a>

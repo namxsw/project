@@ -58,8 +58,9 @@
                         <table id="myTable" class="table table-striped table-bordered table-hover" style="margin-left: -95px;">
                             <thead>
                                 <th>งานที่สมัคร</th>
-                                <th>สถานะ</th>
+                                <th>สถานะการส่งเอกสาร</th>
                                 <th>วันนัดสัมภาษณ์</th>
+                                <th>ผลการสัมภาษณ์</th>
 
 
 
@@ -74,6 +75,8 @@
                                 <td><?php echo $row['Job_Type']; ?></td>
                                 <td><?php echo $row['Status']; ?></td>
                                 <td><?php echo 'วันที่ '.$row['interview_date'].' เวลา '.$row['interview_time'];  ?></td>
+                                <td><?php echo $row['interview_status']; ?></td>
+                                
                             </tbody>
                             <?php
                                 }
