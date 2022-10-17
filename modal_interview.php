@@ -5,7 +5,7 @@ if(isset($_POST['save-data'])){
     $interview_date = $_POST['interview_date'];
     $interview_time = $_POST['interview_time'];
    
-    $approve = mysqli_query ($conn," UPDATE `applicant` SET`interview_date`=' $interview_date',`interview_time`='$interview_time' WHERE Applicant_ID = '$Applicant_ID'");
+    $approve = mysqli_query ($conn," UPDATE `applicant` SET`interview_date`=' $interview_date',`interview_time`='$interview_time', `interview_status`='รอสัมภาษณ์' WHERE Applicant_ID = '$Applicant_ID'");
     // $approve = mysqli_query ($conn," UPDATE `applicant` SET interview_date=' $interview_date',interview_time= $interview_time  WHERE Applicant_ID = '$Applicant_ID'");
     if ($approve){
         echo "<script>alert('นัดวันสัมภาษณ์สำเร็จ')</script>";

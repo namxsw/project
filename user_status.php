@@ -5,8 +5,8 @@
     <title>ตรวจสอบสถานะ</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <link rel="icon" type="image/png" href="./img/BayasitaD.png">
-     <link rel="stylesheet" href="css/user_status.css">
+    <link rel="icon" type="image/png" href="./img/BayasitaD.png">
+    <link rel="stylesheet" href="css/user_status.css">
 
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <!-- jquery -->
@@ -66,21 +66,29 @@
 
                             </thead>
                             <tbody>
-                            <?php
+                                <?php
                                 include('./config/db.php');
-                                $User_username=$_SESSION['username'];
+                                $User_username = $_SESSION['username'];
                                 $query = mysqli_query($conn, "select applicant.* ,job.Job_Type from applicant join job on (applicant.Job_id= job.Job_ID) where User_username = '$User_username'");
                                 while ($row = mysqli_fetch_array($query)) {
                                 ?>
-                                <td><?php echo $row['Job_Type']; ?></td>
-                                <td><?php echo $row['Status']; ?></td>
-                                <td><?php echo 'วันที่ '.$row['interview_date'].' เวลา '.$row['interview_time'];  ?></td>
-                                <td><?php echo $row['interview_status']; ?></td>
-                                
+                                    <td><?php echo $row['Job_Type']; ?></td>
+                                    <td><?php echo $row['Status']; ?></td>
+                                    <td>
+                                        <?php
+                                        if ($row['interview_date'] && $row['interview_time'] != "null") {
+                                            echo 'วันที่ ' . date("d/m/Y", strtotime($row['interview_date'])) . ' เวลา ' . date("h:i a", strtotime($row['interview_time']));
+                                        } else {
+                                            echo '-';
+                                        }
+                                        ?>
+                                    </td>
+                                    <td><?php echo $row['interview_status']; ?></td>
+
                             </tbody>
-                            <?php
+                        <?php
                                 }
-                                ?>    
+                        ?>
                         </table>
                     </div>
                 </div>
@@ -102,7 +110,7 @@
             Copyright © 2019 Bayasita@KKU. All rights reserved.
         </div>
     </footer>
-    
+
 </body>
 
 </html>

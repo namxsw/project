@@ -69,27 +69,30 @@
 
                                 </thead>
                                 <tbody>
-                                    <!-- <?php
+                                    <?php
                                     include('./config/db.php');
 
-                                    $query = mysqli_query($conn, "select * from applicant");
+                                    $query = mysqli_query($conn, "SELECT `employee`.*,job.Job_Type from employee join job on (employee.emp_Job= job.Job_ID)");
                                     while ($row = mysqli_fetch_array($query)) {
                                     ?>
                                         <tr>
-                                            <td><?php echo $row['Applicant_Fname']; ?></td>
-                                            <td><?php echo $row['Applicant_Lname']; ?></td>
-
-                                            <td><?php echo $row['Applicant_Jobtype']; ?></td>
-                                            <td><?php echo $row['Applicant_Date']; ?></td>
-                                            <td><?php echo $row['Status']; ?></td>
-                                            <td> <a href="ad_stdInfo.php ?Applicant_ID= <?php
-                                                                                        echo $row['Applicant_ID'] ?>"><button type="button" class="btn btn-outline-info">ตรวจสอบ</button></a></td>
+                                            <td><?php echo $row['emp_id']; ?></td>
+                                            <td><?php echo $row['emp_Fname']; ?></td>
+                                            <td><?php echo $row['emp_Lname']; ?></td>
+                                            <td><?php echo $row['Job_Type']; ?></td>
+                                            <td><?php echo $row['emp_tel']; ?></td>
+                                            <td><?php echo $row['emp_email']; ?></td>
+                                            <td><?php echo $row['emp_rating']; ?></td>
+                                            <td>
+                                                <a href="ad_stdInfo.php ?Applicant_ID= <?php echo $row['emp_id'] ?>"><button type="button" class="btn btn-outline-info">แก้ไข</button></a>
+                                                <a href="ad_emylist.php ?del_Applicant_ID= <?php echo $row['emp_id'] ?>"><button type="button" class="btn btn-outline-danger">ลบ</button></a>
+                                            </td>
 
                                         </tr>
                                     <?php
                                     }
 
-                                    ?> -->
+                                    ?>
                                 </tbody>
                         </div>
                     </div>
