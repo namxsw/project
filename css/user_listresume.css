@@ -37,8 +37,9 @@
 }
      
 .upimg{
+    text-align: center;
     background-color: yellow ;
-    margin: 15px;
+    margin-top: 20px;
     border: 300px;
          
 }
@@ -49,3 +50,7 @@ ul li {
     text-align: center;
 }
 
+.Edit{
+    margin-top: 30px;
+    text-align: center;
+}

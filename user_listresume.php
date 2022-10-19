@@ -39,12 +39,12 @@
                                 </label>
                             </li>
 
-                            <li>ชื่อผู้ใช้</li>
+                            <li><?php echo $_SESSION['name']; ?><b class="caret"></li>
                         </ul>
                     </section>
-             
-        <hr>
-       
+
+                    <hr>
+
                     <div class="input-group prefix mt-4" style="width: 1370px;">
                         <span class="input-group-text">คำนำหน้า</span>
                         <input type="text" aria-label="First name" class="form-control" value="">
@@ -78,9 +78,15 @@
                         <span class="input-group-text">ที่อยู่</span>
                         <input type="address" aria-label="First name" class="form-control" value="">
 
+                        <div class=" Edit col-12">
+                            <button type="edit" class="btn btn-warning">แก้ไขข้อมูล</button>
+                            <button type="save" class="btn btn-success">บันทึก</button>
+                        </div>
+
+                    
+                    </div>
                 </div>
             </div>
-        </div>
 
 
 </body>
