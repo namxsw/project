@@ -65,7 +65,7 @@ session_start();
                 <div class="nav-item dropdown">
                     <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><?php echo $_SESSION['name']; ?><b class="caret"></b></a>
                     <div class="dropdown-menu">
-                        <a href="user_profile.php" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a></a>
+                        <a href="user_listresume.php" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a></a>
                         <a href="#" class="dropdown-item"><i class="fa fa-calendar-o"></i> Calendar</a></a>
                         <a href="user_status.php" class="dropdown-item"><i class="fa fa-sliders"></i> ตรวจสอบสถานะ</a></a>
                         <div class="dropdown-divider"></div>
