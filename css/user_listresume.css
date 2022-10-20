@@ -2,9 +2,9 @@
 
 /* กรอบ */
 .appeal-container {
-    margin-left: 180px;
+    margin-left: 250px;
     padding-top: 40px;
-    width: 80%;
+    width: 70%;
     height: auto;
         
 }
@@ -38,7 +38,7 @@
      
 .upimg{
     text-align: center;
-    background-color: yellow ;
+    /* background-color: yellow ; */
     margin-top: 20px;
     border: 300px;
          

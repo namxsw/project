@@ -34,8 +34,12 @@
 
                             <li>
                                 <label class="upimg">
-                                    <i class="fa fa-camera" aria-hidden="true"> อัพโหลดรูปโปรไฟล์</i>
-                                    <form id="upload" method="POST" enctype="multipart/form-data"></form>
+                                    <!-- <i class="fa fa-camera" aria-hidden="true"> อัพโหลดรูปโปรไฟล์</i>
+                                    <form id="upload" method="POST" enctype="multipart/form-data"></form> -->
+                                    <div class="mb-3">
+                                        <label for="formFileSm" class="form-label">อัพโหลดรูปโปรไฟล์</label>
+                                        <input class="form-control form-control-sm" id="formFileSm" type="file">
+                                    </div>
                                 </label>
                             </li>
 
@@ -45,7 +49,7 @@
 
                     <hr>
 
-                    <div class="input-group prefix mt-4" style="width: 1370px;">
+                    <div class="input-group prefix mt-4" style="width: 1170px;">
                         <span class="input-group-text">คำนำหน้า</span>
                         <input type="text" aria-label="First name" class="form-control" value="">
                         <span class="input-group-text">ชื่อ</span>
@@ -54,7 +58,7 @@
                         <input type="text" aria-label="First name" class="form-control" value="">
                     </div>
 
-                    <div class="input-group prefix mt-4" style="width: 1370px;">
+                    <div class="input-group prefix mt-4" style="width: 1170px;">
                         <span class="input-group-text">วันเกิด</span>
                         <input type="date" aria-label="First name" class="form-control" value="">
                         <span class="input-group-text">สัญชาติ</span>
@@ -63,7 +67,7 @@
                         <input type="text" aria-label="First name" class="form-control" value="">
                     </div>
 
-                    <div class="input-group prefix mt-4" style="width: 1370px;">
+                    <div class="input-group prefix mt-4" style="width: 1170px;">
                         <span class="input-group-text">เบอร์โทรศัพท์</span>
                         <input type="text" aria-label="First name" class="form-control" value="">
                         <span class="input-group-text">อีเมล</span>
@@ -72,7 +76,7 @@
                         <input type="text" aria-label="First name" class="form-control" value="">
                     </div>
 
-                    <div class="input-group prefix mt-4" style="width: 1370px;">
+                    <div class="input-group prefix mt-4" style="width: 1170px;">
                         <span class="input-group-text">ที่อยู่</span>
                         <input type="address" aria-label="First name" class="form-control" value="">
                         <span class="input-group-text">ที่อยู่</span>
@@ -83,7 +87,7 @@
                             <button type="save" class="btn btn-success">บันทึก</button>
                         </div>
 
-                    
+
                     </div>
                 </div>
             </div>
