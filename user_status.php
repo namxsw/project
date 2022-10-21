@@ -48,10 +48,10 @@
 
     <div class="container">
         <div style="height:50px;"></div>
-        <div class="well" style="margin:auto; padding:auto; width:110%;">
+        <div class="well" >
             <span style="font-size:35px; color:#000">
                 <center><strong>ตรวจสอบสถานะ</strong></center>
-            </span>
+            </span> 
             <div class="appeal-container">
                 <div class="appeal-content">
                     <div class="appeal-content-info">
@@ -97,14 +97,14 @@
     </div>
 
     <footer>
-        <h5> ช่องทางการติดต่อ</h5>
+        <!-- <h5> ช่องทางการติดต่อ</h5>
         <p> <i class="fa-solid fa-envelope"></i> bayasita@kku.ac.th </p>
         <p> <i class="fa-brands fa-chrome"></i> https://bayasita.kku.ac.th/th </p>
         <p> <i class="fa-solid fa-phone"></i> +66 43 343 097, 203 158 <i class="fa-solid fa-mobile"></i> 099 023 9779 </p>
         <p> <i class="fa-brands fa-facebook"></i> https://www.facebook.com/Bayasitakku/ </p>
-        <p> <i class="fa-solid fa-location-dot"></i> 123 Moo 16 Mitraphap Rd., Muang District,Khon Kaen 40002, Thailand </p>
+        <p> <i class="fa-solid fa-location-dot"></i> 123 Moo 16 Mitraphap Rd., Muang District,Khon Kaen 40002, Thailand </p> -->
 
-        <hr>
+        <!-- <hr> -->
         <div class="ft">
             <img src="./img/bayasitaW.png" alt="">
             Copyright © 2019 Bayasita@KKU. All rights reserved.

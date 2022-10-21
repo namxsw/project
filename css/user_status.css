@@ -4,13 +4,18 @@ body {
 
 }
 
+strong{
+    margin-top: 40px;
+}
+
 /* กรอบ */
 .appeal-container {
     /* padding-left: -20px;  */
-    padding-top: 30px;
-    width: 100%;
+    margin-left: 100px;
+    padding-top: 40px;
+    width: 80%;
     height: auto;
-    border-radius: 25px;
+    /* border-radius: 25px; */
 }
 
 .appeal-content {
@@ -70,4 +75,26 @@ footer p {
 }
 .ft img{
     height: 60px;
+}
+
+
+@media(max-width: 992px) {
+    .appeal-container {
+        margin: 20px 10px 20px 120px !important;
+    }
+}
+
+@media(max-width: 648px) {
+    .appeal-container {
+        margin: 20px 10px 20px 10px !important;
+        width: 90% !important;
+
+    }
+
+}
+
+@media(max-width: 1612){
+    .ft{
+margin-bottom: -20px;
+    }
 }

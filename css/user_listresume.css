@@ -1,14 +1,12 @@
-
-
 /* กรอบ */
 .appeal-container {
     margin-left: 250px;
     padding-top: 40px;
     width: 70%;
     height: auto;
-        
+
 }
-     
+
 .appeal-content {
     background-color: #fff;
     border-radius: 10px;
@@ -19,38 +17,68 @@
     overflow: hidden;
     width: 100%;
 }
-         
+
 .appeal-content-info {
     padding: 80px;
     position: relative;
     width: 100%;
 }
-     
+
 /* รูปภาพ */
-.profileUser{
+.profileUser {
     align-items: center !important;
     margin-left: 125px;
 }
-     
-.img-profile{
+
+.img-profile {
     height: 150px;
 }
-     
-.upimg{
+
+.upimg {
     text-align: center;
     /* background-color: yellow ; */
     margin-top: 20px;
     border: 300px;
-         
+
 }
-     
+
 ul li {
     margin-left: -120px;
     list-style: none;
     text-align: center;
 }
 
-.Edit{
+.Edit {
     margin-top: 30px;
     text-align: center;
+}
+
+
+@media(max-width: 992px) {
+    .appeal-container {
+        margin: 20px 10px 20px 120px !important;
+    }
+}
+
+
+@media(max-width: 720px) {
+    .input-group-text {
+        width: 50% !important ;
+        margin-bottom: 5px !important;
+    }
+
+    .from-input-text {
+        width: 50% !important;
+    }
+
+}
+
+
+@media(max-width: 648px) {
+    .appeal-container {
+        margin: 20px 10px 20px 10px !important;
+        width: 90% !important;
+
+    }
+
 }
