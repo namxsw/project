@@ -52,23 +52,23 @@
                 <form role="form" method="post">
                     <img src="./img/BayasitaD.png" alt="">
                     <h3><b>เข้าสู่ระบบ</h3>
-                    <div class="input-group mb-3" style="margin-top: 30px; width: 450px; ">
+                    <div class="input-group mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-default"><i class="fa-solid fa-user"></i> </span>
                         <input type="text" name="username" class="form-control input_user" value="" placeholder="username">
                     </div>
 
-                    <div class="input-group mb-3" style="margin-top: 30px; width: 450px;">
+                    <div class="input-group mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-default"><i class="fa-solid fa-key"></i></span>
                         <input type="password" name="password" class="form-control input_pass" value="" placeholder="password">
                     </div>
 
                     <div class="form-group">
-                        <div class="custom-control custom-checkbox" style="margin-left: 270px; margin-top:25px">
+                        <div class="custom-control custom-checkbox" >
                             <a href="./register.php" class="regis">สมัครสมาชิก</a>&nbsp;| &nbsp;<a href="" class="forget">ลืมรหัสผ่าน</a>
                         </div>
 
                     </div>
-                    <div class="d-grid gap-2" style="margin-left: 200px; width: 150px; margin-top:30px">
+                    <div class="d-grid gap-2 mt-3" >
 
                         <button type="submit" name="login" class="btn btn-primary">เข้าสู่ระบบ</button>
                     </div>

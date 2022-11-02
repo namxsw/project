@@ -1,5 +1,4 @@
 
-
 body {
   background: #fff9f3 !important;
   font-family: sans-serif;
@@ -40,12 +39,11 @@ img{
 }
 
 .appeal-container {
-  
-  margin-left: 32%;
+  margin-left: 30%;
   margin-top: 100px;
   padding: 15px;
-  width: 65%;
-  border-radius: 25px;
+  width: 75%;
+
 }
 
 .appeal-content {
@@ -53,7 +51,7 @@ img{
   border-radius: 10px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   display: flex;
-  max-width: 80%;
+  max-width: 100%;
   margin: 20px;
   overflow: hidden;
   width: 50%;
@@ -72,7 +70,7 @@ img{
 }
 
 .appeal-content-info {
-  padding: 30px;
+  padding: 60px;
   position: relative;
   width: 100%;
 }
@@ -87,4 +85,35 @@ img{
 
 .regis,.forget{
 text-decoration: none;
+}  
+
+.input-group{
+  margin-left: -1px;
 }
+
+.input-group .input-group-text .form-control{
+  width: 50px;
+  
+}
+
+
+
+@media(max-width: 1292px) {
+  .appeal-container {
+      margin: 20px 10px 20px 350px !important;
+      width: 90%;
+  }
+}
+
+
+
+@media(max-width: 648px) {
+  .appeal-container {
+      margin: 20px 10px 20px 10px !important;
+      width: 90% !important;
+
+  }
+
+}
+
+

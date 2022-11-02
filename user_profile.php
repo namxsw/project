@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/user_profile.css">
+    <link rel="stylesheet" href="./css/user_listresume.css">
     <link rel="icon" type="image/png" href="./img/BayasitaD.png">
     <title>Profile</title>
     <!-- bootstrap -->
@@ -20,121 +20,77 @@
     include "./user_navbar.php";
     ?>
 
-    <div class="container">
-        <h1>Profile</h1>
-        <hr>
-        <div class="row">
-            <!-- left column -->
-            <div class="col-md-3">
-                <div class="text-center">
-                    <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
-                    <h6>Upload a different photo...</h6>
+    <div class="appeal-container">
+        <div class="appeal-content">
+            <div class="appeal-content-info">
+                <div class="pic-company pic-company-cc">
+                    <section class="profileUser">
+                        <ul>
+                            <li>
+                                <div id="img">
+                                    <img src="https://jobbkk.com/assets/template/jobbkk/theme02/images/default_user.png?v=1665065612" class="img-profile">
+                                </div>
+                            </li>
 
-                    <input type="file" class="form-control">
+                            <li>
+                                <label class="upimg">
+                                    <!-- <i class="fa fa-camera" aria-hidden="true"> อัพโหลดรูปโปรไฟล์</i>
+                                    <form id="upload" method="POST" enctype="multipart/form-data"></form> -->
+                                    <div class="mb-3">
+                                        <label for="formFileSm" class="form-label">อัพโหลดรูปโปรไฟล์</label>
+                                        <input class="form-control form-control-sm" id="formFileSm" type="file">
+                                    </div>
+                                </label>
+                            </li>
+
+                            <li><?php echo $_SESSION['name']; ?><b class="caret"></li>
+                        </ul>
+                    </section>
+
+                    <hr>
+
+                    <div class="from-input">
+                        <div class="input-group prefix mt-4" >
+                            <span class="input-group-text">คำนำหน้า</span>
+                            <input type="text" aria-label="First name" class="form-control from-input-text" value="">
+                            <span class="input-group-text">ชื่อ</span>
+                            <input type="text" aria-label="First name" class="form-control from-input-text" value="">
+                            <span class="input-group-text">นามสกุล</span>
+                            <input type="text" aria-label="First name" class="form-control from-input-text" value="">
+                        </div>
+
+                        <div class="input-group prefix mt-4" >
+                            <span class="input-group-text">วันเกิด</span>
+                            <input type="date" aria-label="First name" class="form-control from-input-text" value="">
+                            <span class="input-group-text">สัญชาติ</span>
+                            <input type="text" aria-label="First name" class="form-control from-input-text" value="">
+                            <span class="input-group-text">หมายเลขบัตรประชาชน</span>
+                            <input type="text" aria-label="First name" class="form-control from-input-text" value="">
+                        </div>
+
+                        <div class="input-group prefix mt-4" >
+                            <span class="input-group-text">เบอร์โทรศัพท์</span>
+                            <input type="text" aria-label="First name" class="form-control from-input-text" value="">
+                            <span class="input-group-text">อีเมล</span>
+                            <input type="text" aria-label="First name" class="form-control from-input-text" value="">
+                            <span class="input-group-text">Line ID</span>
+                            <input type="text" aria-label="First name" class="form-control from-input-text" value="">
+                        </div>
+
+                        <div class="input-group prefix mt-4" >
+                            <span class="input-group-text">ที่อยู่</span>
+                            <input type="address" aria-label="First name" class="form-control from-input-text" value="">
+                            <span class="input-group-text">ที่อยู่</span>
+                            <input type="address" aria-label="First name" class="form-control from-input-text" value="">
+
+                            <div class=" Edit col-12">
+                                <button type="edit" class="btn btn-warning">แก้ไขข้อมูล</button>
+                                <button type="save" class="btn btn-success">บันทึก</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <?php
-            include('./config/db.php');
-            
-            $query = mysqli_query($conn, "select * from applicant");
-            $row = mysqli_fetch_array($query);
-            extract($row)
-            ?>
-                <!-- edit form column -->
-                <div class="col-md-9 personal-info">
-                    <div class="alert alert-info alert-dismissable">
-                        <a class="panel-close close" data-dismiss="alert">×</a>
-                        <i class="fa fa-coffee"></i>
-                        This is an <strong>.alert</strong>. Use this to show important messages to the user.
-                    </div>
-                    <h3>ข้อมูลส่วนตัว</h3>
-
-                    <form class="form-horizontal" role="form">
-                        <div class="form-group">
-                            <label class="col-lg-3 control-label">เลขประจำตัวประชาชน : </label>
-                            <div class="col-lg-8">
-                                <input class="form-control" type="text" value="<?php echo $row['Applicant_Cardid']; ?>" >
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-lg-3 control-label">ชื่อ :</label>
-                            <div class="col-lg-8">
-                                <input class="form-control" type="text" value="<?php echo $row['Applicant_Fname']; ?>">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-lg-3 control-label">นามสกุล :</label>
-                            <div class="col-lg-8">
-                                <input class="form-control" type="text" value="<?php echo $row['Applicant_Lname']; ?>" >
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="col-lg-3 control-label">Email :</label>
-                            <div class="col-lg-8">
-                                <input class="form-control" type="text" value="<?php echo $row['Applicant_Email']; ?>" >
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-lg-3 control-label">วันเดือนปีเกิด :</label>
-                            <div class="col-lg-8">
-                                <input class="form-control" type="date" value="<?php echo $row['Applicant_Birthday']; ?>">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-lg-3 control-label">เบอร์โทรศัพท์ :</label>
-                            <div class="col-lg-8">
-                                <input class="form-control" type="text" value="<?php echo $row['Applicant_Tel']; ?>" >
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-lg-3 control-label">ที่อยู่ :</label>
-                            <div class="col-lg-8">
-                                <input class="form-control" type="text" value="<?php echo $row['Applicant_Address']; ?>" >
-                            </div>
-                        </div>
-                        
-                        
-                        <!-- <div class="form-group">
-                            <label class="col-md-3 control-label">Username : </label>
-                            <div class="col-md-8">
-                                <input class="form-control" type="text" value="" >>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">รหัสผ่านปัจจุบัน : </label>
-                            <div class="col-md-8">
-                                <input class="form-control" type="password" value="" placeholder="รหัสผ่านปัจจุบัน">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">รหัสผ่านใหม่ :</label>
-                            <div class="col-md-8">
-                                <input class="form-control" type="password" value="" placeholder="รหัสผ่านใหม่">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">ยืนยันรหัสผ่าน :</label>
-                            <div class="col-md-8">
-                                <input class="form-control" type="password" value="" placeholder="ยืนยันรหัสผ่าน">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-3 control-label"></label>
-                            <div class="col-md-8">
-                                <input type="button" class="btn btn-primary" value="บันทึก">
-                                <span></span>
-                                <input type="reset" class="btn btn-default" value="ยกเลิก">
-                            </div>
-                        </div> -->
-                    </form>
-                </div>
-            
-        </div>
-    </div>
-    <hr>
-
 
 
 </body>
