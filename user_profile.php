@@ -49,45 +49,66 @@
 
                     <hr>
 
+                    <div class="info">
+                        <h3>ข้อมูลส่วนตัว</h3>
+                    </div>
+
                     <div class="from-input">
-                        <div class="input-group prefix mt-4" >
+                        <div class="input-group prefix mt-4">
                             <span class="input-group-text">คำนำหน้า</span>
-                            <input type="text" aria-label="First name" class="form-control from-input-text" value="">
+                            <input type="text" aria-label="prefix" class="form-control from-input-text" value="">
                             <span class="input-group-text">ชื่อ</span>
-                            <input type="text" aria-label="First name" class="form-control from-input-text" value="">
+                            <input type="text" aria-label="firstname" class="form-control from-input-text" value="">
                             <span class="input-group-text">นามสกุล</span>
-                            <input type="text" aria-label="First name" class="form-control from-input-text" value="">
+                            <input type="text" aria-label="lastname" class="form-control from-input-text" value="">
                         </div>
 
-                        <div class="input-group prefix mt-4" >
+                        <div class="input-group prefix mt-4">
                             <span class="input-group-text">วันเกิด</span>
-                            <input type="date" aria-label="First name" class="form-control from-input-text" value="">
+                            <input type="date" aria-label="birthday" class="form-control from-input-text" value="">
                             <span class="input-group-text">สัญชาติ</span>
                             <input type="text" aria-label="First name" class="form-control from-input-text" value="">
                             <span class="input-group-text">หมายเลขบัตรประชาชน</span>
-                            <input type="text" aria-label="First name" class="form-control from-input-text" value="">
+                            <input type="text" aria-label="idcrad" class="form-control from-input-text" value="">
                         </div>
 
-                        <div class="input-group prefix mt-4" >
+                        <div class="input-group prefix mt-4">
                             <span class="input-group-text">เบอร์โทรศัพท์</span>
-                            <input type="text" aria-label="First name" class="form-control from-input-text" value="">
+                            <input type="text" aria-label="tel" class="form-control from-input-text" value="">
                             <span class="input-group-text">อีเมล</span>
-                            <input type="text" aria-label="First name" class="form-control from-input-text" value="">
+                            <input type="text" aria-label="email" class="form-control from-input-text" value="">
                             <span class="input-group-text">Line ID</span>
+                            <input type="text" aria-label="line" class="form-control from-input-text" value="">
+                        </div>
+
+                        <div class="input-group prefix mt-4">
+                            <span class="input-group-text">ที่อยู่</span>
+                            <input type="address" aria-label="address" class="form-control from-input-text" value="">
+                            
+                        </div>
+
+                        <hr>
+
+                        <div class="education">
+                            <h3>การศึกษา</h3>
+                        </div>
+
+                        <div class="input-group prefix mt-4">
+                            <span class="input-group-text">คณะ</span>
+                            <input type="text" aria-label="fact" class="form-control from-input-text" value="">
+                            <span class="input-group-text">department</span>
                             <input type="text" aria-label="First name" class="form-control from-input-text" value="">
+                            <span class="input-group-text">ชั้นปี</span>
+                            <input type="text" aria-label="classyear" class="form-control from-input-text" value="">
                         </div>
 
-                        <div class="input-group prefix mt-4" >
-                            <span class="input-group-text">ที่อยู่</span>
-                            <input type="address" aria-label="First name" class="form-control from-input-text" value="">
-                            <span class="input-group-text">ที่อยู่</span>
-                            <input type="address" aria-label="First name" class="form-control from-input-text" value="">
 
-                            <div class=" Edit col-12">
-                                <button type="edit" class="btn btn-warning">แก้ไขข้อมูล</button>
-                                <button type="save" class="btn btn-success">บันทึก</button>
-                            </div>
+
+                        <div class=" Edit col-12">
+                            <button type="edit" class="btn btn-warning">แก้ไขข้อมูล</button>
+                            <button type="save" class="btn btn-success">บันทึก</button>
                         </div>
+
                     </div>
                 </div>
             </div>
