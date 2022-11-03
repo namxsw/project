@@ -59,8 +59,10 @@
 
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-default"><i class="fa-solid fa-key"></i></span>
-                        <input type="password" name="password" class="form-control input_pass" value="" placeholder="password">
+                        <input type="password" id="typepass" name="password" class="form-control input_pass" value="" placeholder="password">
                     </div>
+                        <input type="checkbox" style="float: left;" onclick="Toggle()"> 
+                        <p style="float: left; margin-left: 5px;"><i class="fa-regular fa-eye"></i></p><br><br> 
 
                     <div class="form-group">
                         <div class="custom-control custom-checkbox" >
@@ -70,7 +72,7 @@
                     </div>
                     <div class="d-grid gap-2 mt-3" >
 
-                        <button type="submit" name="login" class="btn btn-primary">เข้าสู่ระบบ</button>
+                        <button type="submit" name="login" class="btn btn-outline-primary">เข้าสู่ระบบ</button>
                     </div>
             </div>
         </div>
@@ -79,4 +81,22 @@
     </form>
 </body>
 
+<script> 
+    function Toggle(){
+var pass = document.getElementById("typepass");
+  if (pass.type === "password") {
+    pass.type = "text";
+  }
+    
+  else{
+    pass.type = "password";
+  
+  }
+
+    } 
+  
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </html>
