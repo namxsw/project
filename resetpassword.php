@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,11 +36,10 @@
                     </div>
 
                     <input type="checkbox" style="float: left;" onclick="Toggle()"> 
-                    <p style="float: left; margin-left: 5px;"><i class="fa-regular fa-eye"></i></p><br><br> 
+                    <b style="float: left; margin-left: 5px; margin-top: -5px;"> แสดงรหัสผ่าน</b><br><br> 
 
 
                     <div class="d-grid gap-2 mt-3">
-
                         <button type="submit" name="continue" class="btn btn-outline-success">ยืนยัน</button>
                     </div>
             </div>

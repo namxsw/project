@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,8 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/e9f79b1eaf.js" crossorigin="anonymous"></script>
-</head>
 
+</head>
 
 <body>
     <?php
@@ -58,20 +57,19 @@
                     </div>
 
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="inputGroup-sizing-default"><i class="fa-solid fa-key"></i></span>
+                        <span class="input-group-text" id="inputGroup-sizing-default"><i class="fa-solid fa-lock"></i></span>
                         <input type="password" id="typepass" name="password" class="form-control input_pass" value="" placeholder="password">
                     </div>
-                        <input type="checkbox" style="float: left;" onclick="Toggle()"> 
-                        <p style="float: left; margin-left: 5px;"><i class="fa-regular fa-eye"></i></p><br><br> 
+                    <input type="checkbox" style="float: left;" onclick="Toggle()">
+                    <b style="float: left; margin-left: 5px; margin-top: -5px;"> แสดงรหัสผ่าน</b><br><br>
 
                     <div class="form-group">
-                        <div class="custom-control custom-checkbox" >
-                            <a href="./register.php" class="regis">สมัครสมาชิก</a>&nbsp;| &nbsp;<a href="" class="forget">ลืมรหัสผ่าน</a>
+                        <div class="custom-control custom-checkbox">
+                            <a href="./register.php" class="regis">สมัครสมาชิก</a>&nbsp;| &nbsp;<a href="forget.php" class="forget">ลืมรหัสผ่าน</a>
                         </div>
 
                     </div>
-                    <div class="d-grid gap-2 mt-3" >
-
+                    <div class="d-grid gap-2 mt-3">
                         <button type="submit" name="login" class="btn btn-outline-primary">เข้าสู่ระบบ</button>
                     </div>
             </div>
@@ -81,22 +79,23 @@
     </form>
 </body>
 
-<script> 
-    function Toggle(){
-var pass = document.getElementById("typepass");
-  if (pass.type === "password") {
-    pass.type = "text";
-  }
-    
-  else{
-    pass.type = "password";
-  
-  }
 
-    } 
-  
+<!-- แสดงรหัสผ่าน -->
+<script>
+    function Toggle() {
+        var pass = document.getElementById("typepass");
+        if (pass.type === "password") {
+            pass.type = "text";
+        } else {
+            pass.type = "password";
+
+        }
+
+    }
 </script>
+ 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </html>
