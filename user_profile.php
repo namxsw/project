@@ -43,7 +43,7 @@
                                 </label>
                             </li>
 
-                            <li><?php echo $_SESSION['name']; ?><b class="caret"></li>
+                            <!-- <li><?php echo $_SESSION['name']; ?><b class="caret"></li> -->
                         </ul>
                     </section>
 
@@ -52,44 +52,51 @@
                     <div class="info">
                         <h3>ข้อมูลส่วนตัว</h3>
                     </div>
+                    <?php
+                    include('./config/db.php');
+                    $user = $_SESSION['username'];
+                    $query = mysqli_query($conn, "select * from user  WHERE `User_username`='$user'");
+                    while ($row = mysqli_fetch_array($query)) {
+                    ?>
+                    
 
                     <div class="from-input">
                         <div class="input-group prefix mt-4">
-                            <span class="input-group-text">คำนำหน้า</span>
-                            <input type="text" aria-label="prefix" class="form-control from-input-text" value="">
+                            <!-- <span class="input-group-text">คำนำหน้า</span>
+                            <input type="text" aria-label="prefix" class="form-control from-input-text" value=""> -->
                             <span class="input-group-text">ชื่อ</span>
-                            <input type="text" aria-label="firstname" class="form-control from-input-text" value="">
+                            <input type="text" aria-label="firstname" class="form-control from-input-text"value="<?php echo $row['User_Fname']; ?>">
                             <span class="input-group-text">นามสกุล</span>
-                            <input type="text" aria-label="lastname" class="form-control from-input-text" value="">
+                            <input type="text" aria-label="lastname" class="form-control from-input-text" value="<?php echo $row['User_Lname']; ?>">
                         </div>
 
                         <div class="input-group prefix mt-4">
                             <span class="input-group-text">วันเกิด</span>
-                            <input type="date" aria-label="birthday" class="form-control from-input-text" value="">
-                            <span class="input-group-text">สัญชาติ</span>
-                            <input type="text" aria-label="First name" class="form-control from-input-text" value="">
-                            <span class="input-group-text">หมายเลขบัตรประชาชน</span>
-                            <input type="text" aria-label="idcrad" class="form-control from-input-text" value="">
+                            <input type="date" aria-label="birthday" class="form-control from-input-text" value="<?php echo $row['User_Birthday']; ?>">
+                            <!-- <span class="input-group-text">สัญชาติ</span>
+                            <input type="text" aria-label="First name" class="form-control from-input-text" value=""> -->
+                            <!-- <span class="input-group-text">หมายเลขบัตรประชาชน</span>
+                            <input type="text" aria-label="idcrad" class="form-control from-input-text" value=""> -->
                         </div>
 
                         <div class="input-group prefix mt-4">
                             <span class="input-group-text">เบอร์โทรศัพท์</span>
-                            <input type="text" aria-label="tel" class="form-control from-input-text" value="">
+                            <input type="text" aria-label="tel" class="form-control from-input-text" value="<?php echo $row['User_Tel']; ?>">
                             <span class="input-group-text">อีเมล</span>
-                            <input type="text" aria-label="email" class="form-control from-input-text" value="">
-                            <span class="input-group-text">Line ID</span>
-                            <input type="text" aria-label="line" class="form-control from-input-text" value="">
+                            <input type="text" aria-label="email" class="form-control from-input-text" value="<?php echo $row['User_Email']; ?>">
+                            <!-- <span class="input-group-text">Line ID</span>
+                            <input type="text" aria-label="line" class="form-control from-input-text" value=""> -->
                         </div>
 
-                        <div class="input-group prefix mt-4">
+                        <!-- <div class="input-group prefix mt-4">
                             <span class="input-group-text">ที่อยู่</span>
-                            <input type="address" aria-label="address" class="form-control from-input-text" value="">
+                            <input type="address" aria-label="address" class="form-control from-input-text" value="<?php echo $row['User_Address']; ?>">
                             
-                        </div>
+                        </div> -->
 
                         <hr>
 
-                        <div class="education">
+                        <!-- <div class="education">
                             <h3>การศึกษา</h3>
                         </div>
 
@@ -100,7 +107,7 @@
                             <input type="text" aria-label="First name" class="form-control from-input-text" value="">
                             <span class="input-group-text">ชั้นปี</span>
                             <input type="text" aria-label="classyear" class="form-control from-input-text" value="">
-                        </div>
+                        </div> -->
 
 
 
@@ -108,7 +115,10 @@
                             <button type="edit" class="btn btn-warning">แก้ไขข้อมูล</button>
                             <button type="save" class="btn btn-success">บันทึก</button>
                         </div>
+                        <?php
+                                }
 
+                                ?>
                     </div>
                 </div>
             </div>
