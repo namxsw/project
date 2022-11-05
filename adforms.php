@@ -31,7 +31,7 @@
     $User_username=$_SESSION['username'];
     // $education = $_FILES ["File"]['name'];
 
-    // ไฟล์ภาพ
+    // ไฟล์ภาพ1
     date_default_timezone_set('Asia/Bangkok');
     $date = date("Ymd");
     $numrand = (mt_rand());
@@ -42,17 +42,23 @@
     $education = $filename;
     $filepath = './img/' . $filename;
     // echo "gender".$gender."card".$card."firstname".$firstname."pref".$pref."lastname".$lastname."email".$email."birthday".$birthday."address".$address."tell".$tell."jobtype".$jobtype."factculty".$factculty."dept".$dept."classs".$classs."";
+    $filetmp2 = $_FILES['File1']['tmp_name'];
+    $fileoldname2 = strrchr($_FILES['File1']['name'], ".");
+    $filename2 = $date . $numrand . $fileoldname2;
+    $filetype2 = $_FILES['File1']['type'];
+    $education2 = $filename2;
+    $filepath2 = './img/' . $filename2;
 
 
+    if ($gender != "" && $card != "" && $firstname != "" && $pref != "" && $lastname != "" && $email != "" && $birthday != "" && $address != "" && $tell != ""  && $factculty != "" && $dept != "" && $classs != "" && $education != "" && $education2 !="") {
 
-    if ($gender != "" && $card != "" && $firstname != "" && $pref != "" && $lastname != "" && $email != "" && $birthday != "" && $address != "" && $tell != ""  && $factculty != "" && $dept != "" && $classs != "" && $education != "") {
-
-      $sql = "INSERT INTO `applicant`( `Applicant_Gender`, `Applicant_Cardid`, `Applicant_Fname`, `Applicant_Prefix`, `Applicant_Lname`, `Applicant_Email`, `Applicant_Birthday`, `Applicant_Address`, `Applicant_Tel`, `Applicant_Fact`, `Applicant_Dept`, `Applicant_Class`, `Applicant_Education`,`Applicant_Grade`,`Applicant_Yearend`,`Applicant_Type`,`User_username`,`Job_ID`)
-      VALUES ('$gender','$card','$firstname','$pref','$lastname','$email','$birthday','$address','$tell','$factculty','$dept','$classs','$education','-','-','1','$User_username','$Job_ID')";
+      $sql = "INSERT INTO `applicant`( `Applicant_Gender`, `Applicant_Cardid`, `Applicant_Fname`, `Applicant_Prefix`, `Applicant_Lname`, `Applicant_Email`, `Applicant_Birthday`, `Applicant_Address`, `Applicant_Tel`, `Applicant_Fact`, `Applicant_Dept`, `Applicant_Class`, `Applicant_Education`,`Applicant_Education2`,`Applicant_Grade`,`Applicant_Yearend`,`Applicant_Type`,`User_username`,`Job_ID`)
+      VALUES ('$gender','$card','$firstname','$pref','$lastname','$email','$birthday','$address','$tell','$factculty','$dept','$classs','$education','$education2','-','-','1','$User_username','$Job_ID')";
       echo $sql;
       $result = mysqli_query($conn, $sql);
       if ($result) {
         move_uploaded_file($filetmp, $filepath);
+        move_uploaded_file($filetmp2, $filepath2);
         // echo '<meta http-equiv="refresh" content="1";  />';
         echo "<script>alert('สมัครสำเร็จ') </script>";
         echo "<script>window.location='userpage.php'</script>";
