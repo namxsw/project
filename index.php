@@ -113,9 +113,11 @@
                     <tr>
                         <div class="post">
                             <p class="section-ap">
-                            <h4><b>
+                            <h4>
+                                <b>
                                     <td><?php echo $row['Job_Type']; ?>
-                                </b></h4>
+                                </b>
+                            </h4>
                             </td>
                             </p>
                             <p class="section-ap"><i class="fa-solid fa-person"></i> จำนวน : <td><?php echo $row['Job_Amount']; ?></td>

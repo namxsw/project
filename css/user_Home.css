@@ -176,6 +176,14 @@ footer p {
         width: 78% !important;
     }
 
+    .post{
+        margin-bottom: 50px !important;
+    }
+
+    .btn-detail{
+       position:block;
+    }
+
 }
 
 
