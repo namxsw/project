@@ -90,10 +90,10 @@ body {
 }
 
 .appeal-container {
-  margin-left: 18%;
+  margin-left: 28%;
   margin-top: 3%;
   padding: 0;
-  width: 65%;
+  width: 45%;
   border-radius: 25px;
 }
 
@@ -137,6 +137,7 @@ body {
   border: none;
   border-radius: 5px;
   padding: 10px 15px;
+  
 
 }
 
@@ -147,3 +148,5 @@ body {
 .del{
 color: #000;
 }
+
+
