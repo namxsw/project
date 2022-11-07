@@ -1,9 +1,7 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+body {
+  background-color: #FFF9F3 !important;
   font-family: sans-serif;
+  min-width: 370px;
 }
 
 /* ปุ่มสมัครงาน */
@@ -43,7 +41,7 @@
   width: 110px;
   align-items: center;
   padding: 10px;
-  
+  text-decoration: none;
 }
 
 .general {
@@ -56,6 +54,7 @@
   padding-bottom: 2%;
   width: 110px;
   padding: 10px;
+  text-decoration: none;
 }
 
 /* details */

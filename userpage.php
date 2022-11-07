@@ -111,13 +111,13 @@
                                 </b></h4>
                             </td>
                             </p>
-                            <p class="section-ap"><i class="fa-solid fa-person"></i> จำนวน : <td><?php echo $row['Job_Amount']; ?></td>
+                            <p class="section-ap"><i class="fa-solid fa-person"></i> จำนวน : <td><?php echo $row['Job_Amount']; ?>คน</td>
                             </p>
                             <p class="section-ap"><i class="fa-solid fa-newspaper"></i> รายละเอียดงาน : <td><?php echo $row['Job_Result']; ?></td>
                             </p>
                             <p class="section-ap"><i class="fa-solid fa-graduation-cap"></i> วุฒิการศึกษา : <td><?php echo $row['Job_Education']; ?></td>
                             </p>
-                            <p class="section-ap"><i class="fa-solid fa-money-bills"></i> เงินเดือน : <td><?php echo $row['Job_Salary']; ?></td>
+                            <p class="section-ap"><i class="fa-solid fa-money-bills"></i> เงินเดือน : <td><?php echo $row['Job_Salary']; ?>บาท</td>
                             </p>
 
                         </div>
@@ -138,18 +138,17 @@
 
     ?>
 
-    <footer>
+<footer>
         <h5> ช่องทางการติดต่อ</h5>
-        <p> <i class="fa-solid fa-envelope" col-2></i> bayasita@kku.ac.th </p>
-        <p> <i class="fa-brands fa-chrome"></i> https://bayasita.kku.ac.th/th </p>
+        <p> <i class="fa-solid fa-envelope"></i> bayasita@kku.ac.th </p>
         <p> <i class="fa-solid fa-phone"></i> +66 43 343 097, 203 158 <i class="fa-solid fa-mobile"></i> 099 023 9779 </p>
-        <p> <i class="fa-brands fa-facebook"></i> https://www.facebook.com/Bayasitakku/ </p>
+        <!-- <p> <i class="fa-brands fa-facebook"></i> https://www.facebook.com/Bayasitakku/ </p> -->
         <p> <i class="fa-solid fa-location-dot"></i> 123 Moo 16 Mitraphap Rd., Muang District,Khon Kaen 40002, Thailand </p>
 
         <hr>
         <div class="ft">
             <img src="./img/bayasitaW.png" alt="">
-            Copyright © 2019 Bayasita@KKU. All rights reserved.
+            Copyright © 2021 Bayasita@KKU. All rights reserved.
         </div>
     </footer>
 </body>

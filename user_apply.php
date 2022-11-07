@@ -42,9 +42,9 @@
         <hr>
         <h4><b>รายละเอียดงาน</b></h4>
         <h5><i class="fa-solid fa-briefcase"></i> รูปแบบงาน : <?php echo $row['Job_Result']; ?> </h5>
-        <h5><i class="fa-solid fa-person"></i> จำนวนที่รับ : <?php echo $row['Job_Amount']; ?></h5>
-        <h5><i class="fa-solid fa-clock"></i> ชั่วโมงทำงาน : <?php echo $row['Job_Time']; ?></h5>
-        <h5><i class="fa-solid fa-money-bills"></i> เงินเดือน(บาท) : <?php echo $row['Job_Salary']; ?></h5>
+        <h5><i class="fa-solid fa-person"></i> จำนวนที่รับ : <?php echo $row['Job_Amount']; ?>คน</h5>
+        <h5><i class="fa-solid fa-clock"></i> ชั่วโมงทำงาน : <?php echo $row['Job_Time']; ?>ชั่วโมง</h5>
+        <h5><i class="fa-solid fa-money-bills"></i> เงินเดือน : <?php echo $row['Job_Salary']; ?>บาท</h5>
         <h5><i class="fa-solid fa-calendar-days"></i> วันหยุด : <?php echo $row['Job_Dayoff']; ?></h5>
         <hr>
         <h4><b>คุณสมบัติ </b></h4>

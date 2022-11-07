@@ -96,13 +96,13 @@
                                 <td><?php echo $row['Job_Type']; ?></td>
                         </p></b>
 
-                        <p class="section-ap"><i class="fa-solid fa-person"></i> จำนวน : <td><?php echo $row['Job_Amount']; ?></td>
+                        <p class="section-ap"><i class="fa-solid fa-person"></i> จำนวน : <td><?php echo $row['Job_Amount']; ?>คน</td>
                         </p>
                         <p class="section-ap"><i class="fa-solid fa-newspaper"></i> รายละเอียดงาน : <td><?php echo $row['Job_Result']; ?></td>
                         </p>
                         <p class="section-ap"><i class="fa-solid fa-graduation-cap"></i> วุฒิการศึกษา : <td><?php echo $row['Job_Education']; ?></td>
                         </p>
-                        <p class="section-ap"><i class="fa-solid fa-money-bills"></i> เงินเดือน : <td><?php echo $row['Job_Salary']; ?></td>
+                        <p class="section-ap"><i class="fa-solid fa-money-bills"></i> เงินเดือน : <td><?php echo $row['Job_Salary']; ?>บาท</td>
                         </p>
 
                     </div>
