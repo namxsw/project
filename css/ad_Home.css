@@ -149,4 +149,7 @@ body {
 color: #000;
 }
 
-
+#ft , #fttext , #fttext2
+{
+  display: none;
+}

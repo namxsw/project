@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body onload="typesalary(event)">
 
     <?php
     include "./ad_Slidebar.php";
@@ -129,7 +129,7 @@
                     <span class="input-group-text" id="basic-addon1">หัวข้อ</span>
                     <input type="text" name="topic" class="form-control " placeholder="ชื่อ" aria-describedby="basic-addon1">
                     <span class="input-group-text" id="basic-addon1">ประเภทงาน</span>
-                    <select class="form-select" name="jobtype" aria-label="Default select example">
+                    <select class="form-select" name="jobtype" aria-label="Default select example" >
                         <option selected>เลือกประเภทงาน</option>
                         <option value="พนักงานเดลิเวอรี่">พนักงานเดลิเวอรี่</option>
                         <option value="พนักงานต้อนรับ">พนักงานต้อนรับ</option>
@@ -141,9 +141,9 @@
                     <h6>รายละเอียดงาน:</h6>
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">รูปแบบงาน</span>
-                        <select class="form-select" name="jobresult" aria-label="Default select example">
-                            <option selected></option>
-                            <option value="พาร์ทไทม์">พาร์ทไทม์</option>
+                        <select class="form-select" id="selecttype" name="jobresult" aria-label="Default select example" onchange="typesalary(event)">
+                            <!-- <option selected></option> -->
+                            <option value="Part-time">Part-time</option>
                             <option value="Full-time">Full-time</option>
                         </select>
                         <span class="input-group-text" id="basic-addon1">จำนวนที่รับ</span>
@@ -178,8 +178,15 @@
                         <option value="9 ชั่วโมง">9 ชั่วโมง</option>
                         <option value="10 ชั่วโมง">10 ชั่วโมง</option>
                     </select>
-                    <span class="input-group-text" id="basic-addon1">เงินเดือน</span>
-                    <input type="text" name="jobsalary" class="form-control" placeholder="เงินเดือน(บาท)" aria-describedby="basic-addon1">
+                    
+                    <span class="input-group-text" id="pttext">ค่าจ้าง part-time</span>
+                    <input type="text" id="pt" name="" class="form-control" placeholder="ค่าจ้าง(บาท)" aria-describedby="basic-addon1" >
+                    <span class="input-group-text" id="pttext2">บาท(ต่อชั่วโมง)</span>
+                    
+                    <span class="input-group-text" id="fttext">เงินเดือน</span>
+                    <input type="text" id="ft" name="" class="form-control" placeholder="เงินเดือน(บาท)" aria-describedby="basic-addon1">
+                    <span class="input-group-text" id="fttext2">บาท(ต่อเดือน)</span>
+                    
                     <span class="input-group-text" id="basic-addon1">วันหยุด</span>
                     <input type="text" name="dayoff" class="form-control" placeholder="Ex.วันจันทร์" aria-describedby="basic-addon1">
                 </div>
@@ -214,6 +221,31 @@
                             <textarea name="duty" class="form-control" placeholder="เพิ่มข้อความที่นี่" aria-describedby="basic-addon1" cols="50" rows="6"></textarea>
                         </div>
                     </div>
+                <script>
+                    function typesalary(){
+                        var x= document.getElementById("selecttype").value
+                        if(x=='Part-time'){
+                            document.getElementById("pttext").style.display="block"; 
+                            document.getElementById("pttext2").style.display="block"; 
+                            document.getElementById("pt").style.display="block";
+                            document.getElementById("fttext").style.display="none"; 
+                            document.getElementById("fttext2").style.display="none"; 
+                            document.getElementById("ft").style.display="none";
+                            document.getElementById('pt').name = 'jobsalary';
+                            document.getElementById('ft').name = 'jobsalary2';
+                         }else{
+                            document.getElementById("pttext").style.display="none"; 
+                            document.getElementById("pttext2").style.display="none"; 
+                            document.getElementById("pt").style.display="none";
+                            document.getElementById("fttext").style.display="block"; 
+                            document.getElementById("fttext2").style.display="block"; 
+                            document.getElementById("ft").style.display="block";
+                            document.getElementById('pt').name = 'jobsalary2';
+                            document.getElementById('ft').name = 'jobsalary';
+                         }
+                    }
+
+                </script>
 
                     <!-- <div class="inputct">
                             <h6>รูปภาพ:</h6>

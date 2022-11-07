@@ -39,7 +39,7 @@
 
 
 
-    if ($jobtopic != "" && $typejob != "" && $result != "" && $jobamount != "" && $time != "" && $salary != "" && $jobdayoff != "" && $jobgender != "" && $jobage != "" && $jobedu != "" && $jobduty != "") {
+    if ($jobtopic != "" && $typejob != "" && $result != "" && $jobamount != "" && $time != ""  &&$salary != "" && $jobdayoff != "" && $jobgender != "" && $jobage != "" && $jobedu != "" && $jobduty != "") {
 
       $sql = "INSERT INTO `job`(`Job_Topic`, `Job_Type`, `Job_Result`, `Job_Amount`, `Job_Time`, `Job_Salary`, `Job_Dayoff`, `Job_Gender`, `Job_Age`, `Job_Education`, `Job_Duty`) VALUES ('$jobtopic','$typejob','$result','$jobamount','$time','$salary','$jobdayoff','$jobgender',' $jobage','$jobedu','$jobduty')";
       $result = mysqli_query($conn, $sql);
@@ -52,6 +52,7 @@
       }
     } else {
       echo "<script>alert('กรอกข้อมูลไม่ครบ')</script>";
+      // echo $jobtopic.$typejob.$result.$jobamount.$time.$salary.$jobdayoff.$jobgender. $jobage.$jobedu.$jobduty;
       echo "<script>window.location='adminpage.php'</script>";
     }
   }
