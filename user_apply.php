@@ -42,14 +42,14 @@
         <hr>
         <h4><b>รายละเอียดงาน</b></h4>
         <h5><i class="fa-solid fa-briefcase"></i> รูปแบบงาน : <?php echo $row['Job_Result']; ?> </h5>
-        <h5><i class="fa-solid fa-person"></i> จำนวนที่รับ : <?php echo $row['Job_Amount']; ?>คน</h5>
-        <h5><i class="fa-solid fa-clock"></i> ชั่วโมงทำงาน : <?php echo $row['Job_Time']; ?>ชั่วโมง</h5>
-        <h5><i class="fa-solid fa-money-bills"></i> เงินเดือน : <?php echo $row['Job_Salary']; ?>บาท</h5>
+        <h5><i class="fa-solid fa-person"></i> จำนวนที่รับ : <?php echo $row['Job_Amount']; ?> คน</h5>
+        <h5><i class="fa-solid fa-clock"></i> ชั่วโมงทำงาน : <?php echo $row['Job_Time']; ?> ชั่วโมง</h5>
+        <h5><i class="fa-solid fa-money-bills"></i> เงินเดือน : <?php echo $row['Job_Salary']; ?> บาท</h5>
         <h5><i class="fa-solid fa-calendar-days"></i> วันหยุด : <?php echo $row['Job_Dayoff']; ?></h5>
         <hr>
         <h4><b>คุณสมบัติ </b></h4>
         <h5><i class="fa-solid fa-venus-mars"></i> เพศ : <?php echo $row['Job_Gender']; ?></h5>
-        <h5><i class="fa-solid fa-person-circle-question"></i> อายุ(ปี) : <?php echo $row['Job_Age']; ?></h5>
+        <h5><i class="fa-solid fa-person-circle-question"></i> อายุ(ปี) : <?php echo $row['Job_Age']; ?> ปี</h5>
         <h5><i class="fa-solid fa-graduation-cap"></i> ระดับการศึกษา : <?php echo $row['Job_Education']; ?></h5>
         <hr>
         <h4><b>หน้าที่รับผิดชอบ </b></h4>
