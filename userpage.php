@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./css/user_Home.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/user_navbar.css">
     <link rel="icon" type="image/png" href="./img/BayasitaD.png">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -16,13 +15,6 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-    <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet" />
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
 
 
 </head>
@@ -59,23 +51,15 @@
         </button>
     </div>
 
-    <!-- ค้นหา -->
-    <div class="ser">
-        <div class="search">
+  <!-- ค้นหา        -->
+  <div class="ser ">
+        <div class="search align-items-center">
             <h4><b>ระบุงานที่คุณต้องการ</h4></b>
         </div>
 
-        <div class="input-group">
-            <div class="form-outline">
-                <input type="search" id="form1" class="form-control" />
-                <label class="form-label" for="form1">Search</label>
-            </div>
-            <button type="button" class="btn btn-primary">
-                <i class="fas fa-search"></i>
-            </button>
-
-            <div class="select">
-                <select class="form-select" aria-label="Default select example">
+        <form class="row row-cols-lg-auto g-3 align-items-center search-brn">
+            <div class="col-12 ">
+                <select class="form-select form-control" aria-label="Default select example">
                     <option selected>วุฒิการศึกษา</option>
                     <option value="1">ม.6</option>
                     <option value="2">ปวช.</option>
@@ -84,15 +68,25 @@
                 </select>
             </div>
 
-            <div class="select">
-                <select class="form-select" aria-label="Default select example">
+            <div class="col-12">
+                <select class="form-select form-control" aria-label="Default select example">
                     <option selected>เลือกประเภทงาน</option>
                     <option value="พนักงานเดลิเวอรี่">พนักงานเดลิเวอรี่</option>
                     <option value="พนักงานต้อนรับ">พนักงานต้อนรับ</option>
                     <option value="พนักงานเสิร์ฟอาหาร">พนักงานเสิร์ฟอาหาร</option>
                 </select>
             </div>
-        </div>
+
+            <div class="col-12">
+                <input class="form-control" type="search" placeholder="Search">
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary submit">ค้นหา</button>
+            </div>
+        </form>
+
+
     </div>
 
     <div class="title">
@@ -111,7 +105,6 @@
 
                     <tr>
                         <div class="post">
-
                             <p class="section-ap">
                             <h4><b>
                                     <td><?php echo $row['Job_Type']; ?>
@@ -126,8 +119,6 @@
                             </p>
                             <p class="section-ap"><i class="fa-solid fa-money-bills"></i> เงินเดือน : <td><?php echo $row['Job_Salary']; ?></td>
                             </p>
-
-
 
                         </div>
                     </tr>
