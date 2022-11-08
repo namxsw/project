@@ -32,14 +32,14 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="./img/baya.jpg" class="d-block w-100" alt="baya">
+                <img src="./img/bayasita.jpg" class="d-block w-100" alt="baya">
             </div>
-            <div class="carousel-item">
+            <!-- <div class="carousel-item">
                 <img src="./img/baya.jpg" class="d-block w-100" alt="image">
             </div>
             <div class="carousel-item">
                 <img src="./img/baya.jpg" class="d-block w-100" alt="1">
-            </div>
+            </div> -->
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
