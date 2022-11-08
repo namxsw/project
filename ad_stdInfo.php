@@ -136,7 +136,7 @@
                         </div>-->
 
                             <div class="edu mt-3">
-                                <span> <b>หลักฐานทางการศึกษา :</b></span>
+                                <span> <b>หลักฐานทางการศึกษา :<a href="PageUploadToMySQL3.php">View files</a></b></span>
 
                             </div>
 
