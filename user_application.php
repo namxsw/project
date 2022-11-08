@@ -101,7 +101,7 @@
                     <input class="form-control col-12" type="text"  name="Job_ID" value="<?php echo $Job_ID; ?>" hidden />
                     
                     <div class="des_input">ไฟล์เพิ่มเติม</div>
-                    <input class="sqr-input col-12 form-control" type="file" placeholder="ไฟล์เพิ่มเติม" name="File1" required>
+                    <input class="sqr-input col-12 form-control" type="file" placeholder="ไฟล์เพิ่มเติม" name="File1" >
                     <input class="form-control col-12" type="text"  name="Job_ID" value="<?php echo $Job_ID; ?>" hidden />
                     <input type="button" name="previous" class="btn btn-primary action-button" value="ย้อนกลับ" onclick="previousbtn()" id="back">
 

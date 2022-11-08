@@ -149,16 +149,17 @@
                         <span class="input-group-text" id="basic-addon1">จำนวนที่รับ</span>
                         <select class="form-select" name="amount" aria-label="Default select example">
                             <option selected></option>
-                            <option value="1 คน">1 คน</option>
-                            <option value="2 คน">2 คน</option>
-                            <option value="3 คน">3 คน</option>
-                            <option value="4 คน">4 คน</option>
-                            <option value="5 คน">5 คน</option>
-                            <option value="6 คน">6 คน</option>
-                            <option value="7 คน">7 คน</option>
-                            <option value="8 คน">8 คน</option>
-                            <option value="9 คน">9 คน</option>
-                            <option value="10 คน">10 คน</option>
+                            <option value="1 ">1 คน</option>
+                            <option value="2 ">2 คน</option>
+                            <option value="3 ">3 คน</option>
+                            <option value="4 ">4 คน</option>
+                            <option value="5 ">5 คน</option>
+                            <option value="6 ">6 คน</option>
+                            <option value="7 ">7 คน</option>
+                            <option value="8 ">8 คน</option>
+                            <option value="9 ">9 คน</option>
+                            <option value="10 ">10 คน </option>
+                            
                         </select>
                     </div>
                 </div>
@@ -167,16 +168,16 @@
                     <span class="input-group-text" id="basic-addon1">ชั่วโมงทำงาน</span>
                     <select class="form-select" name="jobtime" aria-label="Default select example">
                         <option selected></option>
-                        <option value="1 ชั่วโมง">1 ชั่วโมง</option>
-                        <option value="2 ชั่วโมง">2 ชั่วโมง</option>
-                        <option value="3 ชั่วโมง">3 ชั่วโมง</option>
-                        <option value="4 ชั่วโมง">4 ชั่วโมง</option>
-                        <option value="5 ชั่วโมง">5 ชั่วโมง</option>
-                        <option value="6 ชั่วโมง">6 ชั่วโมง</option>
-                        <option value="7 ชั่วโมง">7 ชั่วโมง</option>
-                        <option value="8 ชั่วโมง">8 ชั่วโมง</option>
-                        <option value="9 ชั่วโมง">9 ชั่วโมง</option>
-                        <option value="10 ชั่วโมง">10 ชั่วโมง</option>
+                        <option value="1 ">1 ชั่วโมง</option>
+                        <option value="2 ">2 ชั่วโมง</option>
+                        <option value="3 ">3 ชั่วโมง</option>
+                        <option value="4 ">4 ชั่วโมง</option>
+                        <option value="5 ">5 ชั่วโมง</option>
+                        <option value="6 ">6 ชั่วโมง</option>
+                        <option value="7 ">7 ชั่วโมง</option>
+                        <option value="8 ">8 ชั่วโมง</option>
+                        <option value="9 ">9 ชั่วโมง</option>
+                        <option value="10 ">10 ชั่วโมง</option>
                     </select>
                     
                     <span class="input-group-text" id="pttext">ค่าจ้าง part-time</span>
