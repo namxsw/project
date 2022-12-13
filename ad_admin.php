@@ -48,7 +48,7 @@
 				<span style="font-size:35px; color:#000">
 					<center><strong>แอดมิน </strong></center>
 				</span>
-				<span class="add"><a href="./ad_admininfo.php" data-toggle="modal" class="btn btn-outline-primary ml-5" ><i class="fa-solid fa-plus"></i> เพิ่มแอดมิน</a></span>
+				<span class="add"><a href="./ad_admininfo.php" data-toggle="modal" class="btn btn-outline-primary ml-5"><i class="fa-solid fa-plus"></i> เพิ่มแอดมิน</a></span>
 				<div class="appeal-container">
 					<div class="appeal-content">
 						<div class="appeal-content-info">
@@ -78,13 +78,11 @@
 											<td>
 
 												<!-- แก้ไข -->
-												
-												<a type="button" style="width: 150px;" class="btn btn-outline-warning" 
-                                					href="./editadminform.php?User_id=<?php echo $row['User_id']; ?>" onclick="return confirm('คุณต้องการแก้ไขใช่หรือไม่')" >แก้ไข</a>								
+
+												<a type="button" style="width: 150px;" class="btn btn-outline-warning" href="./editadminform.php?User_id=<?php echo $row['User_id']; ?>" onclick="return confirm('คุณต้องการแก้ไขใช่หรือไม่')">แก้ไข</a>
 												<!-- ลบ -->
-												
-												<a type="button" style="width: 150px;" class="btn btn-outline-danger" 
-                                					href="./delete_admin.php?User_id=<?php echo $row['User_id']; ?>" onclick="return confirm('คุณต้องการลบใช่หรือไม่')" >ลบ</a>
+
+												<a type="button" style="width: 150px;" class="btn btn-outline-danger" href="./delete_admin.php?User_id=<?php echo $row['User_id']; ?>" onclick="return confirm('คุณต้องการลบใช่หรือไม่')">ลบ</a>
 
 
 											</td>
@@ -98,7 +96,15 @@
 								</tbody>
 							</table>
 						</div>
+						<?php
+						//check session 
+						if (isset($_SESSION['username'])) {
+						} else {
+							echo "<script>alert('คุณยังไม่ได้เข้าสู่ระบบ กลับไปยังหน้าเข้าสู่ระบบก่อน')</script>";
+							echo "<script>window.open('signin.php','_self')</script>";
+						}
 
+						?>
 					</div>
 
 </body>

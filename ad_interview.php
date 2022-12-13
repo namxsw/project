@@ -176,7 +176,7 @@ if (isset($_GET['Approved_Applicant_ID'])) {
     $emp_Job = $rowd['Job_ID'];
     $emp_tel = $rowd['Applicant_Tel'];
     $emp_email = $rowd['Applicant_Email'];
-    $emp_id = 'EM0' . $emp_Job. '0' . $emprow_for_id;
+    $emp_id = 'BY0' . $emp_Job. '0' . $emprow_for_id;
 
     $approved_update = mysqli_query($conn, "UPDATE `applicant` SET `interview_status`='ผ่านการสัมภาษณ์' WHERE `Applicant_ID`= $Approved_Applicant_ID");
 
