@@ -18,83 +18,83 @@ session_start();
 </head>
 
 <body>
-  <div class="sidebar">
-    <div class="logo-details">
-      <!-- <i class='bx bxl-c-plus-plus icon'></i> -->
-      <img src="./img/bayasitaW.png" alt="" width="50px" height="50px">
-      <div class="logo_name " id="btn"><b>สมัครพาร์ทไทม์</b></div>
-      <!-- <i class='bx bx-menu' id="btn" ></i> -->
-    </div>
-    <ul class="nav-list">
-      <!-- <li>
+  <nav>
+    <div class="sidebar">
+      <div class="logo-details">
+        <!-- <i class='bx bxl-c-plus-plus icon'></i> -->
+        <img src="./img/bayasitaW.png" alt="" width="50px" height="50px">
+        <div class="logo_name " id="btn"><b>สมัครพาร์ทไทม์</b></div>
+        <!-- <i class='bx bx-menu' id="btn" ></i> -->
+      </div>
+      <ul class="nav-list">
+        <!-- <li>
           <i class='bx bx-search' ></i>
          <input type="text" placeholder="Search...">
          <span class="tooltip">Search</span>
       </li> -->
-      <li>
-        <a href="./adminpage.php">
-          <i class='bx bx-grid-alt'></i>
-          <span class="links_name">แก้ไขหน้าประกาศข่าวสาร</span>
-        </a>
-        <span class="tooltip">แก้ไขหน้าประกาศข่าวสาร</span>
-      </li>
-      <li>
-        <a href="./checkapplicant.php">
-          <i class='bx bx-folder'></i>
-          <span class="links_name">ตรวจสอบข้อมูล</span>
-        </a>
-        <span class="tooltip">ตรวจสอบข้อมูล</span>
-      </li>
-      <li>
-        <a href="./ad_interview.php">
-          <i class="fa-regular fa-calendar"></i>
-          <span class="links_name">วันสัมภาษณ์</span>
-        </a>
-        <span class="tooltip">วันสัมภาษณ์</span>
-      </li>
-      <li>
-        <a href="ad_emylist.php">
-          <i class="fa-regular fa-address-book"></i>
-          <span class="links_name">รายชื่อพนักงาน</span>
-        </a>
-        <span class="tooltip">รายชื่อพนักงาน</span>
-      </li>
-      <li>
-        <a href="./ad_quiz.php  ">
-          <i class="fa-regular fa-file-lines"></i>
-          <span class="links_name">แบบทดสอบ</span>
-        </a>
-        <span class="tooltip">แบบทดสอบ</span>
-      </li>
-      <li>
-        <a href="./ad_admin.php">
-          <i class="fa-regular fa-user"></i>
-          <span class="links_name">แอดมิน</span>
-        </a>
-        <span class="tooltip">แอดมิน</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-chat'></i>
-          <span class="links_name">แชท</span>
-        </a>
-        <span class="tooltip">แชท</span>
-      </li>
-      <li class="profile">
-        <div class="profile-details">
+        <li>
+          <a href="./adminpage.php">
+            <i class='bx bx-grid-alt'></i>
+            <span class="links_name">แก้ไขหน้าประกาศข่าวสาร</span>
+          </a>
+          <span class="tooltip">แก้ไขหน้าประกาศข่าวสาร</span>
+        </li>
+        <li>
+          <a href="./checkapplicant.php">
+            <i class='bx bx-folder'></i>
+            <span class="links_name">ตรวจสอบข้อมูล</span>
+          </a>
+          <span class="tooltip">ตรวจสอบข้อมูล</span>
+        </li>
+        <li>
+          <a href="./ad_interview.php">
+            <i class="fa-regular fa-calendar"></i>
+            <span class="links_name">วันสัมภาษณ์</span>
+          </a>
+          <span class="tooltip">วันสัมภาษณ์</span>
+        </li>
+        <li>
+          <a href="ad_emylist.php">
+            <i class="fa-regular fa-address-book"></i>
+            <span class="links_name">รายชื่อพนักงาน</span>
+          </a>
+          <span class="tooltip">รายชื่อพนักงาน</span>
+        </li>
+        <li>
+          <a href="./ad_quiz.php  ">
+            <i class="fa-regular fa-file-lines"></i>
+            <span class="links_name">แบบทดสอบ</span>
+          </a>
+          <span class="tooltip">แบบทดสอบ</span>
+        </li>
+        <li>
+          <a href="./ad_admin.php">
+            <i class="fa-regular fa-user"></i>
+            <span class="links_name">แอดมิน</span>
+          </a>
+          <span class="tooltip">แอดมิน</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-chat'></i>
+            <span class="links_name">แชท</span>
+          </a>
+          <span class="tooltip">แชท</span>
+        </li>
+        <li class="profile">
+          <div class="profile-details">
 
-          <!--<img src="profile.jpg" alt="profileImg">-->
-          <div class="name_job">
-            <div class="name"></div>
-            <div class="profile_name"><?php
-                                      echo $_SESSION['name'];
-                                      ?></div>
+            <!--<img src="profile.jpg" alt="profileImg">-->
+            <div class="name_job">
+              <div class="name"></div>
+              <div class="profile_name"><?php echo $_SESSION['name']; ?></div>
+            </div>
           </div>
-        </div>
-        <a href="./logout.php">
-          <i class='bx bx-log-out' id="log_out"></i></a>
-      </li>
-    </ul>
+          <a href="./logout.php">
+            <i class='bx bx-log-out' id="log_out"></i></a>
+        </li>
+      </ul>
+  </nav>
   </div>
 
 

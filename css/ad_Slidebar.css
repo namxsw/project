@@ -6,15 +6,29 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
 .sidebar{
   position: fixed;
+  top: 0;
   height: 100%;
   width: 100px;
   background: #97372F;
   padding: 6px 14px;
-  z-index: 99;
-  transition: all 0.5s ease;
-  border-radius: 15px;
+  box-shadow: 0 5 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 .sidebar.open{
   width: 250px;

@@ -24,6 +24,14 @@
     include "./ad_Slidebar.php";
     ?>
 
+    <!-- <div class="breadcrumb">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Home</li>
+            </ol>
+        </nav>
+    </div> -->
+
     <div id="content">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -86,8 +94,8 @@
                                     <hr class="dropdown-divider">
                                 </li>
                                 <li>
-                                    <a class="del text-decoration-none p-3"href="./delete_post.php?Job_ID=<?php echo $row['Job_ID']; ?>" onclick="return confirm('คุณต้องการลบใช่หรือไม่')"> <i class='fa-solid fa-trash-can me-2'></i>ลบโพสต์</a>
-                                    
+                                    <a class="del text-decoration-none p-3" href="./delete_post.php?Job_ID=<?php echo $row['Job_ID']; ?>" onclick="return confirm('คุณต้องการลบใช่หรือไม่')"> <i class='fa-solid fa-trash-can me-2'></i>ลบโพสต์</a>
+
                                 </li>
                             </ul>
                         </div>
@@ -129,7 +137,7 @@
                     <span class="input-group-text" id="basic-addon1">หัวข้อ</span>
                     <input type="text" name="topic" class="form-control " placeholder="ชื่อ" aria-describedby="basic-addon1">
                     <span class="input-group-text" id="basic-addon1">ประเภทงาน</span>
-                    <select class="form-select" name="jobtype" aria-label="Default select example" >
+                    <select class="form-select" name="jobtype" aria-label="Default select example">
                         <option selected>เลือกประเภทงาน</option>
                         <option value="พนักงานเดลิเวอรี่">พนักงานเดลิเวอรี่</option>
                         <option value="พนักงานต้อนรับ">พนักงานต้อนรับ</option>
@@ -159,7 +167,7 @@
                             <option value="8 ">8 คน</option>
                             <option value="9 ">9 คน</option>
                             <option value="10 ">10 คน </option>
-                            
+
                         </select>
                     </div>
                 </div>
@@ -179,15 +187,15 @@
                         <option value="9 ">9 ชั่วโมง</option>
                         <option value="10 ">10 ชั่วโมง</option>
                     </select>
-                    
+
                     <span class="input-group-text" id="pttext">ค่าจ้าง part-time</span>
-                    <input type="text" id="pt" name="" class="form-control" placeholder="ค่าจ้าง(บาท)" aria-describedby="basic-addon1" >
+                    <input type="text" id="pt" name="" class="form-control" placeholder="ค่าจ้าง(บาท)" aria-describedby="basic-addon1">
                     <span class="input-group-text" id="pttext2">บาท(ต่อชั่วโมง)</span>
-                    
+
                     <span class="input-group-text" id="fttext">เงินเดือน</span>
                     <input type="text" id="ft" name="" class="form-control" placeholder="เงินเดือน(บาท)" aria-describedby="basic-addon1">
                     <span class="input-group-text" id="fttext2">บาท(ต่อเดือน)</span>
-                    
+
                     <span class="input-group-text" id="basic-addon1">วันหยุด</span>
                     <input type="text" name="dayoff" class="form-control" placeholder="Ex.วันจันทร์" aria-describedby="basic-addon1">
                 </div>
@@ -222,31 +230,30 @@
                             <textarea name="duty" class="form-control" placeholder="เพิ่มข้อความที่นี่" aria-describedby="basic-addon1" cols="50" rows="6"></textarea>
                         </div>
                     </div>
-                <script>
-                    function typesalary(){
-                        var x= document.getElementById("selecttype").value
-                        if(x=='Part-time'){
-                            document.getElementById("pttext").style.display="block"; 
-                            document.getElementById("pttext2").style.display="block"; 
-                            document.getElementById("pt").style.display="block";
-                            document.getElementById("fttext").style.display="none"; 
-                            document.getElementById("fttext2").style.display="none"; 
-                            document.getElementById("ft").style.display="none";
-                            document.getElementById('pt').name = 'jobsalary';
-                            document.getElementById('ft').name = 'jobsalary2';
-                         }else{
-                            document.getElementById("pttext").style.display="none"; 
-                            document.getElementById("pttext2").style.display="none"; 
-                            document.getElementById("pt").style.display="none";
-                            document.getElementById("fttext").style.display="block"; 
-                            document.getElementById("fttext2").style.display="block"; 
-                            document.getElementById("ft").style.display="block";
-                            document.getElementById('pt').name = 'jobsalary2';
-                            document.getElementById('ft').name = 'jobsalary';
-                         }
-                    }
-
-                </script>
+                    <script>
+                        function typesalary() {
+                            var x = document.getElementById("selecttype").value
+                            if (x == 'Part-time') {
+                                document.getElementById("pttext").style.display = "block";
+                                document.getElementById("pttext2").style.display = "block";
+                                document.getElementById("pt").style.display = "block";
+                                document.getElementById("fttext").style.display = "none";
+                                document.getElementById("fttext2").style.display = "none";
+                                document.getElementById("ft").style.display = "none";
+                                document.getElementById('pt').name = 'jobsalary';
+                                document.getElementById('ft').name = 'jobsalary2';
+                            } else {
+                                document.getElementById("pttext").style.display = "none";
+                                document.getElementById("pttext2").style.display = "none";
+                                document.getElementById("pt").style.display = "none";
+                                document.getElementById("fttext").style.display = "block";
+                                document.getElementById("fttext2").style.display = "block";
+                                document.getElementById("ft").style.display = "block";
+                                document.getElementById('pt').name = 'jobsalary2';
+                                document.getElementById('ft').name = 'jobsalary';
+                            }
+                        }
+                    </script>
 
                     <!-- <div class="inputct">
                             <h6>รูปภาพ:</h6>
