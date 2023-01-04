@@ -17,12 +17,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<?php
+include "./ad_Slidebar.php";
+?>
 
 <body onload="typesalary(event)">
 
-    <?php
-    include "./ad_Slidebar.php";
-    ?>
+    <!-- <div class="breadcrumb">
+    <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Home</li>
+  </ol>
+</div> -->
 
     <!-- <div class="breadcrumb">
         <nav aria-label="breadcrumb">
@@ -189,12 +194,12 @@
                     </select>
 
                     <span class="input-group-text" id="pttext">ค่าจ้าง part-time</span>
-                    <input type="text" id="pt" name="" class="form-control" placeholder="ค่าจ้าง(บาท)" aria-describedby="basic-addon1">
-                    <span class="input-group-text" id="pttext2">บาท(ต่อชั่วโมง)</span>
+                    <input type="number" id="pt" name="" class="form-control" placeholder="ค่าจ้าง(บาท)" min="1" max="1000000" aria-describedby="basic-addon1">
+                    <span class=" input-group-text" id="pttext2">บาท(ต่อชั่วโมง)</span>
 
                     <span class="input-group-text" id="fttext">เงินเดือน</span>
-                    <input type="text" id="ft" name="" class="form-control" placeholder="เงินเดือน(บาท)" aria-describedby="basic-addon1">
-                    <span class="input-group-text" id="fttext2">บาท(ต่อเดือน)</span>
+                    <input type="number" id="ft" name="" class="form-control" placeholder="เงินเดือน(บาท)" min="1" max="1000000" aria-describedby="basic-addon1">
+                    <span class=" input-group-text" id="fttext2">บาท</span>
 
                     <span class="input-group-text" id="basic-addon1">วันหยุด</span>
                     <input type="text" name="dayoff" class="form-control" placeholder="Ex.วันจันทร์" aria-describedby="basic-addon1">

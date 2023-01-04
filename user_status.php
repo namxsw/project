@@ -61,6 +61,7 @@
                                 <th>สถานะการส่งเอกสาร</th>
                                 <th>วันนัดสัมภาษณ์</th>
                                 <th>ผลการสัมภาษณ์</th>
+                                <th>สถานะ</th>
                             </thead>
                             <tbody>
                                 <?php
@@ -81,6 +82,8 @@
                                         ?>
                                     </td>
                                     <td><?php echo $row['interview_status']; ?></td>
+                                    <td><button type="button" class="btn btn-danger">ยกเลิก</button>
+                                    <button type="button" class="btn btn-success">ยืนยัน</button></td>
 
                             </tbody>
                         <?php
