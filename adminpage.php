@@ -46,14 +46,14 @@ include "./ad_Slidebar.php";
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./img/baya.jpg" class="d-block w-100" alt="baya">
+                    <img src="img/img1.jpg" class="d-block w-100" alt="baya">
                 </div>
-                <div class="carousel-item">
+                <!-- <div class="carousel-item">
                     <img src="img/baya.jpg" class="d-block w-100" alt="image">
                 </div>
                 <div class="carousel-item">
                     <img src="./img/baya.jpg" class="d-block w-100" alt="1">
-                </div>
+                </div> -->
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -69,11 +69,14 @@ include "./ad_Slidebar.php";
             <h2><b>ประกาศข่าวสาร </h2></b>
         </div>
         <div id="line"></div>
-
     </div>
-    <button id="addbn" type="button" class="btn btn-danger rigth" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+
+
+    <button id="addbn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         <i class='bx bxs-edit'> สร้างประกาศ</i>
     </button>
+
+
     <div class="pp">
         <?php
         include('./config/db.php');
@@ -81,6 +84,7 @@ include "./ad_Slidebar.php";
         while ($row = mysqli_fetch_array($query)) {
         ?>
     </div>
+
     <div class="appeal-container">
         <div class="appeal-content">
             <div class="appeal-content-info">

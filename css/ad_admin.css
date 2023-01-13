@@ -14,11 +14,11 @@ h1{
     margin-top: 3%;
 } 
 
-.table{
+/* .table{
     margin-top: 5%;
     width: 50%;
     
-}
+} */
 
 /* กรอบ */
 .appeal-container {
@@ -37,16 +37,14 @@ h1{
     max-width: 100%;
     margin: 20px;
     overflow: hidden;
-    width: 100%;
+    width: 95%;
 }
-
 
 .appeal-content-info {
     padding: 20px;
     position: relative;
     width: 100%;
 }
-
 
 .dataTables_wrapper{
     margin-left: 120px;
@@ -59,9 +57,11 @@ h1{
     margin-right: 95px;
 }
 
-
-
 .dataTables_paginate{
     margin-top: 15px;
     margin-right: 75px;
 }
+
+/* .table-striped{
+    border-color: #97392f;
+} */

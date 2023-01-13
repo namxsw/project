@@ -49,7 +49,7 @@
         <hr>
         <h4><b>คุณสมบัติ </b></h4>
         <h5><i class="fa-solid fa-venus-mars"></i> เพศ : <?php echo $row['Job_Gender']; ?></h5>
-        <h5><i class="fa-solid fa-person-circle-question"></i> อายุ(ปี) : <?php echo $row['Job_Age']; ?> ปี</h5>
+        <h5><i class="fa-solid fa-person-circle-question"></i> อายุ(ปี) : <?php echo $row['Job_Age']; ?> ปีขึ้นไป</h5>
         <h5><i class="fa-solid fa-graduation-cap"></i> ระดับการศึกษา : <?php echo $row['Job_Education']; ?></h5>
         <hr>
         <h4><b>หน้าที่รับผิดชอบ </b></h4>

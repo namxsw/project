@@ -32,7 +32,7 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="./img/bayasita.jpg" class="d-block w-100" alt="baya">
+                <img src="img/img1.jpg " class="d-block w-100" alt="baya">
             </div>
             <!-- <div class="carousel-item">
                 <img src="./img/baya.jpg" class="d-block w-100" alt="image">
@@ -102,7 +102,6 @@
         <div class="appeal-container">
             <div class="appeal-content">
                 <div class="appeal-content-info">
-
                     <tr>
                         <div class="post">
                             <p class="section-ap">
@@ -122,9 +121,6 @@
 
                         </div>
                     </tr>
-
-
-
 
                     <a class="btn-detail" type="button" href="user_apply.php ?Job_ID= 
                 <?php echo $row['Job_ID'] ?>">รายละเอียด</a>

@@ -45,7 +45,7 @@
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="./user_Home.php">หน้าหลัก</a>
+                        <a class="nav-link" href="#">หน้าหลัก</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">ค้นหางาน</a>

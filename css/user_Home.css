@@ -21,7 +21,7 @@ h5 {
 
 /* banner */
 .carousel-inner {
-    height: 620px;
+    height: 750px;
     padding: 30px;
 }
 
@@ -68,11 +68,13 @@ h5 {
     border-top: 0.3px solid black;
 }
 
+/* กรอบ */
+
 .appeal-container {
-    margin-left: 18%;
+    margin-left: 25%;
     margin-top: 10px;
     /* padding: 15px; */
-    width: 65%;
+    width: 49%;
     border-radius: 25px;
 }
 
@@ -128,10 +130,7 @@ h5 {
     border-radius: 5px;
     padding: 10px 15px;
     text-decoration: none;
-
-
 }
-
 
 
 footer {
@@ -142,8 +141,6 @@ footer {
     color: white;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
     opacity: 0.9;
-
-
 }
 
 footer h5 {

@@ -111,10 +111,10 @@
 
 
 
-                        <!-- <div class=" Edit col-12">
+                        <div class=" Edit col-12">
                             <button type="edit" class="btn btn-warning">แก้ไขข้อมูล</button>
                             <button type="save" class="btn btn-success">บันทึก</button>
-                        </div> -->
+                        </div>
                         <?php
                                 }
 

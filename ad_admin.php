@@ -48,11 +48,12 @@
 				<span style="font-size:35px; color:#000">
 					<center><strong>แอดมิน </strong></center>
 				</span>
-				<span class="add"><a href="./ad_admininfo.php" data-toggle="modal" class="btn btn-outline-primary ml-5"><i class="fa-solid fa-plus"></i> เพิ่มแอดมิน</a></span>
+				<!-- <span class="add"><a href="./ad_admininfo.php" data-toggle="modal" class="btn btn-outline-primary ml-5"><i class="fa-solid fa-plus"></i>เพิ่มแอดมิน</a></span> -->
 				<div class="appeal-container">
 					<div class="appeal-content">
 						<div class="appeal-content-info">
 							<table id="myTable" class="table table-striped table-bordered table-hover" style="margin-left: -95px;">
+							<span class="add"><a href="./ad_admininfo.php" data-toggle="modal" class="btn btn-primary ml-5"><i class="fa-solid fa-plus"></i>เพิ่มแอดมิน</a></span>
 
 								<thead>
 									<th style="width: 200px;">ชื่อผู้ใช้</th>
