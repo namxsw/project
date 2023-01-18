@@ -1,9 +1,9 @@
-*{
-    margin: 0;
-}
-body{
-    justify-content: center;
-    font-family: sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
+
+body {
+  background-color: #fff9f3 !important;
+  font-family: 'Mitr', sans-serif !important;
+  min-width: 370px;
 }
 
 

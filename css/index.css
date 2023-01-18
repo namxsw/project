@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
+
 body {
+  background-color: #fff9f3 !important;
+  font-family: 'Mitr', sans-serif !important;
+}
+
+/* body {
     background-color: #FFF9F3 !important;
     font-family: sans-serif;
     min-width: 370px;
-}
+} */
 
 .header {
     color: #97372f;
@@ -18,7 +25,7 @@ h5 {
 
 /* banner */
 .carousel-inner {
-    height: 620px;
+    width: 700px;
     padding: 30px;
 }
 
@@ -30,7 +37,8 @@ h5 {
 }
 
 .search-brn {
-    padding-left: 25%;
+    /* margin-top: 20px; */
+    padding-left: 30%;
 }
 
 .form-select {
@@ -65,11 +73,13 @@ h5 {
     border-top: 0.3px solid black;
 }
 
+/* กรอบ */
+
 .appeal-container {
-    margin-left: 18%;
+    margin-left: 25%;
     margin-top: 10px;
     /* padding: 15px; */
-    width: 65%;
+    width: 49%;
     border-radius: 25px;
 }
 

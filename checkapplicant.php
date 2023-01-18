@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <title>หน้าหลัก</title>
+    <title>ตรวจสอบข้อมูลผู้สมัคร</title>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="./img/BayasitaD.png">
     <link rel="stylesheet" href="./css/checkapplicant.css">
@@ -20,6 +20,7 @@
 
     <!-- css tadatable -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
+ 
 
 </head>
 <script>
@@ -49,7 +50,7 @@
     ?>
 
     <div class="container">
-        <div style="height:50px;"></div>
+        <div style="height:10px;"></div>
         <div class="well" style="margin:auto; padding:auto; width:110%;">
             <span style="font-size:35px; color:#000">
                 <center><strong>ตรวจสอบข้อมูลผู้สมัคร </strong></center>
@@ -57,13 +58,12 @@
             <div class="appeal-container">
                 <div class="appeal-content">
                     <div class="appeal-content-info">
-                        <table id="myTable" class="table table-striped table-bordered table-hover" style="margin-left: -95px;">
-
-                            <thead>
-                                <th style="width: 200px;">ชื่อผู้สมัคร</th>
-                                <th style="width: 200px;">นามสกุล</th>
-                                <th>งานที่สมัคร</th>
-                                <th>เวลาที่ส่งใบสมัคร</th>
+                        <table id="myTable" class="display" style="margin-left: -95px;">
+                            <thead style="text-align: center;">
+                                <th style="width: 120px ;">ชื่อผู้สมัคร</th>
+                                <th style="width: 120px;">นามสกุล</th>
+                                <th style="width: 100px;">งานที่สมัคร</th>
+                                <th style="width: 120px;">เวลาที่ส่งใบสมัคร</th>
                                 <th>สถานะ</th>
                                 <th>วันที่สัมภาษณ์</th>
                                 <th>จัดการ</th>
@@ -92,8 +92,8 @@
                                             }
                                             ?>
                                         </td>
-                                        <td> <a href="ad_stdInfo.php ?Applicant_ID= <?php echo $row['Applicant_ID'] ?>"><button type="button" class="btn btn-outline-warning">ตรวจสอบ</button></a>
-                                            <button type="button" class="btn btn-outline-success modal_data" id="<?php echo $row['Applicant_ID'] ?>">นัดวันสัมภาษณ์</button>
+                                        <td> <a href="ad_stdInfo.php ?Applicant_ID= <?php echo $row['Applicant_ID'] ?>"><button type="button" class="btn btn-outline-warning"><i class="fa-solid fa-user-check"></i> ตรวจสอบ</button></a>
+                                            <button type="button" class="btn btn-outline-success modal_data" id="<?php echo $row['Applicant_ID'] ?>"><i class="fa-solid fa-calendar-plus"></i> นัดสัมภาษณ์</button>
                                         </td>
 
                                     </tr>
@@ -148,5 +148,5 @@
         })
     });
 </script>
-
+</body>
 </html>

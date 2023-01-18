@@ -71,11 +71,12 @@ include "./ad_Slidebar.php";
         <div id="line"></div>
     </div>
 
-
+<!-- 
     <button id="addbn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         <i class='bx bxs-edit'> สร้างประกาศ</i>
-    </button>
+    </button> -->
 
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-regular fa-square-plus"></i> สร้างประกาศ</button>
 
     <div class="pp">
         <?php
@@ -134,7 +135,7 @@ include "./ad_Slidebar.php";
 <!-- Modal -->
 <div id="staticBackdrop" class="modal fade" role="dialog">
     <div class="modal-dialog modal-dialog-scrollable">
-        <form method="POST" action="./adjob.php" enctype="multipart/form-data" class="modal-content" style="width:220%;  height: 75vh;  padding:0 20px;">
+        <form method="POST" action="./adjob.php" enctype="multipart/form-data" class="modal-content" style="width:200%;  height: 80vh;  padding:0 20px;">
             <div class="modal-header">
                 <h4 class="modal-title">สร้างประกาศ</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
+
 body {
-    background-color: #fff9f3 !important;
-    font-family: sans-serif;
-    margin-top: 90px !important;
+  background-color: #fff9f3 !important;
+  font-family: 'Mitr', sans-serif !important;
 }
+
 h1{
     text-align: center;
     color: #97392f  ; 

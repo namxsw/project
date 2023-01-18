@@ -49,7 +49,7 @@
     ?>
 
     <div class="container">
-        <div style="height:50px;"></div>
+        <div style="height:10px;"></div>
         <div class="well" style="margin:auto; padding:auto; width:110%;">
             <span style="font-size:35px; color:#000">
                 <center><strong>ข้อมูลการสัมภาษณ์ </strong></center>
@@ -58,14 +58,12 @@
                 <div class="appeal-content">
                     <div class="appeal-content-info">
                         <table id="myTable" class="table table-striped table-bordered table-hover" style="margin-left: -95px;">
-
-                            <thead>
-
-                                <th>วันที่สัมภาษณ์</th>
+                            <thead style="text-align: center;">
+                                <th>วันสัมภาษณ์</th>
                                 <th>เวลาสัมภาษณ์</th>
 
-                                <th style="width: 200px;">ชื่อผู้สมัคร</th>
-                                <th style="width: 200px;">นามสกุล</th>
+                                <th style="width: 180px;">ชื่อผู้สมัคร</th>
+                                <th style="width: 180px;">นามสกุล</th>
 
                                 <th>งานที่สมัคร</th>
 
@@ -90,8 +88,8 @@
                                         <!-- <td><?php echo date("วันที่ d/m/Y เวลา h:i a", strtotime($row['Applicant_Date'])) ?></td> -->
                                         <!-- <td><?php echo $row['Status']; ?></td> -->
                                         <td>
-                                            <a href="ad_interview.php ?denined_Applicant_ID= <?php echo $row['Applicant_ID'] ?>"><button type="button" class="btn btn-outline-warning">ไม่ผ่าน</button></a>
-                                            <a href="ad_interview.php ?Approved_Applicant_ID= <?php echo $row['Applicant_ID'] ?>"><button type="button" class="btn btn-outline-success modal_data">ผ่าน</button></a>
+                                            <a href="ad_interview.php ?denined_Applicant_ID= <?php echo $row['Applicant_ID'] ?>"><button type="button" class="btn btn-outline-warning"><i class="fa-regular fa-circle-xmark"></i> ไม่ผ่าน</button></a>
+                                            <a href="ad_interview.php ?Approved_Applicant_ID= <?php echo $row['Applicant_ID'] ?>"><button type="button" class="btn btn-outline-success modal_data"><i class="fa-regular fa-circle-check"></i> ผ่าน</button></a>
 
                                         </td>
 

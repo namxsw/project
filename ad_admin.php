@@ -43,7 +43,7 @@
 
 	<tbody>
 		<div class="container">
-			<div style="height:50px;"></div>
+			<div style="height:90px;"></div>
 			<div class="well" style="margin:auto; padding:auto; width:110%;">
 				<span style="font-size:35px; color:#000">
 					<center><strong>แอดมิน </strong></center>
@@ -53,13 +53,14 @@
 					<div class="appeal-content">
 						<div class="appeal-content-info">
 							<table id="myTable" class="table table-striped table-bordered table-hover" style="margin-left: -95px;">
-							<span class="add"><a href="./ad_admininfo.php" data-toggle="modal" class="btn btn-primary ml-5"><i class="fa-solid fa-plus"></i>เพิ่มแอดมิน</a></span>
+								<span class="add"><a href="./ad_admininfo.php" data-toggle="modal" class="btn btn-primary ml-5"><i class="fa-regular fa-square-plus"></i> เพิ่มแอดมิน</a></span>
 
-								<thead>
-									<th style="width: 200px;">ชื่อผู้ใช้</th>
-									<th style="width: 250px;">ชื่อ</th>
-									<th style="width: 250px;">นามสกุล</th>
-									<th style="width: 100px;">role</th>
+								<thead style="text-align: center;">
+									<th style="width: 120px;">ชื่อผู้ใช้</th>
+									<th style="width: 160px;">ชื่อ</th>
+									<th style="width: 160px;">นามสกุล</th>
+									<th>อีเมล</th>
+									<th style="width: 110px;">สถานะ</th>
 									<th>จัดการ</th>
 
 								</thead>
@@ -72,22 +73,17 @@
 									?>
 										<tr>
 											<td><?php echo $row['User_username']; ?></td>
-
 											<td><?php echo $row['User_Fname']; ?></td>
 											<td><?php echo $row['User_Lname']; ?></td>
+											<td><?php echo $row['User_Email']; ?></td>
 											<td><?php echo $row['UserType_Name']; ?></td>
 											<td>
 
 												<!-- แก้ไข -->
-
-												<a type="button" style="width: 150px;" class="btn btn-outline-warning" href="./editadminform.php?User_id=<?php echo $row['User_id']; ?>" onclick="return confirm('คุณต้องการแก้ไขใช่หรือไม่')">แก้ไข</a>
+												<a type="button" style="width: 120px;" class="btn btn-outline-warning" href="./editadminform.php?User_id=<?php echo $row['User_id']; ?>" onclick="return confirm('คุณต้องการแก้ไขใช่หรือไม่')"><i class="fa-regular fa-pen-to-square"></i> แก้ไข</a>
 												<!-- ลบ -->
-
-												<a type="button" style="width: 150px;" class="btn btn-outline-danger" href="./delete_admin.php?User_id=<?php echo $row['User_id']; ?>" onclick="return confirm('คุณต้องการลบใช่หรือไม่')">ลบ</a>
-
-
+												<a type="button" style="width: 120px;" class="btn btn-outline-danger" href="./delete_admin.php?User_id=<?php echo $row['User_id']; ?>" onclick="return confirm('คุณต้องการลบใช่หรือไม่')"><i class="fa-regular fa-trash-can"></i> ลบ</a>
 											</td>
-
 
 										</tr>
 									<?php
