@@ -28,17 +28,28 @@
     $tell = $_POST["tel"];
     $conpass = $_POST["compass"];
 
+    date_default_timezone_set('Asia/Bangkok');
+    $date = date("Ymd");
+    $numrand = (mt_rand());
+    $filetmp3 = $_FILES['picc']['tmp_name'];
+    $fileoldname3 = strrchr($_FILES['picc']['name'], ".");
+    $filename3 = $date . $numrand . $fileoldname3;
+    $filetype3 = $_FILES['picc']['type'];
+    $PIC = $filename3;
+    $filepath3 = './img/' . $filename3;
+
 
 
     if ($password != $conpass) {
       echo "<script>alert('รหัสผ่านไม่ตรงกัน')</script>";
     }
-    if ($password != "" && $password != "" && $firstname != "" && $lastname != "" && $email != "" && $birthday != "" && $tell != "" && $conpass != "") {
+    if ($password != "" && $password != "" && $firstname != "" && $lastname != "" && $email != "" && $birthday != "" && $tell != "" && $conpass != "" && $PIC) {
       $password = md5($password);
-      $sql = "INSERT INTO `user`(`User_username`, `User_Password`, `User_Fname`, `User_Lname`, `User_Tel`, `User_Email`, `User_Birthday`, `Usertype_Id`) 
-          VALUES ('$username','$password','$firstname','$lastname','$tell','$email','$birthday','2')";
+      $sql = "INSERT INTO `user`(`User_username`, `User_Password`, `User_Fname`, `User_Lname`, `User_Tel`, `User_Email`, `User_Birthday`, `Usertype_Id`, `PIC`) 
+          VALUES ('$username','$password','$firstname','$lastname','$tell','$email','$birthday','2','$PIC')";
       $result = mysqli_query($conn, $sql);
       if ($result) {
+        move_uploaded_file($filetmp3, $filepath3);
         echo "<script>alert('สมัครสำเร็จ')</script>";
         echo "<script>window.location='index.php';</script>";
       } else {
@@ -54,7 +65,7 @@
   <div class="back">
     <a href="./index.php"><i class="fa-solid fa-angles-left"></i></a>
   </div>
-  <form method="post">
+  <form method="post"enctype="multipart/form-data">
     <div class="appeal-container">
       <div class="appeal-content">
         <div class="appeal-content-info">
@@ -100,6 +111,10 @@
             <div class="text-start ms-5 ps-4 mb-1">ยืนยันรหัสผ่าน</div>
             <input type="password" class="form-control" name="compass" aria-describedby="compass" style="width: 450px;">
           </div>
+          <div class="des_input">รูปภาพ</div>
+          <input class="sqr-input col-12 form-control" type="file" placeholder="รูปภาพ" name="picc" >
+          <input class="form-control col-12" type="text" />
+
           <button type="submit" name="signup" class="btn btn-primary">สมัครสมาชิก</button>
 
         </div>

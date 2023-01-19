@@ -41,7 +41,7 @@
     $filetype = $_FILES['File']['type'];
     $education = $filename;
     $filepath = './img/' . $filename;
-    // echo "gender".$gender."card".$card."firstname".$firstname."pref".$pref."lastname".$lastname."email".$email."birthday".$birthday."address".$address."tell".$tell."jobtype".$jobtype."factculty".$factculty."dept".$dept."classs".$classs."";
+    
     $filetmp2 = $_FILES['File1']['tmp_name'];
     $fileoldname2 = strrchr($_FILES['File1']['name'], ".");
     $filename2 = $date . $numrand . $fileoldname2;

@@ -32,16 +32,15 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <!-- <li>
                                 <label class="upimg">
-                                    <!-- <i class="fa fa-camera" aria-hidden="true"> อัพโหลดรูปโปรไฟล์</i>
-                                    <form id="upload" method="POST" enctype="multipart/form-data"></form> -->
-                                    <div class="mb-3">
-                                        <label for="formFileSm" class="form-label">อัพโหลดรูปโปรไฟล์</label>
-                                        <input class="form-control form-control-sm" id="formFileSm" type="file">
-                                    </div>
+                                    
+                                    <div class="des_input">รูปภาพ</div>
+                                    <input class="sqr-input col-12 form-control" type="file" placeholder="รูปภาพ" name="PIC" required>
+                                    <input class="form-control col-12" type="text" name="User_id" value="<?php echo $User_id; ?>" hidden />
+
                                 </label>
-                            </li>
+                            </li> -->
 
                             <!-- <li><?php echo $_SESSION['name']; ?><b class="caret"></li> -->
                         </ul>
@@ -56,47 +55,50 @@
                     include('./config/db.php');
                     $user = $_SESSION['username'];
                     $query = mysqli_query($conn, "select * from user  WHERE `User_username`='$user'");
-                    while ($row = mysqli_fetch_array($query)) {
+                    while ($row = mysqli_fetch_array($query)) 
+                    {
                     ?>
-                    
-
-                    <div class="from-input">
-                        <div class="input-group prefix mt-4">
-                            <!-- <span class="input-group-text">คำนำหน้า</span>
+                    <img src="./img/<?php echo $row['PIC']; ?>" alt="" width="100px" height="100px" >
+                        <div class="from-input">
+                            <div class="input-group prefix mt-4">
+                                <!-- <span class="input-group-text">คำนำหน้า</span>
                             <input type="text" aria-label="prefix" class="form-control from-input-text" value=""> -->
-                            <span class="input-group-text">ชื่อ</span>
-                            <input type="text" aria-label="firstname" class="form-control from-input-text"value="<?php echo $row['User_Fname']; ?>">
-                            <span class="input-group-text">นามสกุล</span>
-                            <input type="text" aria-label="lastname" class="form-control from-input-text" value="<?php echo $row['User_Lname']; ?>">
-                        </div>
+                            <!-- <img src="../img/"<?php echo $row['PIC']; ?>> -->
+                            
 
-                        <div class="input-group prefix mt-4">
-                            <span class="input-group-text">วันเกิด</span>
-                            <input type="date" aria-label="birthday" class="form-control from-input-text" value="<?php echo $row['User_Birthday']; ?>">
-                            <!-- <span class="input-group-text">สัญชาติ</span>
+                                <span class="input-group-text">ชื่อ</span>
+                                <input type="text" aria-label="firstname" class="form-control from-input-text" value="<?php echo $row['User_Fname']; ?>">
+                                <span class="input-group-text">นามสกุล</span>
+                                <input type="text" aria-label="lastname" class="form-control from-input-text" value="<?php echo $row['User_Lname']; ?>">
+                            </div>
+
+                            <div class="input-group prefix mt-4">
+                                <span class="input-group-text">วันเกิด</span>
+                                <input type="date" aria-label="birthday" class="form-control from-input-text" value="<?php echo $row['User_Birthday']; ?>">
+                                <!-- <span class="input-group-text">สัญชาติ</span>
                             <input type="text" aria-label="First name" class="form-control from-input-text" value=""> -->
-                            <!-- <span class="input-group-text">หมายเลขบัตรประชาชน</span>
+                                <!-- <span class="input-group-text">หมายเลขบัตรประชาชน</span>
                             <input type="text" aria-label="idcrad" class="form-control from-input-text" value=""> -->
-                        </div>
+                            </div>
 
-                        <div class="input-group prefix mt-4">
-                            <span class="input-group-text">เบอร์โทรศัพท์</span>
-                            <input type="text" aria-label="tel" class="form-control from-input-text" value="<?php echo $row['User_Tel']; ?>">
-                            <span class="input-group-text">อีเมล</span>
-                            <input type="text" aria-label="email" class="form-control from-input-text" value="<?php echo $row['User_Email']; ?>">
-                            <!-- <span class="input-group-text">Line ID</span>
+                            <div class="input-group prefix mt-4">
+                                <span class="input-group-text">เบอร์โทรศัพท์</span>
+                                <input type="text" aria-label="tel" class="form-control from-input-text" value="<?php echo $row['User_Tel']; ?>">
+                                <span class="input-group-text">อีเมล</span>
+                                <input type="text" aria-label="email" class="form-control from-input-text" value="<?php echo $row['User_Email']; ?>">
+                                <!-- <span class="input-group-text">Line ID</span>
                             <input type="text" aria-label="line" class="form-control from-input-text" value=""> -->
-                        </div>
+                            </div>
 
-                        <!-- <div class="input-group prefix mt-4">
+                            <!-- <div class="input-group prefix mt-4">
                             <span class="input-group-text">ที่อยู่</span>
                             <input type="address" aria-label="address" class="form-control from-input-text" value="<?php echo $row['User_Address']; ?>">
                             
                         </div> -->
 
-                        <hr>
+                            <hr>
 
-                        <!-- <div class="education">
+                            <!-- <div class="education">
                             <h3>การศึกษา</h3>
                         </div>
 
@@ -109,17 +111,21 @@
                             <input type="text" aria-label="classyear" class="form-control from-input-text" value="">
                         </div> -->
 
+                        <div class="des_input">รูปภาพ</div>
+                                    <input class="sqr-input col-12 form-control" type="file" placeholder="รูปภาพ" name="PIC" required>
+                                    <input class="form-control col-12" type="text" name="User_id" value="<?php echo $User_id; ?>" hidden />
 
-
-                        <div class=" Edit col-12">
-                            <button type="edit" class="btn btn-warning">แก้ไขข้อมูล</button>
-                            <button type="save" class="btn btn-success">บันทึก</button>
-                        </div>
+                            <div class=" Edit col-12">
+                                <button type="edit" class="btn btn-warning">แก้ไขข้อมูล</button>
+                               
+                                <button type="save" name="addwork" class="btn btn-success submitBtn" id="submit" value="ยืนยันการสมัคร">ยืนยันการบันทึก</button>
+                            </div>
                         <?php
-                                }
+                    
+                    }
 
-                                ?>
-                    </div>
+                        ?>
+                        </div>
                 </div>
             </div>
 
