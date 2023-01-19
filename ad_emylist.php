@@ -47,7 +47,7 @@
 
     <tbody>
         <div class="container">
-            <div style="height:50px;"></div>
+            <div style="height:10px;"></div>
             <div class="well" style="margin:auto; padding:auto; width:110%;">
                 <span style="font-size:35px; color:#000">
                     <center><strong>รายชื่อพนักงาน </strong></center>
@@ -57,13 +57,13 @@
                         <div class="appeal-content-info">
                             <table id="myTable" class="table table-striped table-bordered table-hover" style="margin-left: -95px;">
 
-                                <thead>
-                                    <th>รหัสพนักงาน</th>
-                                    <th>ชื่อ</th>
-                                    <th>สกุล</th>
-                                    <th>หน้าที่</th>
+                                <thead style="text-align: center;">
+                                    <th style="width: 90px;">รหัสพนักงาน</th>
+                                    <th style="width: 120px;">ชื่อ</th>
+                                    <th style="width: 120px;">สกุล</th>
+                                    <th style="width: 100px;">หน้าที่</th>
                                     <th>เบอร์โทร</th>
-                                    <th>อีเมล</th>
+                                    <th style="width: 150px;">อีเมล</th>
                                     <th>เรทติ้ง</th>
                                     <th>แก้ไข / ลบ</th>
 
@@ -84,8 +84,8 @@
                                             <td><?php echo $row['emp_email']; ?></td>
                                             <td><?php echo $row['emp_rating']; ?></td>
                                             <td>
-                                                <a href="ad_stdInfo.php ?Applicant_ID= <?php echo $row['emp_id'] ?>"><button type="button" class="btn btn-outline-info">แก้ไข</button></a>
-                                                <a href="ad_emylist.php ?del_Applicant_ID= <?php echo $row['emp_id'] ?>"><button type="button" class="btn btn-outline-danger">ลบ</button></a>
+                                                <a href="ad_stdInfo.php ?Applicant_ID= <?php echo $row['emp_id'] ?>"><button type="button" class="btn btn-outline-info"><i class="fa-regular fa-pen-to-square"></i> แก้ไข</button></a>
+                                                <a href="ad_emylist.php ?del_Applicant_ID= <?php echo $row['emp_id'] ?>"><button type="button" class="btn btn-outline-danger"><i class="fa-regular fa-trash-can"></i> ลบ</button></a>
                                             </td>
 
                                         </tr>

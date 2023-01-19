@@ -23,20 +23,6 @@ include "./ad_Slidebar.php";
 
 <body onload="typesalary(event)">
 
-    <!-- <div class="breadcrumb">
-    <ol class="breadcrumb">
-    <li class="breadcrumb-item active" aria-current="page">Home</li>
-  </ol>
-</div> -->
-
-    <!-- <div class="breadcrumb">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">Home</li>
-            </ol>
-        </nav>
-    </div> -->
-
     <div id="content">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -48,12 +34,6 @@ include "./ad_Slidebar.php";
                 <div class="carousel-item active">
                     <img src="img/img1.jpg" class="d-block w-100" alt="baya">
                 </div>
-                <!-- <div class="carousel-item">
-                    <img src="img/baya.jpg" class="d-block w-100" alt="image">
-                </div>
-                <div class="carousel-item">
-                    <img src="./img/baya.jpg" class="d-block w-100" alt="1">
-                </div> -->
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -71,11 +51,7 @@ include "./ad_Slidebar.php";
         <div id="line"></div>
     </div>
 
-
-    <button id="addbn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        <i class='bx bxs-edit'> สร้างประกาศ</i>
-    </button>
-
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-regular fa-square-plus"></i> สร้างประกาศ</button>
 
     <div class="pp">
         <?php
@@ -134,7 +110,7 @@ include "./ad_Slidebar.php";
 <!-- Modal -->
 <div id="staticBackdrop" class="modal fade" role="dialog">
     <div class="modal-dialog modal-dialog-scrollable">
-        <form method="POST" action="./adjob.php" enctype="multipart/form-data" class="modal-content" style="width:220%;  height: 75vh;  padding:0 20px;">
+        <form method="POST" action="./adjob.php" enctype="multipart/form-data" class="modal-content" style="width:200%;  height: 80vh;  padding:0 20px;">
             <div class="modal-header">
                 <h4 class="modal-title">สร้างประกาศ</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
+
 body {
-  background-color: #FFF9F3 !important;
-  font-family: sans-serif;
+  background-color: #fff9f3 !important;
+  font-family: 'Mitr', sans-serif !important;
   min-width: 370px;
 }
 
 /* ปุ่มสมัครงาน */
 .btn {
-  margin-top: 5%;
+  margin-top: 8%;
   width: 180px;
   height: 50px;
   position: absolute;
-  right: 44.5%;
+  right: 40%;
 }
 
 .tit .modal-title {
@@ -69,18 +71,78 @@ body {
 .Des h5 {
   margin-left: 30px;
   margin-top: 15px;
+  /* color: aqua; */
+  font-size: 16px;
+}
+
+.Des .fa-solid {
+  color: #3e2723;
+  margin-right: 5px;
 }
 
 hr {
   margin-top: 15px;
-  width: 48%;
+  width: 60%;
 }
 
 .card {
   position: absolute;
-  top: -450px;
-  left: 70%;
+  top: -653px;
+  left: 65%;
   background-color: #fff;
   border-radius: 15px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  height: 160px;
+  padding: 15px;
 }
 
+/* กรอบ */
+
+.appeal-container {
+  margin-left: 150px;
+  margin-top: 50px;
+  padding: 15px;
+  width: 55%;
+  height: auto;
+  border-radius: 25px;
+}
+
+.appeal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  max-width: 100%;
+  margin: 20px;
+  overflow: hidden;
+  width: 95%;
+}
+
+/* 
+.appeal-content h5 {
+  margin: 0;
+  text-transform: uppercase;
+} */
+
+
+/* .appeal-preview {
+  padding: 30px;
+  font-weight: 400;
+  max-width: 250px;
+} */
+
+.appeal-content-info {
+  /* padding: 30px; */
+  padding-bottom: 40px;
+  padding-top: 10px;
+  position: relative;
+  width: 80%;
+}
+
+/* .progress-container {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  text-align: right;
+  width: 150px;
+} */

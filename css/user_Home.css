@@ -1,9 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
+
 body {
+  background-color: #fff9f3 !important;
+  font-family: 'Mitr', sans-serif !important;
+  min-width: 370px;
+/* margin: 50px; */
+}
+
+
+/* body {
     background-color: #FFF9F3 !important;
     font-family: sans-serif;
     min-width: 370px;
     margin: 50px;
-}
+} */
 
 .header {
     color: #97372f;
@@ -21,7 +31,7 @@ h5 {
 
 /* banner */
 .carousel-inner {
-    height: 750px;
+    width: 700px;
     padding: 30px;
 }
 
@@ -33,7 +43,8 @@ h5 {
 }
 
 .search-brn {
-    padding-left: 25%;
+    /* margin-top: 20px; */
+    padding-left: 30%;
 }
 
 .form-select {

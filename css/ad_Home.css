@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
+
 body {
   background-color: #fff9f3 !important;
-  font-family: sans-serif;
-  margin-top: 90px !important;
-
+  font-family: 'Mitr', sans-serif !important;
 }
+
 
 /* ----------------------banner------------------------------ */
 #content {
-  height: 500px;
-  margin-right: 150px;
+  width: 1400px;
+  /* height: 00px; */
+  margin-right: 100px;
 }
 
 .carousel-item img {
@@ -24,7 +26,7 @@ body {
 }
 
 .btn {
-  margin-top: 60px;
+  margin-top: -px;
   width: 180px;
   height: 50px;
   position: absolute;
@@ -32,7 +34,7 @@ body {
 }
 
 .tt {
-  margin-top: 80px;
+  margin-top: 50px;
   margin-left: 200px;
 
 }
@@ -65,7 +67,7 @@ body {
 /* post */
 
 .post h4 {
-  margin-top: 150px;
+  margin-top: 50px;
   margin-left: 590px;
 }
 
@@ -92,14 +94,13 @@ body {
 }
 
 .pp {
-  margin-top: 10%;
+  margin-top: 6%;
 }
 
 .appeal-container {
   margin-left: 28%;
-  margin-top: 3%;
-  padding: 0;
-  width: 45%;
+  margin-top: 30px;
+  width: 50%;
   border-radius: 25px;
 }
 
@@ -143,19 +144,18 @@ body {
   border: none;
   border-radius: 5px;
   padding: 10px 15px;
-  
+
 
 }
 
-.edit{
+.edit {
   color: #000;
 }
 
-.del{
-color: #000;
+.del {
+  color: #000;
 }
 
-#ft , #fttext , #fttext2
-{
+#ft, #fttext, #fttext2 {
   display: none;
 }

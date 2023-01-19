@@ -1,23 +1,25 @@
-body {
-    background-color: #fff9f3 !important;
-    font-family: sans-serif;
-    margin-top: 90px !important;
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
 
+body {
+  background-color: #fff9f3 !important;
+  font-family: 'Mitr', sans-serif !important;
+    margin-top: 90px !important;
 }
 
 /* กรอบ */
 .appeal-container {
     /* padding-left: -20px;  */
     padding-top: 30px;
-    width: 100%;
+    width: 95%;
     height: auto;
-    border-radius: 25px;
+    border-radius: 15px;
+    border: 3px;
 }
 
 .appeal-content {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 10px rgba(0.1, 0.1, 0.1, 0.1);
     display: flex;
     max-width: 100%;
     margin: 20px;
@@ -32,6 +34,8 @@ body {
     width: 100%;
 }
 
+
+/* ตาราง */
 
 .dataTables_wrapper{
     margin-left: 120px;

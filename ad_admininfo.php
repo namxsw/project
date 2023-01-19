@@ -23,11 +23,12 @@
       <a href="javascript:history.back()">
         <i class="fa-solid fa-angles-left"></i>ย้อนกลับ</a>
 
-      <h1><b>เพิ่มแอดมิน</h1>
+      <!-- <h1><b>เพิ่มแอดมิน</h1> -->
       <div class="appeal-container1">
         <div class="appeal-content">
           <div class="appeal-content-info">
             <h3><b>ข้อมูลแอดมิน</h3>
+            <hr>
             <div class="input-group mb-3">
               <span class="input-group-text" id="inputGroup-sizing-default">ชื่อผู้ใช้</span>
               <input type="text" class="form-control" name="username" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
@@ -63,10 +64,7 @@
           </div>
         </div>
       </div>
-      
-
+    
     </form>
-
 </body>
-
 </html>
