@@ -122,7 +122,14 @@
                             </div>
                         
                             <div class="edu mt-3">
+<<<<<<< HEAD
                                 <span> <b>หลักฐานทางการศึกษา : <a href="PageUploadToMySQL3.php" >View files</a></b></span>
+=======
+
+                                <span> <b>หลักฐานทางการศึกษา :<a href="PageUploadToMySQL3.php">View files1</a></b></span>
+                                <span> <b>หลักฐานทางการศึกษา :<a href="PageUploadToMySQL3.php">View files2</a></b></span>
+
+>>>>>>> 4c8a9583a0452cc1df818c0ae82f15d403887933
                             </div>
 
                             <div class="button">
