@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,7 +59,7 @@
             </div>
 
             <div class="col-12">
-                <input class="form-control" type="search" placeholder="Search">
+                <input class="form-control"  name="a" type="search" placeholder="Search">
             </div>
 
             <div class="col-12">

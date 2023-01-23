@@ -67,6 +67,8 @@
                                 <th>สถานะ</th>
                                 <th>วันที่สัมภาษณ์</th>
                                 <th>จัดการ</th>
+                                <th>ผลการสัมภาษณ์</th>
+                                <th>ผลการสมัคร</th>
 
                             </thead>
                             <tbody>
@@ -95,6 +97,12 @@
                                         <td> <a href="ad_stdInfo.php ?Applicant_ID= <?php echo $row['Applicant_ID'] ?>"><button type="button" class="btn btn-outline-warning"><i class="fa-solid fa-user-check"></i> ตรวจสอบ</button></a>
                                             <button type="button" class="btn btn-outline-success modal_data" id="<?php echo $row['Applicant_ID'] ?>"><i class="fa-solid fa-calendar-plus"></i> นัดสัมภาษณ์</button>
                                         </td>
+                                        <td><?php echo $row['interview_status']; ?></td>
+                                        <td><?php 
+                                        if ($row['approve_user'] == 'ยกเลิก' ){
+                                            echo "สละสิทธิ";
+                                        }else{
+                                        echo $row['approve_user'];} ?></td>
 
                                     </tr>
                                 <?php

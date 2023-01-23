@@ -82,8 +82,28 @@
                                         ?>
                                     </td>
                                     <td><?php echo $row['interview_status']; ?></td>
-                                    <td><button type="button" class="btn btn-danger">ยกเลิก</button>
-                                    <button type="button" class="btn btn-success">ยืนยัน</button></td>
+                                    <td><?php 
+                                    if ($row['interview_status']=='ผ่านการสัมภาษณ์'){ 
+                                        if ($row['approve_user']=='ยืนยัน' || $row['approve_user']=='ยกเลิก') { 
+                                            echo $row ['approve_user'];
+                                        }else{
+                                    
+                                        ?>
+                                        
+                                        <a href="user_status.php ?denined_Applicant_ID= <?php echo $row['Applicant_ID'] ?>"><button type="button" class="btn btn-outline-warning"><i class="fa-regular fa-circle-xmark"></i> ยกเลิก</button></a>
+                                        <a href="user_status.php ?Approved_Applicant_ID= <?php echo $row['Applicant_ID'] ?>"><button type="button" class="btn btn-outline-success modal_data"><i class="fa-regular fa-circle-check"></i> ยืนยัน</button></a>
+                                        <?php
+                                    }}
+                                    elseif ($row['interview_status']=='ไม่ผ่านการสัมภาษณ์'){
+                                        echo "ไม่ผ่านการสัมภาษณ์";
+                                    }
+                                    else {
+
+                                        echo "รอสัมภาษณ์";
+                                        
+
+                                    }?>
+                                    </td>
 
                             </tbody>
                         <?php
@@ -111,5 +131,49 @@
     </footer>
 
 </body>
+<?php 
+    if (isset($_GET['Approved_Applicant_ID'])){
+        $Approved_Applicant_ID = $_GET['Approved_Applicant_ID'];
+    $query_approved = mysqli_query($conn, "select applicant.* ,job.Job_Type from applicant join job on (applicant.Job_id= job.Job_ID) WHERE `Applicant_ID`= $Approved_Applicant_ID");
+    $rowd = mysqli_fetch_array($query_approved);
+    extract($rowd);
+    $query_emp = mysqli_query($conn, "SELECT * FROM `employee`");
+    $numRows = mysqli_num_rows($query_emp);
+    $emprow_for_id =  $numRows + 1;
+
+    $emp_Fname = $rowd['Applicant_Fname'];
+    $emp_Lname = $rowd['Applicant_Lname'];
+    $emp_Job = $rowd['Job_ID'];
+    $emp_tel = $rowd['Applicant_Tel'];
+    $emp_email = $rowd['Applicant_Email'];
+    $emp_id = 'BY0' . $emp_Job. '0' . $emprow_for_id;
+
+    
+    $approved_update = mysqli_query($conn, "UPDATE `applicant` SET `approve_user`='ยืนยัน' WHERE `Applicant_ID`= $Approved_Applicant_ID");
+    if ($approve_user =='ยืนยัน'){
+        if ($approved_update) {
+            $add_employee = mysqli_query($conn, "INSERT INTO `employee`(`emp_id`, `emp_Fname`, `emp_Lname`, `emp_Job`, `emp_tel`, `emp_email`) VALUES ('$emp_id','$emp_Fname','$emp_Lname', '$emp_Job','$emp_tel','$emp_email')");
+
+            if ($add_employee) {
+
+                echo "<script>alert('อัพเดทสถานะการสัมภาษณ์เสร็จสิ้น')</script>";
+            } else {
+                echo "<script>alert('ผิดพลาด กรุณาลองอีกครั้ง2 $emp_id,$emp_Fname,$emp_Lname, $emp_Job, $emp_tel, $emp_email')</script>";
+            }
+        } else {
+            echo "<script>alert('ผิดพลาด กรุณาลองอีกครั้ง1')</script>";
+        }
+    }else{
+        
+    }
+
+    }
+    
+    if (isset($_GET['denined_Applicant_ID'])) {
+        $denined_Applicant_ID = $_GET['denined_Applicant_ID'];
+        $denined_update = mysqli_query($conn, "UPDATE `applicant` SET `approve_user`='ยกเลิก' WHERE `Applicant_ID`= $denined_Applicant_ID");
+    }
+    
+?>
 
 </html>

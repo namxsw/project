@@ -177,21 +177,18 @@ if (isset($_GET['Approved_Applicant_ID'])) {
     $emp_id = 'BY0' . $emp_Job. '0' . $emprow_for_id;
 
     $approved_update = mysqli_query($conn, "UPDATE `applicant` SET `interview_status`='ผ่านการสัมภาษณ์' WHERE `Applicant_ID`= $Approved_Applicant_ID");
-    if ($approve_user =='ยืนยัน'){
-        if ($approved_update) {
-            $add_employee = mysqli_query($conn, "INSERT INTO `employee`(`emp_id`, `emp_Fname`, `emp_Lname`, `emp_Job`, `emp_tel`, `emp_email`) VALUES ('$emp_id','$emp_Fname','$emp_Lname', '$emp_Job','$emp_tel','$emp_email')");
 
-            if ($add_employee) {
+    if ($approved_update) {
+        $add_employee = mysqli_query($conn, "INSERT INTO `employee`(`emp_id`, `emp_Fname`, `emp_Lname`, `emp_Job`, `emp_tel`, `emp_email`) VALUES ('$emp_id','$emp_Fname','$emp_Lname', '$emp_Job','$emp_tel','$emp_email')");
 
-                echo "<script>alert('อัพเดทสถานะการสัมภาษณ์เสร็จสิ้น')</script>";
-            } else {
-                echo "<script>alert('ผิดพลาด กรุณาลองอีกครั้ง2 $emp_id,$emp_Fname,$emp_Lname, $emp_Job, $emp_tel, $emp_email')</script>";
-            }
+        if ($add_employee) {
+
+            echo "<script>alert('อัพเดทสถานะการสัมภาษณ์เสร็จสิ้น')</script>";
         } else {
-            echo "<script>alert('ผิดพลาด กรุณาลองอีกครั้ง1')</script>";
+            echo "<script>alert('ผิดพลาด กรุณาลองอีกครั้ง2 $emp_id,$emp_Fname,$emp_Lname, $emp_Job, $emp_tel, $emp_email')</script>";
         }
-    }else{
-        
+    } else {
+        echo "<script>alert('ผิดพลาด กรุณาลองอีกครั้ง1')</script>";
     }
 }
 ?>
