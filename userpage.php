@@ -12,9 +12,10 @@
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <!-- sweetalert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 </head>
@@ -24,15 +25,15 @@
     include "./user_navbar.php";
     ?>
 
-       
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="img/img1.jpg " class="d-block w-100" alt="baya">
-            </div>
-        </div>
 
-  <!-- ค้นหา        -->
-  <div class="ser ">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="img/img1.jpg " class="d-block w-100" alt="baya">
+        </div>
+    </div>
+
+    <!-- ค้นหา        -->
+    <div class="ser ">
         <div class="search align-items-center">
             <h4><b>ระบุงานที่คุณต้องการ</h4></b>
         </div>
@@ -114,7 +115,7 @@
 
     ?>
 
-<footer>
+    <footer>
         <h5> ช่องทางการติดต่อ</h5>
         <p> <i class="fa-solid fa-envelope"></i> bayasita@kku.ac.th </p>
         <p> <i class="fa-solid fa-phone"></i> +66 43 343 097, 203 158 <i class="fa-solid fa-mobile"></i> 099 023 9779 </p>
@@ -128,5 +129,6 @@
         </div>
     </footer>
 </body>
-
+<script src="script.js"></script>
+<script src="./script/script.js"></script>
 </html>

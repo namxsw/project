@@ -16,6 +16,7 @@
     include "./ad_Slidebar.php";
 
     ?>
+ 
 
     <div class="img-upload">
         <div class="wrapper">
@@ -119,45 +120,10 @@
                                 <span class="input-group-text classyear">ชั้นปี</span>
                                 <input type="text" aria-label="Last name" class="form-control" value="<?php echo $row['Applicant_Class']; ?>">
                             </div>
-                            <!-- 
-                        <div class="fact">
-                            <span><b>คณะ :</b></span>
-                            <input type="text" >
-                        </div>
-
-                        <div class="depart">
-                            <span><b>สาขา :</b></span>
-                            <input type="text" >
-                        </div>
-
-                        <div class="classyear">
-                            <span><b>ชั้นปี :</b></span>
-                            <input type="text">
-                        </div>-->
-
+                        
                             <div class="edu mt-3">
-                                <span> <b>หลักฐานทางการศึกษา :<a href="PageUploadToMySQL3.php">View files</a></b></span>
-
+                                <span> <b>หลักฐานทางการศึกษา : <a href="PageUploadToMySQL3.php" >View files</a></b></span>
                             </div>
-
-
-
-                            <!-- <hr class="hr1">
-
-                            <div class="status">
-                                <div class="status-name">
-                                    <span>
-                                        <h3><b>สถานะ :
-                                    </span></h3><br>
-                                </div>
-                                <select name="enroll_class_type">
-                                    <option selected disabled>เลือกสถานะ</option>
-                                    <option value="<?php echo $row['Status']; ?>" selected><?php echo $row['Status']; ?></option>
-                                    <option value="รอตรวจสอบ">รอตรวจสอบ</option>
-                                    <option value="ตรวจสอบเรียบร้อย">ตรวจสอบเรียบร้อย</option>
-                                </select>
-                            </div> -->
-
 
                             <div class="button">
                                 <button type="button" style="width: 100px;" class="btn btn-outline-danger"> ยกเลิก</button>

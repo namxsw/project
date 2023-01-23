@@ -4,8 +4,9 @@ if(isset($_GET['Applicant_ID'])){
     $Applicant_ID = $_GET['Applicant_ID'];
     $approve = mysqli_query ($conn," UPDATE `applicant` SET `Status`='ตรวจสอบเรียบร้อย' WHERE Applicant_ID = $Applicant_ID");
     if($approve){
-        echo "<script>alert('ตรวจสอบสำเร็จ') </script>";
-        echo "<script>window.location.href='checkapplicant.php'</script>";
+        include "./script/alert.php";
+        echo "<script>checksuccess(); </script> ";
+        // echo "<script>window.location.href='checkapplicant.php'</script>";
     
     }
     else{

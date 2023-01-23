@@ -92,7 +92,8 @@
                                             }
                                             ?>
                                         </td>
-                                        <td> <a href="ad_stdInfo.php ?Applicant_ID= <?php echo $row['Applicant_ID'] ?>"><button type="button" class="btn btn-outline-warning"><i class="fa-solid fa-user-check"></i> ตรวจสอบ</button></a>
+                                        <td> 
+                                            <a href="ad_stdInfo.php ?Applicant_ID= <?php echo $row['Applicant_ID'] ?>"><button type="button" class="btn btn-outline-warning"><i class="fa-solid fa-user-check"></i> ตรวจสอบ</button></a>
                                             <button type="button" class="btn btn-outline-success modal_data" id="<?php echo $row['Applicant_ID'] ?>"><i class="fa-solid fa-calendar-plus"></i> นัดสัมภาษณ์</button>
                                         </td>
 

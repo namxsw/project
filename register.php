@@ -111,11 +111,11 @@
             <div class="text-start ms-5 ps-4 mb-1">ยืนยันรหัสผ่าน</div>
             <input type="password" class="form-control" name="compass" aria-describedby="compass" style="width: 450px;">
           </div>
-          <div class="des_input">รูปภาพ</div>
-          <input class="sqr-input col-12 form-control" type="file" placeholder="รูปภาพ" name="picc" >
-          <input class="form-control col-12" type="text" />
+          <div class="des_input text-start ms-5 ps-4 mb-1">รูปภาพ</div>
+          <input class="sqr-input col-12 form-control" type="file" placeholder="รูปภาพ" name="picc" style="width: 450px;">
+          
 
-          <button type="submit" name="signup" class="btn btn-primary">สมัครสมาชิก</button>
+          <button type="submit" name="signup" class="btn btn-primary mt-3">สมัครสมาชิก</button>
 
         </div>
       </div>

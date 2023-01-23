@@ -1,8 +1,9 @@
-<?php
- session_start();
 
-  echo "Logout Successfully ";
-  unset ($_SESSION['user']);
-  session_destroy();   
-  header("Location: index.php");
-?>
+
+<?php
+session_start();
+session_destroy();
+if (session_start() && session_destroy()) {
+    include "./script/alert.php";
+    echo "<script>logoutsuccess(); </script> ";
+}

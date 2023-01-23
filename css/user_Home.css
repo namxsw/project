@@ -8,12 +8,6 @@ body {
 }
 
 
-/* body {
-    background-color: #FFF9F3 !important;
-    font-family: sans-serif;
-    min-width: 370px;
-    margin: 50px;
-} */
 
 .header {
     color: #97372f;
@@ -141,6 +135,12 @@ h5 {
     border-radius: 5px;
     padding: 10px 15px;
     text-decoration: none;
+}
+
+.btn-detail:hover{
+   text-decoration: none;
+   color: #fff;
+   background-color: #d0908a;
 }
 
 
