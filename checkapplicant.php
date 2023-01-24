@@ -20,7 +20,7 @@
 
     <!-- css tadatable -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
- 
+
 
 </head>
 <script>
@@ -60,12 +60,12 @@
                     <div class="appeal-content-info">
                         <table id="myTable" class="display" style="margin-left: -95px;">
                             <thead style="text-align: center;">
-                                <th style="width: 120px ;">ชื่อผู้สมัคร</th>
-                                <th style="width: 120px;">นามสกุล</th>
+                                <th style="width: 100px ;">ชื่อ</th>
+                                <th style="width: 100px;">นามสกุล</th>
                                 <th style="width: 100px;">งานที่สมัคร</th>
-                                <th style="width: 120px;">เวลาที่ส่งใบสมัคร</th>
+                                <th style="width: 120px;">เวลาส่งใบสมัคร</th>
                                 <th>สถานะ</th>
-                                <th>วันที่สัมภาษณ์</th>
+                                <th>วันสัมภาษณ์</th>
                                 <th>จัดการ</th>
                                 <th>ผลการสัมภาษณ์</th>
                                 <th>ผลการสมัคร</th>
@@ -83,7 +83,7 @@
                                         <td><?php echo $row['Applicant_Lname']; ?></td>
 
                                         <td><?php echo $row['Job_Type']; ?></td>
-                                        <td><?php echo date("d/m/Y h:i a", strtotime($row['Applicant_Date']))?></td>
+                                        <td><?php echo date("d/m/Y h:i a", strtotime($row['Applicant_Date'])) ?></td>
                                         <td><?php echo $row['Status']; ?></td>
                                         <td>
                                             <?php
@@ -94,16 +94,23 @@
                                             }
                                             ?>
                                         </td>
-                                        <td> 
+
+                                        <td>
                                             <a href="ad_stdInfo.php ?Applicant_ID= <?php echo $row['Applicant_ID'] ?>"><button type="button" class="btn btn-outline-warning"><i class="fa-solid fa-user-check"></i> ตรวจสอบ</button></a>
                                             <button type="button" class="btn btn-outline-success modal_data" id="<?php echo $row['Applicant_ID'] ?>"><i class="fa-solid fa-calendar-plus"></i> นัดสัมภาษณ์</button>
                                         </td>
-                                        <td><?php echo $row['interview_status']; ?></td>
-                                        <td><?php 
-                                        if ($row['approve_user'] == 'ยกเลิก' ){
-                                            echo "สละสิทธิ";
-                                        }else{
-                                        echo $row['approve_user'];} ?></td>
+                                        
+                                        <td>
+                                            <?php echo  $row['interview_status']; ?>
+                                        </td>
+
+                                        <td><?php
+                                            if ($row['approve_user'] == 'ยกเลิก') {
+                                                echo "สละสิทธิ";
+                                            } else {
+                                                echo $row['approve_user'];
+                                            } ?></td>
+
 
                                     </tr>
                                 <?php
@@ -158,4 +165,5 @@
     });
 </script>
 </body>
+
 </html>
