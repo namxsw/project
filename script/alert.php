@@ -77,7 +77,7 @@
 
       function resetsuccess() {
           Swal.fire({
-              title: 'เพิ่มผู้ดูแลสำเร็จ',
+              title: 'รีเซตรหัสสำเร็จ',
               icon: 'success',
               showConfirmButton: false,
               timer: 1000
