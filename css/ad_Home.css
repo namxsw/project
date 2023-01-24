@@ -58,9 +58,11 @@ body {
 }
 
 .btn-post button {
-  width: 250px;
+  text-align: center;
+  width: 200px;
   background-color: #2412eb;
-  margin-right: 320px;
+  margin-right: 250px;  
+  margin-bottom: 20px;
 }
 
 

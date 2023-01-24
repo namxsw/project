@@ -9,59 +9,35 @@
     <link rel="stylesheet" href="css/user_status.css">
 
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <!-- jquery -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+ 
     <?php
     include "./user_navbar.php";
+    include "./script/alert.php";
     ?>
-    <!-- js datatable -->
-    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-
-    <!-- css tadatable -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
 
 </head>
 
-<script>
-    $(document).ready(function() {
-        $("#myTable").DataTable({
-            "language": {
-                "search": "ค้นหา :",
-                "zeroRecords": "ไม่พบข้อมูลที่ค้นหา",
-                "info": "แสดงผลลัพธ์ _PAGE_ จาก _PAGES_ หน้า",
-                "infoEmpty": "ไม่พบตารางที่ค้นหา",
-                "infoFiltered": "(ค้นหาจากทั้งหมด _MAX_ ตาราง)",
-                "lengthMenu": "แสดง  _MENU_  ตารางต่อหน้า",
-                "paginate": {
-                    "previous": "ก่อนหน้า",
-                    "next": "หน้าถัดไป",
 
-                }
-            }
-        });
-
-    });
-</script>
 
 <body>
 
 
     <div class="container">
         <div style="height:50px;"></div>
-        <div class="well" >
+        <div class="well">
             <span style="font-size:35px; color:#000">
                 <center><strong>ตรวจสอบสถานะ</strong></center>
-            </span> 
+            </span>
             <div class="appeal-container">
                 <div class="appeal-content">
                     <div class="appeal-content-info">
-                        <table id="myTable" class="table table-striped table-bordered table-hover" style="margin-left: -95px;">
-                            <thead>
-                                <th>งานที่สมัคร</th>
-                                <th>สถานะการส่งเอกสาร</th>
-                                <th>วันนัดสัมภาษณ์</th>
-                                <th>ผลการสัมภาษณ์</th>
-                                <th>สถานะ</th>
+                        <table id="myTable" class="display table table-striped dt-responsive " style="width:100%;">
+                            <thead style="text-align: center;">
+                                <th scope="col">งานที่สมัคร</th>
+                                <th scope="col">สถานะ <br> การส่งเอกสาร</th>
+                                <th scope="col">วันสัมภาษณ์</th>
+                                <th scope="col">ผลการสัมภาษณ์</th>
+                                <th scope="col">สถานะ</th>
                             </thead>
                             <tbody>
                                 <?php
@@ -82,27 +58,24 @@
                                         ?>
                                     </td>
                                     <td><?php echo $row['interview_status']; ?></td>
-                                    <td><?php 
-                                    if ($row['interview_status']=='ผ่านการสัมภาษณ์'){ 
-                                        if ($row['approve_user']=='ยืนยัน' || $row['approve_user']=='ยกเลิก') { 
-                                            echo $row ['approve_user'];
-                                        }else{
-                                    
-                                        ?>
-                                        
-                                        <a href="user_status.php ?denined_Applicant_ID= <?php echo $row['Applicant_ID'] ?>"><button type="button" class="btn btn-outline-warning"><i class="fa-regular fa-circle-xmark"></i> ยกเลิก</button></a>
-                                        <a href="user_status.php ?Approved_Applicant_ID= <?php echo $row['Applicant_ID'] ?>"><button type="button" class="btn btn-outline-success modal_data"><i class="fa-regular fa-circle-check"></i> ยืนยัน</button></a>
+                                    <td style="text-align: center;"><?php
+                                                                    if ($row['interview_status'] == 'ผ่านการสัมภาษณ์') {
+                                                                        if ($row['approve_user'] == 'ยืนยัน' || $row['approve_user'] == 'ยกเลิก') {
+                                                                            echo $row['approve_user'];
+                                                                        } else {
+
+                                                                    ?>
+
+                                                <a href="user_status.php ?denined_Applicant_ID= <?php echo $row['Applicant_ID'] ?>"><button type="button" class="btn btn-outline-warning"><i class="fa-regular fa-circle-xmark"></i> ยกเลิก</button></a>
+                                                <a href="user_status.php ?Approved_Applicant_ID= <?php echo $row['Applicant_ID'] ?>"><button type="button" class="btn btn-outline-success modal_data"><i class="fa-regular fa-circle-check"></i> ยืนยัน</button></a>
                                         <?php
-                                    }}
-                                    elseif ($row['interview_status']=='ไม่ผ่านการสัมภาษณ์'){
-                                        echo "ไม่ผ่านการสัมภาษณ์";
-                                    }
-                                    else {
+                                                                        }
+                                                                    } elseif ($row['interview_status'] == 'ไม่ผ่านการสัมภาษณ์') {
+                                                                        echo "ไม่ผ่านการสัมภาษณ์";
+                                                                    } else {
 
-                                        echo "รอสัมภาษณ์";
-                                        
-
-                                    }?>
+                                                                        echo "รอสัมภาษณ์";
+                                                                    } ?>
                                     </td>
 
                             </tbody>
@@ -131,9 +104,9 @@
     </footer>
 
 </body>
-<?php 
-    if (isset($_GET['Approved_Applicant_ID'])){
-        $Approved_Applicant_ID = $_GET['Approved_Applicant_ID'];
+<?php
+if (isset($_GET['Approved_Applicant_ID'])) {
+    $Approved_Applicant_ID = $_GET['Approved_Applicant_ID'];
     $query_approved = mysqli_query($conn, "select applicant.* ,job.Job_Type from applicant join job on (applicant.Job_id= job.Job_ID) WHERE `Applicant_ID`= $Approved_Applicant_ID");
     $rowd = mysqli_fetch_array($query_approved);
     extract($rowd);
@@ -146,11 +119,11 @@
     $emp_Job = $rowd['Job_ID'];
     $emp_tel = $rowd['Applicant_Tel'];
     $emp_email = $rowd['Applicant_Email'];
-    $emp_id = 'BY0' . $emp_Job. '0' . $emprow_for_id;
+    $emp_id = 'BY0' . $emp_Job . '0' . $emprow_for_id;
 
-    
+
     $approved_update = mysqli_query($conn, "UPDATE `applicant` SET `approve_user`='ยืนยัน' WHERE `Applicant_ID`= $Approved_Applicant_ID");
-    if ($approve_user =='ยืนยัน'){
+    if ($approve_user == 'ยืนยัน') {
         if ($approved_update) {
             $add_employee = mysqli_query($conn, "INSERT INTO `employee`(`emp_id`, `emp_Fname`, `emp_Lname`, `emp_Job`, `emp_tel`, `emp_email`) VALUES ('$emp_id','$emp_Fname','$emp_Lname', '$emp_Job','$emp_tel','$emp_email')");
 
@@ -163,17 +136,15 @@
         } else {
             echo "<script>alert('ผิดพลาด กรุณาลองอีกครั้ง1')</script>";
         }
-    }else{
-        
+    } else {
     }
+}
 
-    }
-    
-    if (isset($_GET['denined_Applicant_ID'])) {
-        $denined_Applicant_ID = $_GET['denined_Applicant_ID'];
-        $denined_update = mysqli_query($conn, "UPDATE `applicant` SET `approve_user`='ยกเลิก' WHERE `Applicant_ID`= $denined_Applicant_ID");
-    }
-    
+if (isset($_GET['denined_Applicant_ID'])) {
+    $denined_Applicant_ID = $_GET['denined_Applicant_ID'];
+    $denined_update = mysqli_query($conn, "UPDATE `applicant` SET `approve_user`='ยกเลิก' WHERE `Applicant_ID`= $denined_Applicant_ID");
+}
+
 ?>
 
 </html>

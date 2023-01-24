@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
 
 body {
-  background-color: #fff9f3 !important;
-  font-family: 'Mitr', sans-serif !important;
+    background-color: #fff9f3 !important;
+    font-family: 'Mitr', sans-serif !important;
     margin-top: 90px !important;
 }
 
 /* กรอบ */
 .appeal-container {
-    /* padding-left: -20px;  */
-    padding-top: 30px;
-    width: 95%;
+   margin-left: 20px;
+    margin-top: 30px;
+    width: 100%;
     height: auto;
     border-radius: 15px;
     border: 3px;
@@ -37,22 +37,20 @@ body {
 
 /* ตาราง */
 
-.dataTables_wrapper{
-    margin-left: 120px;
-    margin-top: 10px;
-    margin-right: -65px;
+.dataTables_wrapper {
+    padding: 15px;
     background-color: #fff;
+    
 }
 
 
-.dataTables_wrapper label{
+.dataTables_wrapper label {
     margin-bottom: 25px;
     margin-right: 95px;
 }
 
 
-.dataTables_paginate{
+.dataTables_paginate {
     margin-top: 15px;
     margin-right: 75px;
 }
-

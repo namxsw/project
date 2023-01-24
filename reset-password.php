@@ -3,25 +3,27 @@
 
 include("./config/db.php");
 
-if (isset($_POST['resetpsw']) ) {
+if (isset($_POST['submit-resetpsw'])) {
 
     $email = $_POST['email'];
-    $newpassword = $_POST['newpassword'];
-    $confirmpassword = $_POST['confirmpassword'];
+    $password = $_POST['password'];
+    $cfpassword = $_POST['cfpassword'];
 
-    if (empty($newpassword) || empty($confirmpassword)) {
+    if (empty($password) || empty($cfpassword)) {
 
         echo "Empty Fields";
     } else {
-        if ($newpassword == $confirmpassword) {
-            $hashed = md5($newpassword);
+        if ($password == $cfpassword) {
+            $hashed = md5($password);
             $query = "UPDATE user SET User_Password = '$hashed' WHERE User_Email = '$email' ";
             $res = mysqli_query($conn, $query);
 
             $query_dlt = "DELETE FROM forgot_password WHERE email = '$email' ";
             $res_dlt = mysqli_query($conn, $query_dlt);
 
-            echo "Password is updated successfully! Click <a href='http://localhost/project/signin.php' > here </a> to login again. ";
+            include "./script/alert.php";
+            echo "<script>resetsuccess(); </script> ";
+
         } else {
             echo "Passwords do not match";
         }

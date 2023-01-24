@@ -144,3 +144,11 @@ footer p {
 .ft img{
     height: 60px;
 }
+
+
+@media(max-width: 819px){
+    body{
+       
+    }
+
+}

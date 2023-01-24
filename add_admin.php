@@ -17,12 +17,16 @@
             VALUES ('$username','$password','$firstname','$lastname','$tell','$email','$birthday','1')";
             $result = mysqli_query($conn,$sql);
             if($result){
-              echo "<script>alert('เพิ่มผู้ดูแลสำเร็จ')</script>";
-              echo "<script>window.location='ad_admin.php';</script>";
+              // echo "<script>alert('เพิ่มผู้ดูแลสำเร็จ')</script>";
+              // echo "<script>window.location='ad_admin.php';</script>";
+              include "./script/alert.php";
+              echo "<script>adminsuccess(); </script> ";
               
             }
             else{
-              echo "<script>alert('เพิ่มไม่สำเร็จ')</script>";
+              // echo "<script>alert('เพิ่มไม่สำเร็จ')</script>";
+              include "./script/alert.php";
+              echo "<script>adminerror(); </script> ";
   
             }
           }else{

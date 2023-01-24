@@ -24,7 +24,8 @@ h1{
 
 /* กรอบ */
 .appeal-container {
-    /* padding-left: -20px;  */
+   margin-left: 40px;
+   margin-top: 30px;
     padding-top: 30px;
     width: 100%;
     height: auto;
@@ -49,9 +50,8 @@ h1{
 }
 
 .dataTables_wrapper{
-    margin-left: 120px;
-    margin-top: 10px;
-    margin-right: -65px;
+    padding: 15px;
+    background-color: #fff;
 }
 
 .dataTables_wrapper label{

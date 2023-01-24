@@ -39,9 +39,10 @@ strong{
 }
 
 .dataTables_wrapper{
-    margin-left: 120px;
+    padding: 15px;
+    /* margin-left: 50px;
     margin-top: 10px;
-    margin-right: -65px;
+    margin-right: -65px; */
     background-color: #fff;
 }
 

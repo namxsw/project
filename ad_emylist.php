@@ -12,50 +12,26 @@
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- js datatable -->
-    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-
-    <!-- css tadatable -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
-
 </head>
-<script>
-    $(document).ready(function() {
-        $("#myTable").DataTable({
-            "language": {
-                "search": "ค้นหา :",
-                "zeroRecords": "ไม่พบข้อมูลที่ค้นหา",
-                "info": "แสดงผลลัพธ์ _PAGE_ จาก _PAGES_ หน้า",
-                "infoEmpty": "ไม่พบตารางที่ค้นหา",
-                "infoFiltered": "(ค้นหาจากทั้งหมด _MAX_ ตาราง)",
-                "lengthMenu": "แสดง  _MENU_  ตารางต่อหน้า",
-                "paginate": {
-                    "previous": "ก่อนหน้า",
-                    "next": "หน้าถัดไป",
 
-                }
-            }
-        });
-
-    });
-</script>
 
 <body>
     <?php
     include "./ad_Slidebar.php";
+    include "./script/alert.php"
     ?>
 
     <tbody>
         <div class="container">
             <div style="height:10px;"></div>
-            <div class="well" style="margin:auto; padding:auto; width:110%;">
+            <div class="well" style="margin:auto; padding:auto; width:100%;">
                 <span style="font-size:35px; color:#000">
                     <center><strong>รายชื่อพนักงาน </strong></center>
                 </span>
                 <div class="appeal-container">
                     <div class="appeal-content">
                         <div class="appeal-content-info">
-                            <table id="myTable" class="table table-striped table-bordered table-hover" style="margin-left: -95px;">
+                            <table id="myTable" class="display table table-striped dt-responsive " style="width:100%;">
 
                                 <thead style="text-align: center;">
                                     <th style="width: 90px;">รหัสพนักงาน</th>
@@ -83,7 +59,7 @@
                                             <td><?php echo $row['emp_tel']; ?></td>
                                             <td><?php echo $row['emp_email']; ?></td>
                                             <td><?php echo $row['emp_rating']; ?></td>
-                                            <td>
+                                            <td style="text-align: center;">
                                                 <a href="ad_stdInfo.php ?Applicant_ID= <?php echo $row['emp_id'] ?>"><button type="button" class="btn btn-outline-info"><i class="fa-regular fa-pen-to-square"></i> แก้ไข</button></a>
                                                 <a href="ad_emylist.php ?del_Applicant_ID= <?php echo $row['emp_id'] ?>"><button type="button" class="btn btn-outline-danger"><i class="fa-regular fa-trash-can"></i> ลบ</button></a>
                                             </td>

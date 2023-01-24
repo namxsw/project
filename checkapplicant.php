@@ -15,50 +15,26 @@
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- js datatable -->
-    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-
-    <!-- css tadatable -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
-
 
 </head>
-<script>
-    $(document).ready(function() {
-        $("#myTable").DataTable({
-            "language": {
-                "search": "ค้นหา :",
-                "zeroRecords": "ไม่พบข้อมูลที่ค้นหา",
-                "info": "แสดงผลลัพธ์ _PAGE_ จาก _PAGES_ หน้า",
-                "infoEmpty": "ไม่พบตารางที่ค้นหา",
-                "infoFiltered": "(ค้นหาจากทั้งหมด _MAX_ ตาราง)",
-                "lengthMenu": "แสดง  _MENU_  ตารางต่อหน้า",
-                "paginate": {
-                    "previous": "ก่อนหน้า",
-                    "next": "หน้าถัดไป",
 
-                }
-            }
-        });
-
-    });
-</script>
 
 <body>
     <?php
     include "./ad_Slidebar.php";
+    include "./script/alert.php";
     ?>
 
     <div class="container">
         <div style="height:10px;"></div>
-        <div class="well" style="margin:auto; padding:auto; width:110%;">
+        <div class="well" style="margin:auto; padding:auto; width:100%;">
             <span style="font-size:35px; color:#000">
                 <center><strong>ตรวจสอบข้อมูลผู้สมัคร </strong></center>
             </span>
             <div class="appeal-container">
                 <div class="appeal-content">
                     <div class="appeal-content-info">
-                        <table id="myTable" class="display" style="margin-left: -95px;">
+                        <table id="myTable" class="display table table-striped dt-responsive " style="width:100%;">
                             <thead style="text-align: center;">
                                 <th style="width: 100px ;">ชื่อ</th>
                                 <th style="width: 100px;">นามสกุล</th>
@@ -96,7 +72,7 @@
                                         </td>
 
                                         <td>
-                                            <a href="ad_stdInfo.php ?Applicant_ID= <?php echo $row['Applicant_ID'] ?>"><button type="button" class="btn btn-outline-warning"><i class="fa-solid fa-user-check"></i> ตรวจสอบ</button></a>
+                                            <a href="ad_stdInfo.php ?Applicant_ID= <?php echo $row['Applicant_ID'] ?>"><button type="button" class="btn btn-outline-warning"><i class="fa-solid fa-user-check"></i> ตรวจสอบ</button></a> 
                                             <button type="button" class="btn btn-outline-success modal_data" id="<?php echo $row['Applicant_ID'] ?>"><i class="fa-solid fa-calendar-plus"></i> นัดสัมภาษณ์</button>
                                         </td>
                                         
