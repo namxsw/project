@@ -67,7 +67,7 @@
         <!-- Modal -->
         <div id="staticBackdrop" class="modal fade" role="dialog">
             <div class="modal-dialog modal-dialog-scrollable">
-                <form method="POST" enctype="multipart/form-data" class="modal-content" style="width:120%;  height: 25vh;  padding:0 20px;">
+                <form method="POST" enctype="multipart/form-data" class="modal-content" style="width:120%;  height: 30vh;  padding:0 20px;">
                     <div class="modal-header">
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
@@ -76,7 +76,6 @@
                     </div>
 
                     <div class="btn-post">
-
                         <a class="std" type="button" href="user_application.php?Job_ID=<?php echo $row['Job_ID'] ?>"><i class="fa-solid fa-graduation-cap"></i> <b>นักศึกษา</b></a>
                         <a class="general" type="button" href="user_appli_guest.php?Job_ID=<?php echo $row['Job_ID'] ?>"><i class="fa-solid fa-person"></i> <b>บุคลทั่วไป</b></a>
                     </div>

@@ -149,10 +149,12 @@
 // denined interview
 if (isset($_GET['denined_Applicant_ID'])) {
     $denined_Applicant_ID = $_GET['denined_Applicant_ID'];
-    $denined_update = mysqli_query($conn, "UPDATE `applicant` SET `interview_status`='ไม่ผ่านการสัมภาษณ์' WHERE `Applicant_ID`= $denined_Applicant_ID");
+    $denined_update = mysqli_query($conn, "UPDATE `applicant` SET `interview_status`='ไม่ผ่านการสัมภาษณ์' WHERE `Applicant_ID`= $denined_Applicant_ID") ;
+    
 
     if ($denined_update) {
         echo "<script>alert('อัพเดทสถานะการสัมภาษณ์เสร็จสิ้น')</script>";
+    
     } else {
         echo "<script>alert('ผิดพลาด กรุณาลองอีกครั้ง')</script>";
     }

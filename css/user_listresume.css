@@ -33,11 +33,11 @@ body {
 /* รูปภาพ */
 .profileUser {
     align-items: center !important;
-    margin-left: 125px;
+    margin-left: 85%;
 }
 
-.img-profile {
-    height: 150px;
+.img {
+   align-items: center;
 }
 
 .upimg {

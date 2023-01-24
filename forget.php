@@ -6,18 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ลืมรหัสผ่าน</title>
-    <link rel="stylesheet" href="css/forget.css">
     <link rel="icon" type="image/png" href="./img/BayasitaD.png">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/forget.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/e9f79b1eaf.js" crossorigin="anonymous"></script>
 </head>
 
 <?php
-include "config/db.php"; ?>
+include "./config/db.php"; ?>
 
 <body>
+
     <div class="back">
         <a href="./"><i class="fa-solid fa-angles-left"></i></a>
     </div>
@@ -32,7 +31,7 @@ include "config/db.php"; ?>
                     <h6>ใส่อีเมลของคุณ :</h6>
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-default"><i class="fa-regular fa-envelope"></i></span>
-                        <input type="email" name="email" id="email" class="form-control input_user">
+                        <input type="text" id="email" class="txt form-control" placeholder="Bayasita@gmail.com">
                     </div>
                     <div class="d-grid gap-2 mt-3">
                         <input type="submit" class="btn btn-outline-primary " onclick="sendEmail()" value="ส่งรหัสผ่านไปยังอีเมล">
@@ -42,9 +41,12 @@ include "config/db.php"; ?>
         </div>
     </div>
 
-    <script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
         function sendEmail() {
             var email = $("#email");
+
             if (isNotEmpty(email)) {
                 $.ajax({
                     url: 'sendEmail.php',
@@ -54,7 +56,7 @@ include "config/db.php"; ?>
                         email: email.val()
                     },
                     success: function(response) {
-                        $('#resetpsw')[0].reset();
+                        $('#myForm')[0].reset();
                         $('.msg').text("Message send successfully");
                     }
                 });

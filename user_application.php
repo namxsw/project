@@ -21,95 +21,94 @@
     include('./config/db.php');
     include "./user_navbar.php";
     require "./adforms.php";
-    if(isset($_GET['Job_ID'])){
-     
-    $Job_ID = $_GET['Job_ID'];   
+    if (isset($_GET['Job_ID'])) {
+
+        $Job_ID = $_GET['Job_ID'];
     }
-    $User_username=$_SESSION['username'];
-     $query = mysqli_query($conn, "select * from user where User_username='$User_username' ");
-     $row = mysqli_fetch_array($query);
-     extract($row);
-     $Job_ID = $_GET['Job_ID'];
+    $User_username = $_SESSION['username'];
+    $query = mysqli_query($conn, "select * from user where User_username='$User_username' ");
+    $row = mysqli_fetch_array($query);
+    extract($row);
+    $Job_ID = $_GET['Job_ID'];
     ?>
+    <div class="appeal-container">
+        <div class="appeal-content">
+            <div class="appeal-content-info">
+                <div class="applybox">
+                    <h1 id="headline">ใบสมัครงาน (นักศึกษา)</h1>
+                    <form id="applyform" method="POST" enctype="multipart/form-data">
+                        <div class="form-outer" style="overflow: visible;">
 
-    <div class="applybox">
-        <h1 id="headline">ใบสมัครงาน (นักศึกษา)</h1>
-        <form id="applyform" method="POST" enctype="multipart/form-data">
-            <!-- แถบโปรเกสฟอร์ม -->
-            <section class="step-wizard">
-                <ul class="step-wizard-list">
-                    <li id="Onestep" class="step-wizard-item">
-                        <span class="progress-count">1</span>
-                        <span class="progress-label">ข้อมูลส่วนตัว</span>
-                    </li>
-                    <li id="Twostep" class="step-wizard-item  current-item">
-                        <span class="progress-count">2</span>
-                        <span class="progress-label">ข้อมูลการสมัครงาน</span>
-                    </li>
-                </ul>
-            </section>
+                            <!-- form--1 -->
+                            <div id="stepOne" class="row">
+                                <!-- แถบโปรเกสฟอร์ม -->
+                                <div class="progress p-0 my-2">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Basic example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1/2 </div>
+                                </div>
+                                <div>
+                                    <input type="radio" id="huey" name="gen" value="ชาย" checked>
+                                    <label for="huey">ชาย</label>
+                                    <input type="radio" id="dewey" name="gen" value="หญิง">
+                                    <label for="dewey">หญิง</label>
+                                </div>
+                                <div class="des_input">เลขประจำประตัวชาชน</div>
+                                <input class="sqr-input col-12 form-control" type="text" placeholder="เลขประจำตัวประชาชน" name="cardid" required maxlength="13">
+                                <div class="jobtype">
+                                    <label for="jobtype" class="form-label">คำนำหน้า</label>
+                                    <select class="form-select" name="prefix" aria-label="Default select example">
+                                        <option selected>เลือกคำนำหน้า</option>
+                                        <option value="นาย">นาย</option>
+                                        <option value="นาง">นาง</option>
+                                        <option value="นางสาว">นางสาว</option>
+                                    </select>
+                                </div>
+                                <div class="des_input">ชื่อ</div>
+                                <input class="sqr-input col-12 form-control" type="text" value="<?php echo $row['User_Fname']; ?>" placeholder="ชื่อ" name="fname" required />
+                                <div class="des_input">นามสกุล</div>
+                                <input class="sqr-input col-12 form-control" value="<?php echo $row['User_Lname']; ?>" type="text" placeholder="นามสกุล" name="lname" required />
+                                <div class="des_input">วันเกิด</div>
+                                <input class="sqr-input col-12 form-control" value="<?php echo $row['User_Birthday']; ?>" type="date" placeholder="วันเกิด" name="bd" required />
+                                <div class="des_input">อีเมล</div>
+                                <input class="sqr-input col-12 form-control" value="<?php echo $row['User_Email']; ?>" type="email" placeholder="อีเมล" name="mail" required />
+                                <div class="des_input">ที่อยู่</div>
+                                <input class="sqr-input col-12 form-control" type="text" placeholder="ที่อยู่" name="ad" required />
+                                <div class="des_input">เบอร์โทรศัพท์</div>
+                                <input name="tel" class="sqr-input col-12 form-control" value="<?php echo $row['User_Tel']; ?>" type="text" placeholder="เบอร์โทรศัพท์" name="tel" pattern="[0-9]{10}" title="กรุณากรอกเบอร์โทรศัพท์ หมายเลข (0-9) จำนวน 10 ตัว" required maxlength="10" />
 
-
-            <div class="form-outer" style="overflow: visible;">
-                <!-- form--1 -->
-                <div id="stepOne" class="row">
-                    <div>
-                        <input type="radio" id="huey" name="gen" value="ชาย" checked>
-                        <label for="huey">ชาย</label>
-                        <input type="radio" id="dewey" name="gen" value="หญิง">
-                        <label for="dewey">หญิง</label>
-                    </div>
-                    <div class="des_input">เลขประจำประตัวชาชน</div>
-                    <input class="sqr-input col-12 form-control" type="text" placeholder="เลขประจำตัวประชาชน" name="cardid" required maxlength="13">
-                    <div class="jobtype">
-                        <label for="jobtype" class="form-label">คำนำหน้า</label>
-                        <select class="form-select" name="prefix" aria-label="Default select example">
-                            <option selected>เลือกคำนำหน้า</option>
-                            <option value="นาย">นาย</option>
-                            <option value="นาง">นาง</option>
-                            <option value="นางสาว">นางสาว</option>
-                        </select>
-                    </div>
-                    <div class="des_input">ชื่อ</div>
-                    <input class="sqr-input col-12 form-control" type="text" value="<?php echo $row['User_Fname']; ?>" placeholder="ชื่อ" name="fname" required />
-                    <div class="des_input">นามสกุล</div>
-                    <input class="sqr-input col-12 form-control" value="<?php echo $row['User_Lname']; ?>" type="text" placeholder="นามสกุล" name="lname" required />
-                    <div class="des_input">วันเกิด</div>
-                    <input class="sqr-input col-12 form-control" value="<?php echo $row['User_Birthday']; ?>" type="date" placeholder="วันเกิด" name="bd" required />
-                    <div class="des_input">อีเมล</div>
-                    <input class="sqr-input col-12 form-control" value="<?php echo $row['User_Email']; ?>" type="email" placeholder="อีเมล" name="mail" required />
-                    <div class="des_input">ที่อยู่</div>
-                    <input class="sqr-input col-12 form-control" type="text" placeholder="ที่อยู่" name="ad" required />
-                    <div class="des_input">เบอร์โทรศัพท์</div>
-                    <input name="tel" class="sqr-input col-12 form-control" value="<?php echo $row['User_Tel']; ?>" type="text" placeholder="เบอร์โทรศัพท์" name="tel" pattern="[0-9]{10}" title="กรุณากรอกเบอร์โทรศัพท์ หมายเลข (0-9) จำนวน 10 ตัว" required maxlength="10" />
-
-                    <input type="button" name="next" class=" btn btn-primary action-button" value="ถัดไป" onclick="nextbtn()" id="next">
-                </div>
+                                <input type="button" name="next" class=" btn btn-primary action-button" value="ถัดไป" onclick="nextbtn()" id="next">
+                            </div>
 
 
-                <!-- form--2 -->
-                <div id="stepTwo" class="row">
-                    
-                    <div class="des_input">คณะ</div>
-                    <input class=" col-12 form-control" type="text" placeholder="คณะ" name="fact" required />
-                    <div class="des_input">สาขา</div>
-                    <input class="form-control col-12" type="text" placeholder="สาขา" name="deptt" required />
-                    <div class="des_input">ชั้นปี</div>
-                    <input class="form-control col-12" type="text" placeholder="ขั้นปี" name="class" required />
-                    <div class="des_input">หลักฐานทางการศึกษา</div>
-                    <input class="sqr-input col-12 form-control" type="file" placeholder="หลักฐานทางการศึกษา" name="File" required>
-                    <input class="form-control col-12" type="text"  name="Job_ID" value="<?php echo $Job_ID; ?>" hidden />
-                    
-                    <div class="des_input">ไฟล์เพิ่มเติม</div>
-                    <input class="sqr-input col-12 form-control" type="file" placeholder="ไฟล์เพิ่มเติม" name="File1" >
-                    <input class="form-control col-12" type="text"  name="Job_ID" value="<?php echo $Job_ID; ?>" hidden />
-                    <input type="button" name="previous" class="btn btn-primary action-button" value="ย้อนกลับ" onclick="previousbtn()" id="back">
+                            <!-- form--2 -->
 
-                    <button type="submit" name="addwork" class="btn btn-success submitBtn" id="submit" value="ยืนยันการสมัคร">ยืนยันการสมัคร</button>
+                            <div id="stepTwo" class="row">
+                                <div class="progress p-0 my-2">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Basic example" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">2/2 </div>
+                                </div>
+                                <div class="des_input">คณะ</div>
+                                <input class=" col-12 form-control" type="text" placeholder="คณะ" name="fact" required />
+                                <div class="des_input">สาขา</div>
+                                <input class="form-control col-12" type="text" placeholder="สาขา" name="deptt" required />
+                                <div class="des_input">ชั้นปี</div>
+                                <input class="form-control col-12" type="text" placeholder="ขั้นปี" name="class" required />
+                                <div class="des_input">หลักฐานทางการศึกษา</div>
+                                <input class="sqr-input col-12 form-control" type="file" placeholder="หลักฐานทางการศึกษา" name="File" required>
+                                <input class="form-control col-12" type="text" name="Job_ID" value="<?php echo $Job_ID; ?>" hidden />
+
+                                <div class="des_input">ไฟล์เพิ่มเติม</div>
+                                <input class="sqr-input col-12 form-control" type="file" placeholder="ไฟล์เพิ่มเติม" name="File1">
+                                <input class="form-control col-12" type="text" name="Job_ID" value="<?php echo $Job_ID; ?>" hidden />
+                                <input type="button" name="previous" class="btn btn-primary action-button" value="ย้อนกลับ" onclick="previousbtn()" id="back">
+
+                                <button type="submit" name="addwork" class="btn btn-success submitBtn" id="submit" value="ยืนยันการสมัคร">ยืนยันการสมัคร</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
+
     <footer>
         <h5> ช่องทางการติดต่อ</h5>
         <p> <i class="fa-solid fa-envelope"></i> bayasita@kku.ac.th </p>
@@ -126,17 +125,17 @@
     </footer>
 </body>
 <script>
-    // nextbtn
-    function nextbtn() {
-        document.getElementById("stepOne").style.display = "none";
-        document.getElementById("stepTwo").style.display = "block";
-        document.getElementById("Twostep").classList.remove("current-item");
-    }
+ 
     // previousbtn
     function previousbtn() {
         document.getElementById("stepOne").style.display = "block";
         document.getElementById("stepTwo").style.display = "none";
         document.getElementById("Twostep").classList.add("current-item");
+    }
+   // nextbtn
+    function nextbtn() {
+        document.getElementById("stepOne").style.display = "none";
+        document.getElementById("stepTwo").style.display = "block";
     }
 </script>
 
