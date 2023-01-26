@@ -47,8 +47,28 @@
                     while ($row = mysqli_fetch_array($query)) {
                     ?>
                         <div class="profileUser">
-                            <img src="./img/<?php echo $row['PIC']; ?>" width="120px">
+                            <img src="./img/<?php echo $row['PIC']; ?>" width="120px" height="160px">
                         </div>
+
+                        <?php
+                        include('./config/db.php');
+                        if ($_POST) {
+                            if (isset($_FILES['upload'])) {
+                                $name_file =  $_FILES['upload']['PIC'];
+                                $tmp_name =  $_FILES['upload']['tmp_name'];
+                                $locate_img = "img/";
+                                move_uploaded_file($tmp_name, $locate_img . $name_file);
+                            }
+                        }
+                        ?>
+                        <form class="imgform " action=" " method="post" enctype="multipart/form-data">
+                            <div class='file-input'>
+                                <input type='file' name="upload">
+                                <span class='button'>อัปโหลดรูปภาพ</span>
+                                <span class='label' data-js-label>อัปโหลดรูปภาพ</label>
+                            </div>
+                        </form>
+
                         <hr>
 
                         <div class="info">
@@ -56,12 +76,8 @@
                         </div>
 
                         <div class="from-input">
+                            <form action="./user_profile.php" method="post"></form>
                             <div class="input-group prefix mt-4">
-                                <!-- <span class="input-group-text">คำนำหน้า</span>
-                            <input type="text" aria-label="prefix" class="form-control from-input-text" value=""> -->
-                                <!-- <img src="../img/"<?php echo $row['PIC']; ?>> -->
-
-
                                 <span class="input-group-text">ชื่อ</span>
                                 <input type="text" aria-label="firstname" class="form-control from-input-text" value="<?php echo $row['User_Fname']; ?>">
                                 <span class="input-group-text">นามสกุล</span>
@@ -107,14 +123,14 @@
                             <input type="text" aria-label="classyear" class="form-control from-input-text" value="">
                         </div> -->
 
-                            <div class="des_input">รูปภาพ</div>
+                            <!-- <div class="des_input">รูปภาพ</div>
                             <input class="sqr-input col-12 form-control" type="file" placeholder="รูปภาพ" name="PIC" required>
-                            <input class="form-control col-12" type="text" name="User_id" value="<?php echo $User_id; ?>" hidden />
+                            <input class="form-control col-12" type="text" name="User_id" value="<?php echo $User_id; ?>" hidden /> -->
 
                             <div class=" Edit col-12">
-                                <button type="edit" class="btn btn-warning">แก้ไขข้อมูล</button>
+                                <a type="edit" class="btn btn-warning">แก้ไขข้อมูล</a>
 
-                                <button type="save" name="addwork" class="btn btn-success submitBtn" id="submit" value="ยืนยันการสมัคร">ยืนยันการบันทึก</button>
+                                <a type="submit" name="addwork" class="btn btn-success submitBtn" id="submit" href="./user_profile.php" value="ยืนยันการสมัคร">ยืนยันการบันทึก</a>
                             </div>
                         <?php
 
@@ -126,6 +142,39 @@
             </div>
 
 
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="ft">
+            <img src="./img/bayasitaW.png" alt="">
+            Copyright © 2021 Bayasita@KKU. All rights reserved.
+        </div>
+    </footer>
+
 </body>
+
+<!-- ปุ่มอัปโหลด-->
+<script>
+    var inputs = document.querySelectorAll('.file-input')
+
+    for (var i = 0, len = inputs.length; i < len; i++) {
+        customInput(inputs[i])
+    }
+
+    function customInput(el) {
+        const fileInput = el.querySelector('[type="file"]')
+        const label = el.querySelector('[data-js-label]')
+
+        fileInput.onchange =
+            fileInput.onmouseout = function() {
+                if (!fileInput.value) return
+
+                var value = fileInput.value.replace(/^.*[\\\/]/, '')
+                el.className += ' -chosen'
+                label.innerText = value
+            }
+    }
+</script>
 
 </html>

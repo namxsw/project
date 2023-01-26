@@ -57,7 +57,7 @@
                 </select>
             </div>
 
-            
+
 
             <!-- <div class="col-12">
                 <input class="form-control" type="search" placeholder="Search">
@@ -78,18 +78,15 @@
     <div id="line"></div>
     <?php
     include('./config/db.php');
-    if(isset($_POST['btm']) && $_POST['edu'] != 'all' &&  $_POST['job'] == 'all'){
-        $sql = "SELECT * FROM `job`WHERE `Job_Education` = '".$_POST['edu']."'";
+    if (isset($_POST['btm']) && $_POST['edu'] != 'all' &&  $_POST['job'] == 'all') {
+        $sql = "SELECT * FROM `job`WHERE `Job_Education` = '" . $_POST['edu'] . "'";
+    } elseif (isset($_POST['job']) && $_POST['job'] != 'all' &&  $_POST['edu'] == 'all') {
+        $sql = "SELECT * FROM `job`WHERE `Job_Type` = '" . $_POST['job'] . "'";
+    } elseif (isset($_POST['btm']) && $_POST['job'] != 'all' && $_POST['edu'] != 'all') {
+        $sql = "SELECT * FROM `job`WHERE `Job_Education` = '" . $_POST['edu'] . "' AND `Job_Type` = '" . $_POST['job'] . "'";
+    } else {
+        $sql = "SELECT * FROM `job`";
     }
-    elseif(isset($_POST['job']) && $_POST['job'] != 'all' &&  $_POST['edu'] == 'all'){
-        $sql = "SELECT * FROM `job`WHERE `Job_Type` = '".$_POST['job']."'";
-    }
-    elseif(isset($_POST['btm']) && $_POST['job'] != 'all' && $_POST['edu'] != 'all'){
-        $sql = "SELECT * FROM `job`WHERE `Job_Education` = '".$_POST['edu']."' AND `Job_Type` = '".$_POST['job']."'";
-    }
-    else{
-        $sql = "SELECT * FROM `job`"; 
-    }        
     $query = mysqli_query($conn, $sql);
     while ($row = mysqli_fetch_array($query)) {
     ?>
@@ -140,13 +137,6 @@
     ?>
 
     <footer>
-        <h5> ช่องทางการติดต่อ</h5>
-        <p> <i class="fa-solid fa-envelope"></i> bayasita@kku.ac.th </p>
-        <p> <i class="fa-solid fa-phone"></i> +66 43 343 097, 203 158 <i class="fa-solid fa-mobile"></i> 099 023 9779 </p>
-        <!-- <p> <i class="fa-brands fa-facebook"></i> https://www.facebook.com/Bayasitakku/ </p> -->
-        <p> <i class="fa-solid fa-location-dot"></i> 123 Moo 16 Mitraphap Rd., Muang District,Khon Kaen 40002, Thailand </p>
-
-        <hr>
         <div class="ft">
             <img src="./img/bayasitaW.png" alt="">
             Copyright © 2021 Bayasita@KKU. All rights reserved.
@@ -156,4 +146,5 @@
 <?php
 
 ?>
+
 </html>

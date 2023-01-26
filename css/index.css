@@ -5,11 +5,6 @@ body {
   font-family: 'Mitr', sans-serif !important;
 }
 
-/* body {
-    background-color: #FFF9F3 !important;
-    font-family: sans-serif;
-    min-width: 370px;
-} */
 
 .header {
     color: #97372f;
@@ -31,13 +26,12 @@ h5 {
 
 
 /* ค้นหา */
-
 .ser {
     z-index: -1;
 }
 
 .search-brn {
-    /* margin-top: 20px; */
+    margin-top: 20px;
     padding-left: 30%;
 }
 
@@ -48,6 +42,7 @@ h5 {
 .search h4 {
     text-align: center;
     margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 .input-group {
@@ -55,17 +50,15 @@ h5 {
 
 }
 
-
 .form-control {
     height: 25px;
 }
 
 
-
 /* ดีเทล */
 .title h3 {
     margin-top: 60px;
-    margin-left: 13%;
+    margin-left: 18%;
 }
 
 #line {

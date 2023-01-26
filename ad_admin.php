@@ -34,15 +34,15 @@
 					<div class="appeal-content">
 						<div class="appeal-content-info">
 							<table id="myTable" class="display table table-striped dt-responsive " style="width:100%;">
-							<span class="add"><a href="./ad_admininfo.php" data-toggle="modal" class="btn btn-primary ml-5"><i class="fa-solid fa-plus"></i>เพิ่มแอดมิน</a></span>
+								<span class="add"><a href="./ad_admininfo.php" data-toggle="modal" class="btn btn-primary ml-5"><i class="fa-solid fa-plus"></i>เพิ่มแอดมิน</a></span>
 
 								<thead style="text-align: center;">
-									<th style="width: 120px;">ชื่อผู้ใช้</th>
-									<th style="width: 160px;">ชื่อ</th>
-									<th style="width: 160px;">นามสกุล</th>
-									<th>อีเมล</th>
-									<th style="width: 110px;">สถานะ</th>
-									<th >จัดการ</th>
+									<th scope="col">ชื่อผู้ใช้</th>
+									<th scope="col">ชื่อ</th>
+									<th scope="col">นามสกุล</th>
+									<th scope="col">อีเมล</th>
+									<th scope="col">สถานะ</th>
+									<th>จัดการ</th>
 
 								</thead>
 								<tbody>
@@ -60,7 +60,7 @@
 											<td><?php echo $row['UserType_Name']; ?></td>
 											<td style="text-align: center;">
 												<!-- แก้ไข -->
-												<a type="button" style= "width: 120px;" class="btn btn-outline-warning" href="./editadminform.php?User_id=<?php echo $row['User_id']; ?>" onclick="return confirm('คุณต้องการแก้ไขใช่หรือไม่')">แก้ไข</a>
+												<a type="button" style="width: 120px;" class="btn btn-outline-warning" href="./editadminform.php?User_id=<?php echo $row['User_id']; ?>" onclick="return confirm('คุณต้องการแก้ไขใช่หรือไม่')">แก้ไข</a>
 												<!-- ลบ -->
 												<a type="button" style="width: 120px;" class="btn btn-outline-danger" href="./delete_admin.php?User_id=<?php echo $row['User_id']; ?>" onclick="return confirm('คุณต้องการลบใช่หรือไม่')">ลบ</a>
 											</td>

@@ -29,7 +29,7 @@
       <a href="javascript:history.back()">
         <i class="fa-solid fa-angles-left"></i>ย้อนกลับ</a>
 
-      <h1><b>แก้ไขแอดมิน</h1>
+     
       <div class="appeal-container1">
         <div class="appeal-content">
           <div class="appeal-content-info">
@@ -58,7 +58,7 @@
             
             <div>
               <button  type="submit"   class="btn btn-outline-primary sent1" onclick="return confirm('ยืนยันการแก้ไขใช่หรือไม่')" >ส่ง</button>
-              <button  href="ad_admin.php"  type="button"  class="btn btn-outline-danger cancel">ยกเลิก </button>
+              <button  type="button" onclick="window.location='./ad_admin.php'" class="btn btn-outline-danger cancel">ยกเลิก </button>
               
             </div>
 

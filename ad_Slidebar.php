@@ -6,13 +6,12 @@ session_start();
 
 <head>
   <meta charset="UTF-8">
-  <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
   <link rel="stylesheet" href="./css/ad_Slidebar.css">
   <!-- Boxicons CDN Link -->
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <!-- <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> -->
   <!-- icon -->
   <script src="https://kit.fontawesome.com/e9f79b1eaf.js" crossorigin="anonymous"></script>
 </head>
@@ -120,10 +119,10 @@ session_start();
       menuBtnChange(); //calling the function(optional)
     });
 
-    searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
-      sidebar.classList.toggle("open");
-      menuBtnChange(); //calling the function(optional)
-    });
+    // searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
+    //   sidebar.classList.toggle("open");
+    //   menuBtnChange(); //calling the function(optional)
+    // });
 
     // following are the code to change sidebar button(optional)
     function menuBtnChange() {
@@ -134,7 +133,7 @@ session_start();
       }
     }
   </script>
-  <script src="./JS/ad_sildebar.js"></script>
+  <!-- <script src="./JS/ad_sildebar.js"></script> -->
 </body>
 
 </html>

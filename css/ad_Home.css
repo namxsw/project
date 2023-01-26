@@ -8,13 +8,14 @@ body {
 
 /* ----------------------banner------------------------------ */
 #content {
-  width: 1400px;
+  width: 1350px;
   /* height: 00px; */
-  margin-right: 100px;
+  margin-right: 10px;
 }
 
 .carousel-item img {
   height: 32rem;
+  margin-top: 90px;
 }
 
 #carouselExampleIndicators {

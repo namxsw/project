@@ -85,27 +85,20 @@
               window.location = "./signin.php"
           });
       }
-      function Delete() {
+
+      function regissuccess() {
           Swal.fire({
-              title: 'Are you sure?',
-              text: "You won't be able to revert this!",
-              icon: 'warning',
-              showCancelButton: true,
-              confirmButtonColor: '#3085d6',
-              cancelButtonColor: '#d33',
-              confirmButtonText: 'Yes, delete it!'
-          }).then((result) => {
-              if (result.isConfirmed) {
-                  Swal.fire(
-                      'Deleted!',
-                      'Your file has been deleted.',
-                      'success'
-                  )
-              }
-          })
+              title: 'สมัครสมาชิกสำเร็จ',
+              icon: 'success',
+              showConfirmButton: false,
+              timer: 1000
+          }).then(function() {
+              window.location = "./signin.php"
+          });
       }
 
- // error
+
+// error
 
     function adminerror() {
         Swal.fire({
@@ -117,7 +110,29 @@
         })
     }
 
-      // ตาราง
+    function regiserror() {
+        Swal.fire({
+            title: 'สมัครสมาชิกไม่สำเร็จ',
+            text: 'เกิดข้อผิดพลาดกรุณาลองอีกครั้ง',
+            icon: 'error',
+            showConfirmButton: false,
+            timer: 2500
+        })
+    }
+
+// warning
+    function regiswarn() {
+        Swal.fire({
+            title: 'กรอกข้อมูลไม่ครบ',
+            text: 'กรุณากรอกข้อมูลอีกครั้ง',
+            icon: 'warning',
+            showConfirmButton: false,
+            timer: 2500
+        })
+    }
+
+
+// ตาราง
       $(document).ready(function() {
           $("#myTable").DataTable({
               paging: true,
