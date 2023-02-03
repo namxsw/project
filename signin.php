@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -72,6 +73,7 @@
                     <div class="d-grid gap-2 mt-3">
                         <button type="submit" name="login" class="btn btn-outline-primary">เข้าสู่ระบบ</button>
                     </div>
+              
             </div>
         </div>
     </div>
@@ -93,7 +95,7 @@
 
     }
 </script>
- 
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>

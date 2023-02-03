@@ -21,30 +21,22 @@
     include('./config/db.php');
     $user = $_SESSION['username'];
     $query = mysqli_query($conn, "select * from user  WHERE `User_username`='$user'");
-    while ($row = mysqli_fetch_array($query)) {
+    $rowimg = mysqli_fetch_array($query);
+    extract($rowimg);
 
     ?>
 
 
-        <!-- <div class="img-upload">
-            <div class="wrapper">
-                <div class="profileUser">
-                    <img src="./img/<?php echo $row['PIC']; ?>" width="120px" height="160px" alt=" 11">
-                </div>
-                <div id="cancel-btn"><i class="fas fa-times"></i></div>
-            </div>
-            <span>รูปถ่าย</span><br>
-        </div> -->
+
 
     <?php
-    }
     ?>
 
     <?php
     include('./config/db.php');
     if ($_GET) {
         $Applicant_ID = $_GET['Applicant_ID'];
-        $query = mysqli_query($conn, "select applicant.* ,job.Job_Type from applicant join job on (applicant.Job_id= job.Job_ID)where Applicant_ID = '$Applicant_ID'");
+        $query = mysqli_query($conn, "select applicant.* ,user.PIC,job.Job_Type from applicant join job on (applicant.Job_id= job.Job_ID) JOIN `user` ON (applicant.User_username = user.User_username) where Applicant_ID = '$Applicant_ID'");
     }
     if (isset($_GET['ApplicantID'])) {
 
@@ -59,7 +51,15 @@
 
     while ($row = mysqli_fetch_array($query)) {
     ?>
-
+        <div class="img-upload">
+            <div class="wrapper">
+                <div class="up-icon">
+                    <img src="./img/<?php echo $row['PIC']; ?>" width="120px" height="160px" alt=" 11">
+                </div>
+                <div id="cancel-btn"><i class="fas fa-times"></i></div>
+            </div>
+            <span>รูปถ่าย</span><br>
+        </div>
         <div class="appeal-container">
             <div class="appeal-content">
                 <div class="appeal-content-info">
@@ -136,7 +136,7 @@
                                 </div>
                                 <div class="file1">หลักฐานทางการศึกษา : <a href="img/<?php echo $row['Applicant_Education'] ?>"> <button type="button" class="btn btn-info"> เปิดดู</a> </button></div> <br>
                                 <div class="file2">ไฟล์เอกสารเพิ่มเติม : <a href="img/<?php echo $row['Applicant_Education2'] ?>"> <button type="button" class="btn btn-info">เปิดดู</a></button> </div>
-                                
+
                                 <div class="button">
                                     <button type="button" style="width: 100px;" onclick="window.location='./checkapplicant.php'" class="btn btn-outline-danger"> ยกเลิก</button>
 
@@ -149,7 +149,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
