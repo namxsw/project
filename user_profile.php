@@ -66,13 +66,21 @@
                                 <input type="text" aria-label="firstname" class="form-control from-input-text" value="<?php echo $row['User_Fname']; ?>">
                                 <span class="input-group-text">นามสกุล</span>
                                 <input type="text" aria-label="lastname" class="form-control from-input-text" value="<?php echo $row['User_Lname']; ?>">
+                                <span class="input-group-text">เพศ</span>
+                                <input type="text" aria-label="sex" class="form-control from-input-text" value="<?php echo $row['user_sex']; ?>">
+                                <span class="input-group-text">อายุ</span>
+                                <input type="text" aria-label="age" class="form-control from-input-text" value="<?php echo $row['user_age']; ?> ปี">
+                                <span class="input-group-text">น้ำหนัก</span>
+                                <input type="text" aria-label="weigh" class="form-control from-input-text" value="<?php echo $row['user_weigh']; ?> กิโลกรัม">
+                                <span class="input-group-text">ส่วนสูง</span>
+                                <input type="text" aria-label="heig" class="form-control from-input-text" value="<?php echo $row['user_heig']; ?> เซนติเมตร">
                             </div>
+                            
 
                             <div class="input-group prefix mt-4">
                                 <span class="input-group-text">วันเกิด</span>
                                 <input type="date" aria-label="birthday" class="form-control from-input-text" value="<?php echo $row['User_Birthday']; ?>">
-                                <!-- <span class="input-group-text">สัญชาติ</span>
-                            <input type="text" aria-label="First name" class="form-control from-input-text" value=""> -->
+                              
                                 <!-- <span class="input-group-text">หมายเลขบัตรประชาชน</span>
                             <input type="text" aria-label="idcrad" class="form-control from-input-text" value=""> -->
                             </div>
@@ -82,15 +90,23 @@
                                 <input type="text" aria-label="tel" class="form-control from-input-text" value="<?php echo $row['User_Tel']; ?>">
                                 <span class="input-group-text">อีเมล</span>
                                 <input type="text" aria-label="email" class="form-control from-input-text" value="<?php echo $row['User_Email']; ?>">
-                                <!-- <span class="input-group-text">Line ID</span>
-                            <input type="text" aria-label="line" class="form-control from-input-text" value=""> -->
+                                <span class="input-group-text">Line ID</span>
+                            <input type="text" aria-label="line" class="form-control from-input-text" value="<?php echo $row['User_Tel']; ?>">
                             </div>
 
-                            <!-- <div class="input-group prefix mt-4">
+                            <div class="input-group prefix mt-4">
                             <span class="input-group-text">ที่อยู่</span>
-                            <input type="address" aria-label="address" class="form-control from-input-text" value="<?php echo $row['User_Address']; ?>">
+                            <input type="address" aria-label="address" class="form-control from-input-text" value="<?php echo $row['user_addr']; ?>">
                             
-                        </div> -->
+                        </div>
+                        <div class="input-group prefix mt-4">
+                                <span class="input-group-text">คณะที่ศึกษา</span>
+                                <input type="text" aria-label="fact" class="form-control from-input-text" value="<?php echo $row['user_fact']; ?>">
+                                <span class="input-group-text">สาขาที่ศึกษา</span>
+                                <input type="text" aria-label="dept" class="form-control from-input-text" value="<?php echo $row['user_dept']; ?>">
+                                <span class="input-group-text">เกรด</span>
+                            <input type="text" aria-label="grad" class="form-control from-input-text" value="<?php echo $row['user_grad']; ?>">
+                            </div>
 
                             <hr>
 

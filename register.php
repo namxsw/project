@@ -23,9 +23,17 @@
     $password = $_POST["pass"];
     $firstname = $_POST["firstname"];
     $lastname = $_POST["lastname"];
+    $sex = $_POST["sex"];
     $email = $_POST["email"];
+    $addr = $_POST["addr"];
+    $heig = $_POST["heig"];
+    $weigh = $_POST["weigh"];
+    $age = $_POST["age"];
     $birthday = $_POST["bd"];
     $tell = $_POST["tel"];
+    $fact = $_POST["fact"];
+    $dept = $_POST["dept"];
+    $grad = $_POST["grad"];
     $conpass = $_POST["compass"];
 
     date_default_timezone_set('Asia/Bangkok');
@@ -43,10 +51,10 @@
     if ($password != $conpass) {
       echo "<script>alert('รหัสผ่านไม่ตรงกัน')</script>";
     }
-    if ($password != "" && $password != "" && $firstname != "" && $lastname != "" && $email != "" && $birthday != "" && $tell != "" && $conpass != "" && $PIC) {
+    if ($password != "" && $password != "" && $firstname != "" && $lastname != "" && $sex != "" && $email != "" && $addr != "" && $heig != "" && $age != "" && $weigh != "" && $birthday != "" && $tell != "" && $fact != "" && $dept != "" && $grad != "" && $conpass != "" && $PIC) {
       $password = md5($password);
-      $sql = "INSERT INTO `user`(`User_username`, `User_Password`, `User_Fname`, `User_Lname`, `User_Tel`, `User_Email`, `User_Birthday`, `Usertype_Id`, `PIC`) 
-          VALUES ('$username','$password','$firstname','$lastname','$tell','$email','$birthday','2','$PIC')";
+      $sql = "INSERT INTO `user`(`User_username`, `User_Password`, `User_Fname`, `User_Lname`, `User_Tel`, `User_Email`, `User_Birthday`, `user_addr`, `user_sex`, `user_heig`, `user_weigh`, `user_age`, `user_fact`, `user_dept`, `user_grad`, `Usertype_Id`, `PIC`) 
+          VALUES ('$username','$password','$firstname','$lastname','$tell','$email','$birthday','$addr','$sex','$heig','$weigh','$age','$fact','$dept','$grad','2','$PIC')";
       $result = mysqli_query($conn, $sql);
       if ($result) {
         move_uploaded_file($filetmp3, $filepath3);
@@ -70,7 +78,8 @@
       <div class="appeal-content">
         <div class="appeal-content-info">
           <img src="./img/BayasitaD.png" alt="">
-          <h3><b>สมัครสมาชิก</h3>
+          <h3><b>สมัครสมาชิกและสร้างโปรไฟล์</h3>
+          
 
           <div class="mb-3">
             <div class="text-start ms-5 ps-4 mb-1">ชื่อ</div>
@@ -83,8 +92,33 @@
           </div>
 
           <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">เพศ</div>
+            <input type="text" class="form-control" name="sex" aria-describedby="sex" style="width: 450px;">
+          </div>
+
+          <div class="mb-3">
             <div class="text-start ms-5 ps-4 mb-1">อีเมล</div>
             <input type="text" class="form-control" name="email" aria-describedby="email" style="width: 450px;">
+          </div>
+
+          <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">ที่อยู่</div>
+            <input type="text" class="form-control" name="addr" aria-describedby="addr" style="width: 450px;">
+          </div>
+
+          <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">ส่วนสูง</div>
+            <input type="text" class="form-control" name="heig" aria-describedby="heig" style="width: 450px;">
+          </div>
+
+          <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">น้ำหนัก</div>
+            <input type="text" class="form-control" name="weigh" aria-describedby="weigh" style="width: 450px;">
+          </div>
+
+          <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">อายุ</div>
+            <input type="text" class="form-control" name="age" aria-describedby="age" style="width: 450px;">
           </div>
 
           <div class="mb-3">
@@ -95,6 +129,23 @@
           <div class="mb-3">
             <div class="text-start ms-5 ps-4 mb-1">เบอร์โทร</div>
             <input type="text" class="form-control" name="tel" aria-describedby="tel" style="width: 450px;">
+          </div>
+
+          
+
+          <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">คณะที่ศึกษา</div>
+            <input type="text" class="form-control" name="fact" aria-describedby="fact" style="width: 450px;">
+          </div>
+
+          <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">สาขาที่ศึกษา</div>
+            <input type="text" class="form-control" name="dept" aria-describedby="dept" style="width: 450px;">
+          </div>
+
+          <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">เกรด</div>
+            <input type="text" class="form-control" name="grad" aria-describedby="grad" style="width: 450px;">
           </div>
 
           <div class="mb-3">
