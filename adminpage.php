@@ -204,6 +204,7 @@ include "./ad_Slidebar.php";
                             <option value="ปวช">ปวช.</option>
                             <option value="ปวส">ปวส.</option>
                             <option value="ปริญญาตรี">ปริญญาตรี</option>
+                            <option value="ไม่จำกัดวุฒิ">ไม่จำกัดวุฒิ</option>
                         </select>
                     </div>
                 </div>

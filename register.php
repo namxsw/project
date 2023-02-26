@@ -70,10 +70,14 @@
 
   ?>
 
+
+
+
+
   <div class="back">
     <a href="./index.php"><i class="fa-solid fa-angles-left"></i></a>
   </div>
-  <form method="post"enctype="multipart/form-data">
+  <form method="post" enctype="multipart/form-data">
     <div class="appeal-container">
       <div class="appeal-content">
         <div class="appeal-content-info">
@@ -150,10 +154,11 @@
 
           <div class="mb-3">
             <div class="text-start ms-5 ps-4 mb-1">ชื่อผู้ใช้</div>
-            <input type="text" class="form-control" name="username" aria-describedby="username" style="width: 450px;">
+            <input type="text" class="form-control" name="username" aria-describedby="username" id="username" style="width: 450px;">
+            <span id="msg1" style="font-size: 14px"></span>
           </div>
 
-          <div class="mb-3">
+          <div class="mb-3" >
             <div class="text-start ms-5 ps-4 mb-1">รหัสผ่าน</div>
             <input type="password" class="form-control" name="pass" aria-describedby="pass" style="width: 450px;">
           </div>
@@ -164,7 +169,7 @@
           </div>
           <div class="des_input text-start ms-5 ps-4 mb-1">รูปภาพ</div>
           <input class="sqr-input col-12 form-control" type="file" placeholder="รูปภาพ" name="picc" style="width: 450px;">
-          
+
 
           <button type="submit" name="signup" class="btn btn-primary mt-3">สมัครสมาชิก</button>
 
@@ -177,6 +182,36 @@
   <p>หากเป็นสมาชิกแล้ว คลิกที่นี่เพื่อ<a href="signin.php">เข้าสู่ระบบ</a>
 
 
+
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Username -->
+<script>
+  $(document).ready(function() {
+    $("#username").change(function() {
+      var flag;
+      $.ajax({
+        url: "check.php",
+        data: "username=" + $("#username").val(),
+        type: "POST",
+        async: false,
+        success: function(data, status) {
+          var result = data.split(",");
+          flag = result[0];
+          var msg = result[1];
+          $("#msg1").html(msg);
+        },
+        error: function(xhr, status, exception) {
+          alert(status);
+        }
+      });
+      return flag;
+    });
+  });
+</script>
+
+
 
 </html>

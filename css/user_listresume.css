@@ -48,6 +48,12 @@ body {
 
 }
 
+.imgform .form-control{
+    width: 350px ;
+    /* margin-left: 50%; */
+    /* height: 30px; */
+}
+
 ul li {
     margin-left: -120px;
     list-style: none;
@@ -58,6 +64,69 @@ ul li {
     margin-top: 30px;
     text-align: center;
 }
+
+.file-input > [type='file'] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 20%;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+  
+  .file-input > .button {
+    display: inline-block;
+    cursor: pointer;
+    background: green;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-right: 8px;
+  }
+  
+  .file-input:hover > .button {
+    background: rgb(1, 99, 1);
+    color: white;
+    border: #333;
+  }
+  
+  .file-input > .label {
+    color: #333;
+    white-space: nowrap;
+    opacity: .3;
+  }
+  
+  .file-input.-chosen > .label {
+    opacity: 1;
+  }
+
+
+footer {
+    margin-top: 5%;
+    text-align: center end;
+    padding: 2%;
+    background-color: #97372f;
+    color: white;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+
+}
+
+footer p {
+    font-size: 85%;
+}
+
+.ft{
+    text-align: center;
+}
+.ft img{
+    height: 60px;
+}
+
 
 
 @media(max-width: 992px) {

@@ -13,9 +13,7 @@
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- sweetalert -->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 
 </head>
@@ -32,7 +30,7 @@
         </div>
     </div>
 
-    <!-- ค้นหา        -->
+    <!-- ค้นหา -->
     <div class="ser ">
         <div class="search align-items-center">
             <h4><b>ระบุงานที่คุณต้องการ</h4></b>
@@ -66,8 +64,6 @@
                 <button type="submit" name="btm" class="btn btn-primary submit">ค้นหา</button>
             </div>
         </form>
-
-
     </div>
 
 
@@ -130,13 +126,6 @@
     ?>
 
     <footer>
-        <h5> ช่องทางการติดต่อ</h5>
-        <p> <i class="fa-solid fa-envelope"></i> bayasita@kku.ac.th </p>
-        <p> <i class="fa-solid fa-phone"></i> +66 43 343 097, 203 158 <i class="fa-solid fa-mobile"></i> 099 023 9779 </p>
-        <!-- <p> <i class="fa-brands fa-facebook"></i> https://www.facebook.com/Bayasitakku/ </p> -->
-        <p> <i class="fa-solid fa-location-dot"></i> 123 Moo 16 Mitraphap Rd., Muang District,Khon Kaen 40002, Thailand </p>
-
-        <hr>
         <div class="ft">
             <img src="./img/bayasitaW.png" alt="">
             Copyright © 2021 Bayasita@KKU. All rights reserved.

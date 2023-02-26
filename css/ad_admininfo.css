@@ -21,14 +21,14 @@ h1 {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   max-width: 80%;
-  margin: 40px 0px 0px 100px;
+  margin: 140px 0px 0px 70px;
   overflow: hidden;
   width: 90%;
     
 }
   
 .appeal-content-info {
-  padding: 40px;
+  padding: 25px;
   position: relative;
   width: 85%;
   margin-left: 80px; 

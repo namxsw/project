@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>เพิ่มข้อมูล</title>
   <link rel="icon" type="image/png" href="./img/BayasitaD.png">
   <link rel="stylesheet" href="./css/ad_admininfo.css">
 </head>
@@ -53,11 +53,11 @@
             </div>
             <div class="input-group mb-3">
               <span class="input-group-text" id="inputGroup-sizing-default">วันเกิด</span>
-              <input type="date" class="form-control" name="bd" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              <input type="date" class="form-control" name="bd"  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
             </div>
             <div>
               <button type="submit"  name="add" class="btn btn-outline-primary sent1">ส่ง</button>
-              <button  href="./ad_admin.php" type="button"  class="btn btn-outline-danger cancel">ยกเลิก </button>
+              <button  type="button" onclick="window.location='./ad_admin.php'" class="btn btn-outline-danger cancel">ยกเลิก </button>
               
             </div>
 

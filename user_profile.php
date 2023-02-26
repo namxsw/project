@@ -47,21 +47,38 @@
                     while ($row = mysqli_fetch_array($query)) {
                     ?>
                         <div class="profileUser">
-                            <img src="./img/<?php echo $row['PIC']; ?>" width="120px">
+                            <img src="./img/<?php echo $row['PIC']; ?>" width="120px" height="160px">
                         </div>
+
+                        <?php
+                        include('./config/db.php');
+                        if ($_POST) {
+                            if (isset($_FILES['upload'])) {
+                                $name_file =  $_FILES['upload']['PIC'];
+                                $tmp_name =  $_FILES['upload']['tmp_name'];
+                                $locate_img = "img/";
+                                move_uploaded_file($tmp_name, $locate_img . $name_file);
+                            }
+                        }
+                        ?>
+                        <form class="imgform " action=" " method="post" enctype="multipart/form-data">
+                            <div class='file-input'>
+                                <input type='file' name="upload">
+                                <span class='button'>อัปโหลดรูปภาพ</span>
+                                <span class='label' data-js-label>อัปโหลดรูปภาพ</label>
+                            </div>
+                        </form>
+
                         <hr>
 
                         <div class="info">
-                            <h3>ข้อมูลส่วนตัว</h3>
+                            <h4 class="p-0"><span class="text-secondary"> ขั้นที่ 1</span> ข้อมูลทั่วไป</h4>
                         </div>
 
                         <div class="from-input">
+                            <form action="./user_profile.php" method="post"></form>
+                            
                             <div class="input-group prefix mt-4">
-                                <!-- <span class="input-group-text">คำนำหน้า</span>
-                            <input type="text" aria-label="prefix" class="form-control from-input-text" value=""> -->
-                                <!-- <img src="../img/"<?php echo $row['PIC']; ?>> -->
-
-
                                 <span class="input-group-text">ชื่อ</span>
                                 <input type="text" aria-label="firstname" class="form-control from-input-text" value="<?php echo $row['User_Fname']; ?>">
                                 <span class="input-group-text">นามสกุล</span>
@@ -80,7 +97,8 @@
                             <div class="input-group prefix mt-4">
                                 <span class="input-group-text">วันเกิด</span>
                                 <input type="date" aria-label="birthday" class="form-control from-input-text" value="<?php echo $row['User_Birthday']; ?>">
-                              
+                                <!-- <span class="input-group-text">สัญชาติ</span>
+                            <input type="text" aria-label="First name" class="form-control from-input-text" value=""> -->
                                 <!-- <span class="input-group-text">หมายเลขบัตรประชาชน</span>
                             <input type="text" aria-label="idcrad" class="form-control from-input-text" value=""> -->
                             </div>
@@ -90,47 +108,64 @@
                                 <input type="text" aria-label="tel" class="form-control from-input-text" value="<?php echo $row['User_Tel']; ?>">
                                 <span class="input-group-text">อีเมล</span>
                                 <input type="text" aria-label="email" class="form-control from-input-text" value="<?php echo $row['User_Email']; ?>">
-                                <span class="input-group-text">Line ID</span>
-                            <input type="text" aria-label="line" class="form-control from-input-text" value="<?php echo $row['User_Tel']; ?>">
+                                <!-- <span class="input-group-text">Line ID</span>
+                            <input type="text" aria-label="line" class="form-control from-input-text" value=""> -->
+                            </div>
+
+                            <!-- <div class="input-group prefix mt-4">
+                            <span class="input-group-text">ที่อยู่</span>
+                            <input type="address" aria-label="address" class="form-control from-input-text" value="<?php echo $row['User_Address']; ?>">
+                            
+                        </div> -->
+
+                            <hr>
+
+                            <div class="education">
+                                <h4 class="p-0"><span class="text-secondary"> ขั้นที่ 2</span> ข้อมูลการศึกษา</h4>
                             </div>
 
                             <div class="input-group prefix mt-4">
-                            <span class="input-group-text">ที่อยู่</span>
-                            <input type="address" aria-label="address" class="form-control from-input-text" value="<?php echo $row['user_addr']; ?>">
-                            
-                        </div>
-                        <div class="input-group prefix mt-4">
-                                <span class="input-group-text">คณะที่ศึกษา</span>
-                                <input type="text" aria-label="fact" class="form-control from-input-text" value="<?php echo $row['user_fact']; ?>">
-                                <span class="input-group-text">สาขาที่ศึกษา</span>
-                                <input type="text" aria-label="dept" class="form-control from-input-text" value="<?php echo $row['user_dept']; ?>">
-                                <span class="input-group-text">เกรด</span>
-                            <input type="text" aria-label="grad" class="form-control from-input-text" value="<?php echo $row['user_grad']; ?>">
+                                <span class="input-group-text">คณะ</span>
+                                <input type="text" aria-label="fact" class="form-control from-input-text" value="">
+                                <span class="input-group-text">สาขา</span>
+                                <input type="text" aria-label="First name" class="form-control from-input-text" value="">
+                                <span class="input-group-text">ชั้นปี</span>
+                                <input type="text" aria-label="classyear" class="form-control from-input-text" value="">
                             </div>
 
                             <hr>
 
-                            <!-- <div class="education">
-                            <h3>การศึกษา</h3>
-                        </div>
+                            <div class="address">
+                                <h4 class="p-0"><span class="text-secondary"> ขั้นที่ 3</span> ข้อมูลที่อยู่</h4>
+                            </div>
 
-                        <div class="input-group prefix mt-4">
-                            <span class="input-group-text">คณะ</span>
-                            <input type="text" aria-label="fact" class="form-control from-input-text" value="">
-                            <span class="input-group-text">department</span>
-                            <input type="text" aria-label="First name" class="form-control from-input-text" value="">
-                            <span class="input-group-text">ชั้นปี</span>
-                            <input type="text" aria-label="classyear" class="form-control from-input-text" value="">
-                        </div> -->
+                            <div class="input-group prefix mt-4">
+                                <span class="input-group-text">บ้านเลขที่ </span>
+                                <input type="text" aria-label="fact" class="form-control from-input-text" value="">
+                                <span class="input-group-text">หมู่</span>
+                                <input type="text" aria-label="First name" class="form-control from-input-text" value="">
+                                <span class="input-group-text">ถนน</span>
+                                <input type="text" aria-label="classyear" class="form-control from-input-text" value="">
+                            </div>
+                            <div class="input-group prefix mt-4">
+                                <span class="input-group-text">ซอย </span>
+                                <input type="text" aria-label="fact" class="form-control from-input-text" value="">
+                                <span class="input-group-text">ตำบล</span>
+                                <input type="text" aria-label="First name" class="form-control from-input-text" value="">
+                                <span class="input-group-text">อำเภอ</span>
+                                <input type="text" aria-label="classyear" class="form-control from-input-text" value="">
+                            </div>
 
-                            <div class="des_input">รูปภาพ</div>
+                            
+
+                            <!-- <div class="des_input">รูปภาพ</div>
                             <input class="sqr-input col-12 form-control" type="file" placeholder="รูปภาพ" name="PIC" required>
-                            <input class="form-control col-12" type="text" name="User_id" value="<?php echo $User_id; ?>" hidden />
+                            <input class="form-control col-12" type="text" name="User_id" value="<?php echo $User_id; ?>" hidden /> -->
 
                             <div class=" Edit col-12">
-                                <button type="edit" class="btn btn-warning">แก้ไขข้อมูล</button>
+                                <a type="edit" class="btn btn-warning">แก้ไขข้อมูล</a>
 
-                                <button type="save" name="addwork" class="btn btn-success submitBtn" id="submit" value="ยืนยันการสมัคร">ยืนยันการบันทึก</button>
+                                <a type="submit" name="addwork" class="btn btn-success submitBtn" id="submit" href="./user_profile.php" value="ยืนยันการสมัคร">ยืนยันการบันทึก</a>
                             </div>
                         <?php
 
@@ -142,6 +177,39 @@
             </div>
 
 
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="ft">
+            <img src="./img/bayasitaW.png" alt="">
+            Copyright © 2021 Bayasita@KKU. All rights reserved.
+        </div>
+    </footer>
+
 </body>
+
+<!-- ปุ่มอัปโหลด-->
+<script>
+    var inputs = document.querySelectorAll('.file-input')
+
+    for (var i = 0, len = inputs.length; i < len; i++) {
+        customInput(inputs[i])
+    }
+
+    function customInput(el) {
+        const fileInput = el.querySelector('[type="file"]')
+        const label = el.querySelector('[data-js-label]')
+
+        fileInput.onchange =
+            fileInput.onmouseout = function() {
+                if (!fileInput.value) return
+
+                var value = fileInput.value.replace(/^.*[\\\/]/, '')
+                el.className += ' -chosen'
+                label.innerText = value
+            }
+    }
+</script>
 
 </html>

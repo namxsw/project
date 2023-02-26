@@ -48,6 +48,7 @@ h5 {
 .search h4 {
     text-align: center;
     margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 .input-group {
@@ -65,7 +66,7 @@ h5 {
 /* ดีเทล */
 .title h3 {
     margin-top: 60px;
-    margin-left: 13%;
+    margin-left: 18%;
 }
 
 #line {
