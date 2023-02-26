@@ -98,41 +98,51 @@
       }
 
 
-// error
+      // error
 
-    function adminerror() {
-        Swal.fire({
-            title: 'เพิ่มไม่สำเร็จ',
-            text: 'เกิดข้อผิดพลาดกรุณาลองอีกครั้ง',
-            icon: 'error',
-            showConfirmButton: false,
-            timer: 2500
-        })
-    }
+      function loginerror() {
+          Swal.fire({
+              title: 'กรุณาตรวจสอบอีกครั้ง',
+              text: 'บัญชีผู้ใช้งาน หรือ รหัสผ่านของคุณไม่ถูกต้อง  ',
+              icon: 'error',
+              showConfirmButton: false,
+              timer: 2500
+          })
+      }
 
-    function regiserror() {
-        Swal.fire({
-            title: 'สมัครสมาชิกไม่สำเร็จ',
-            text: 'เกิดข้อผิดพลาดกรุณาลองอีกครั้ง',
-            icon: 'error',
-            showConfirmButton: false,
-            timer: 2500
-        })
-    }
+      function adminerror() {
+          Swal.fire({
+              title: 'เพิ่มไม่สำเร็จ',
+              text: 'เกิดข้อผิดพลาดกรุณาลองอีกครั้ง',
+              icon: 'error',
+              showConfirmButton: false,
+              timer: 2500
+          })
+      }
 
-// warning
-    function regiswarn() {
-        Swal.fire({
-            title: 'กรอกข้อมูลไม่ครบ',
-            text: 'กรุณากรอกข้อมูลอีกครั้ง',
-            icon: 'warning',
-            showConfirmButton: false,
-            timer: 2500
-        })
-    }
+      function regiserror() {
+          Swal.fire({
+              title: 'สมัครสมาชิกไม่สำเร็จ',
+              text: 'เกิดข้อผิดพลาดกรุณาลองอีกครั้ง',
+              icon: 'error',
+              showConfirmButton: false,
+              timer: 2500
+          })
+      }
+
+      // warning
+      function regiswarn() {
+          Swal.fire({
+              title: 'กรอกข้อมูลไม่ครบ',
+              text: 'กรุณากรอกข้อมูลอีกครั้ง',
+              icon: 'warning',
+              showConfirmButton: false,
+              timer: 2500
+          })
+      }
 
 
-// ตาราง
+      // ตาราง
       $(document).ready(function() {
           $("#myTable").DataTable({
               paging: true,
@@ -153,8 +163,6 @@
           });
 
       });
-
-      
   </script>
 
 

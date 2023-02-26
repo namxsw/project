@@ -77,6 +77,7 @@
 
                         <div class="from-input">
                             <form action="./user_profile.php" method="post"></form>
+                            
                             <div class="input-group prefix mt-4">
                                 <span class="input-group-text">ชื่อ</span>
                                 <input type="text" aria-label="firstname" class="form-control from-input-text" value="<?php echo $row['User_Fname']; ?>">
@@ -98,8 +99,8 @@
                                 <input type="text" aria-label="tel" class="form-control from-input-text" value="<?php echo $row['User_Tel']; ?>">
                                 <span class="input-group-text">อีเมล</span>
                                 <input type="text" aria-label="email" class="form-control from-input-text" value="<?php echo $row['User_Email']; ?>">
-                                <span class="input-group-text">Line ID</span>
-                                <input type="text" aria-label="line" class="form-control from-input-text" value="">
+                                <!-- <span class="input-group-text">Line ID</span>
+                                <input type="text" aria-label="line" class="form-control from-input-text" value=""> -->
                             </div>
 
                             <div class="input-group prefix mt-4">

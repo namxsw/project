@@ -47,7 +47,7 @@
                                 <th style="width: 180px;">นามสกุล</th>
 
                                 <th>งานที่สมัคร</th>
-
+                                <th>ผลการสัมภาษณ์</th>
                                 <!-- <th>สถานะ</th> -->
                                 <th>จัดการ</th>
 
@@ -66,6 +66,9 @@
                                         <td><?php echo $row['Applicant_Lname']; ?></td>
 
                                         <td><?php echo $row['Job_Type']; ?></td>
+                                        <td>
+                                            <?php echo  $row['interview_status']; ?>
+                                        </td>
                                         <!-- <td><?php echo date("วันที่ d/m/Y เวลา h:i a", strtotime($row['Applicant_Date'])) ?></td> -->
                                         <!-- <td><?php echo $row['Status']; ?></td> -->
                                         <td>
