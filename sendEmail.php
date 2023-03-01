@@ -45,6 +45,10 @@
         $mail->Port = 465;
         $mail->SMTPSecure = "ssl";
 
+        // $mail->Username = "marketrentalproject@gmail.com"; // enter your email address
+        // $mail->Password = "dmziddrwoslowmmo"; // enter your password
+
+       
         //Email Settings
         $mail->isHTML(true);
         $mail->setFrom($email);

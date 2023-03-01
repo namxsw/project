@@ -82,6 +82,7 @@
         <div class="appeal-content-info">
           <img src="./img/BayasitaD.png" alt="">
           <h3><b>สมัครสมาชิกและสร้างโปรไฟล์</h3>
+<<<<<<< HEAD
           <form id="applyform" method="POST" action="./adforms.php" enctype="multipart/form-data">
             <div class="form-outer" style="overflow: visible;">
               <!-- form--1 -->
@@ -92,6 +93,94 @@
                 </div>
 
                 <!-- <div class="des_input text-start ms-5 ps-4 mb-1">รูปภาพ</div> -->
+=======
+          
+
+          <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">ชื่อ</div>
+            <input type="text" class="form-control" name="firstname" aria-describedby="fitstname" style="width: 450px;">
+          </div>
+
+          <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">นามสกุล</div>
+            <input type="text" class="form-control" name="lastname" aria-describedby="lastname" style="width: 450px;">
+          </div>
+
+          <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">เพศ</div>
+            <input type="text" class="form-control" name="sex" aria-describedby="sex" style="width: 450px;">
+          </div>
+
+          <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">อีเมล</div>
+            <input type="text" class="form-control" name="email" aria-describedby="email" style="width: 450px;">
+          </div>
+
+          <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">ที่อยู่</div>
+            <input type="text" class="form-control" name="addr" aria-describedby="addr" style="width: 450px;">
+          </div>
+
+          <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">ส่วนสูง</div>
+            <input type="text" class="form-control" name="heig" aria-describedby="heig" style="width: 450px;">
+          </div>
+
+          <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">น้ำหนัก</div>
+            <input type="text" class="form-control" name="weigh" aria-describedby="weigh" style="width: 450px;">
+          </div>
+
+          <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">อายุ</div>
+            <input type="text" class="form-control" name="age" aria-describedby="age" style="width: 450px;">
+          </div>
+
+          <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">วันเกิด</div>
+            <input type="date" class="form-control" name="bd" aria-describedby="bd" style="width: 450px;">
+          </div>
+
+          <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">เบอร์โทร</div>
+            <input type="text" class="form-control" name="tel" aria-describedby="tel" style="width: 450px;">
+          </div>
+
+          
+
+          <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">คณะที่ศึกษา</div>
+            <input type="text" class="form-control" name="fact" aria-describedby="fact" style="width: 450px;">
+          </div>
+
+          <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">สาขาที่ศึกษา</div>
+            <input type="text" class="form-control" name="dept" aria-describedby="dept" style="width: 450px;">
+          </div>
+
+          <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">เกรด</div>
+            <input type="text" class="form-control" name="grad" aria-describedby="grad" style="width: 450px;">
+          </div>
+
+          <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">ชื่อผู้ใช้</div>
+            <input type="text" class="form-control" name="username" aria-describedby="username" id="username" style="width: 450px;">
+            <span id="msg1" style="font-size: 14px"></span>
+          </div>
+
+          <div class="mb-3" >
+            <div class="text-start ms-5 ps-4 mb-1">รหัสผ่าน</div>
+            <input type="password" class="form-control" name="pass" aria-describedby="pass" style="width: 450px;">
+          </div>
+
+          <div class="mb-3">
+            <div class="text-start ms-5 ps-4 mb-1">ยืนยันรหัสผ่าน</div>
+            <input type="password" class="form-control" name="compass" aria-describedby="compass" style="width: 450px;">
+          </div>
+          <div class="des_input text-start ms-5 ps-4 mb-1">รูปภาพ</div>
+          <input class="sqr-input col-12 form-control" type="file" placeholder="รูปภาพ" name="picc" style="width: 450px;">
+>>>>>>> 224c3e7cf5a5bdc004e097eaca24ed9bd404bee2
 
 
                 <div class="input-group mb-3 mt-4">

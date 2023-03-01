@@ -82,8 +82,20 @@
                                 <input type="text" aria-label="firstname" class="form-control from-input-text" value="<?php echo $row['User_Fname']; ?>">
                                 <span class="input-group-text">นามสกุล</span>
                                 <input type="text" aria-label="lastname" class="form-control from-input-text" value="<?php echo $row['User_Lname']; ?>">
+<<<<<<< HEAD
                                 
+=======
+                                <span class="input-group-text">เพศ</span>
+                                <input type="text" aria-label="sex" class="form-control from-input-text" value="<?php echo $row['user_sex']; ?>">
+                                <span class="input-group-text">อายุ</span>
+                                <input type="text" aria-label="age" class="form-control from-input-text" value="<?php echo $row['user_age']; ?> ปี">
+                                <span class="input-group-text">น้ำหนัก</span>
+                                <input type="text" aria-label="weigh" class="form-control from-input-text" value="<?php echo $row['user_weigh']; ?> กิโลกรัม">
+                                <span class="input-group-text">ส่วนสูง</span>
+                                <input type="text" aria-label="heig" class="form-control from-input-text" value="<?php echo $row['user_heig']; ?> เซนติเมตร">
+>>>>>>> 224c3e7cf5a5bdc004e097eaca24ed9bd404bee2
                             </div>
+                            
 
                             <div class="input-group prefix mt-4">
                                 
