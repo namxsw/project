@@ -8,7 +8,7 @@ body {
 
   
 label{
-      margin-left: -70%;
+      margin-left: -55%;
        }
   
   .form-control{
@@ -17,13 +17,20 @@ label{
   }
   
   
-  .back a i {
-    color: darkgrey;
+  /* .back a i {
+    color: rgb(255, 12, 12);
     font-size: 50px;
     margin-top: 30px;
     margin-left: -1600px;
   
-  }
+  } */
+
+.back i{
+  color: #757575;
+  font-size: 50px;
+  margin-top: 30px;
+  margin-left: 50px;
+}
   
   h3{
     text-align: center;
@@ -33,10 +40,11 @@ label{
    /* กรอบ */
   
    img{
-     margin-left: -1%;
+     margin-left: 40%;
      margin-bottom: 25px;
      width: 100px;
      height: 100px;
+     /* align-items: center; */
    }
     .title h3 {
       margin-top: 60px;
@@ -50,7 +58,7 @@ label{
     
     .appeal-container {
       
-      margin-left: 30%;
+      margin-left: 27%;
       margin-top: 15px; 
       padding: 35px;
       width: 58%;
@@ -93,5 +101,98 @@ label{
       text-align: right;
       width: 150px;
     }
+p{
+  text-align: center;
+  text-decoration: none ;
+}
+
+a{
+  text-decoration: none !important;
+}
   
+    /* 1.ส่วนบน */
+/* #headline{
+  text-align: center;
+} */
+
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #fd560d !important;
+  transition: width .4s ease;
+}
+
+/* ----------------------------------------2.กล่องฟอร์ม------------------------------------------------------------ */
+
+.applybox {
+  margin: 78px 68px 10px 100px ;
+}
+.form-outer{
+  padding: 0px 10% !important;
+}
+
+#stepOne .btn{
+  margin-left: 10px;
+  padding: .5rem;
+  width: 470px;
   
+}
+
+#stepTwo{
+  display: none;
+}
+#stepTwo .btn{
+  /* margin: 5px auto; */
+  margin-left: 10px;
+  padding: .5rem;
+  width: 470px;
+}
+
+.des_input{
+  margin: 0 !important;
+  padding: 0 0 0 5px !important;
+ 
+}
+.action-button{
+  margin-top: 20px !important;
+}
+
+
+.submitBtn{
+  margin-top: 10px !important;
+
+}
+
+#next:hover{
+  background: #ffa200;
+  border: none;
+  
+}
+
+#back:hover{
+  background-color: #ffa200;
+  border: none;
+}
+
+/* #submit{
+  background-color: #022D8C;
+  border: none;
+  margin-left: 5px;
+  padding: 0.5rem;
+} */
+
+#submit:hover{
+  background-color: #022D8C;
+}
+
+/* .jobtype{
+  padding: 0 !important;
+  margin-left: 4px;
+} */
+

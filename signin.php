@@ -25,7 +25,7 @@
         $sql = "SELECT * FROM user WHERE User_username = '$username' AND User_Password = '$password'";
         $result = mysqli_query($conn, $sql);
         $fRows = mysqli_fetch_row($result);
-        $role = $fRows[8];
+        $role = $fRows[16];
         $_SESSION['username'] = $fRows[1];
         $_SESSION['name'] = $fRows[3] . " " . $fRows[4];
         $_SESSION['tel'] = $fRows[5];

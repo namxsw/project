@@ -71,7 +71,7 @@
                                 <div class="des_input">อีเมล</div>
                                 <input class="sqr-input col-12 form-control" value="<?php echo $row['User_Email']; ?>" type="email" placeholder="อีเมล" name="mail" required />
                                 <div class="des_input">ที่อยู่</div>
-                                <input class="sqr-input col-12 form-control" type="text" placeholder="ที่อยู่" name="ad" required />
+                                <input class="sqr-input col-12 form-control" value="<?php echo $row['user_addr']; ?>" type="text" placeholder="ที่อยู่" name="ad" required />
                                 <div class="des_input">เบอร์โทรศัพท์</div>
                                 <input name="tel" class="sqr-input col-12 form-control" value="<?php echo $row['User_Tel']; ?>" type="text" placeholder="เบอร์โทรศัพท์" name="tel" pattern="[0-9]{10}" title="กรุณากรอกเบอร์โทรศัพท์ หมายเลข (0-9) จำนวน 10 ตัว" required maxlength="10" />
 
@@ -86,9 +86,9 @@
                                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Basic example" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">2/2 </div>
                                 </div>
                                 <div class="des_input">คณะ</div>
-                                <input class=" col-12 form-control" type="text" placeholder="คณะ" name="fact" required />
+                                <input class=" col-12 form-control" value="<?php echo $row['user_fact']; ?>" type="text" placeholder="คณะ" name="fact" required />
                                 <div class="des_input">สาขา</div>
-                                <input class="form-control col-12" type="text" placeholder="สาขา" name="deptt" required />
+                                <input class="form-control col-12" value="<?php echo $row['user_dept']; ?>" type="text" placeholder="สาขา" name="deptt" required />
                                 <div class="des_input">ชั้นปี</div>
                                 <input class="form-control col-12" type="text" placeholder="ขั้นปี" name="class" required />
                                 <div class="des_input">หลักฐานทางการศึกษา</div>
